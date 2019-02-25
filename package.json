@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "no.lol",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Lauren's blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Lauren Tan <arr@sugarpirate.com>",
   "dependencies": {
     "gatsby": "^2.1.17",
     "gatsby-image": "^2.0.29",
@@ -19,6 +19,13 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
+    "@types/react": "^16.8.4",
+    "@types/react-dom": "^16.8.2",
+    "@types/react-helmet": "^5.0.8",
+    "eslint": "^5.14.1",
+    "eslint-loader": "^2.1.2",
+    "gatsby-plugin-eslint": "^2.0.4",
+    "gatsby-plugin-typescript": "^2.0.9",
     "prettier": "^1.16.4"
   },
   "keywords": [
