@@ -6,7 +6,7 @@ import { rhythm, scale } from '../utils/typography';
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props;
-    const rootPath = `${__PATH_PREFIX__}/`;
+    const rootPath = `${__PATH_PREFIX__}/`; // eslint-disable-line no-undef
     let header;
 
     if (location.pathname === rootPath) {
