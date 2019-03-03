@@ -75,5 +75,9 @@ module.exports = {
       },
     },
     `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: { logo: './static/favicon.png' },
+    },
   ],
 };

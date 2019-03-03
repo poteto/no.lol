@@ -8,6 +8,7 @@
     "gatsby": "^2.1.19",
     "gatsby-image": "^2.0.30",
     "gatsby-plugin-eslint": "^2.0.4",
+    "gatsby-plugin-favicon": "^3.1.5",
     "gatsby-plugin-feed": "^2.0.14",
     "gatsby-plugin-google-analytics": "^2.0.15",
     "gatsby-plugin-manifest": "^2.0.20",
@@ -62,6 +63,7 @@
   },
   "scripts": {
     "build": "gatsby build",
+    "dev": "gatsby develop",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
