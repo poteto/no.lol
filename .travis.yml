@@ -1,0 +1,20 @@
+language: node_js
+
+branches:
+  only:
+    - master
+    - /^greenkeeper/.*$/
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+notifications:
+  email: false
+
+node_js:
+  - node
+
+script:
+  - yarn typecheck && yarn lint

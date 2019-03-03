@@ -1,22 +1,22 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "no.lol",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Lauren Tan's personal blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "author": "Lauren Tan <arr@sugarpirate.com>",
   "dependencies": {
     "gatsby": "^2.1.19",
     "gatsby-image": "^2.0.30",
+    "gatsby-plugin-eslint": "^2.0.4",
     "gatsby-plugin-feed": "^2.0.14",
     "gatsby-plugin-google-analytics": "^2.0.15",
     "gatsby-plugin-manifest": "^2.0.20",
     "gatsby-plugin-offline": "^2.0.24",
     "gatsby-plugin-react-helmet": "^3.0.7",
     "gatsby-plugin-sharp": "^2.0.23",
+    "gatsby-plugin-typescript": "^2.0.9",
     "gatsby-plugin-typography": "^2.2.7",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-copy-linked-files": "^2.0.9",
     "gatsby-remark-images": "^2.0.6",
     "gatsby-remark-prismjs": "^3.2.4",
@@ -36,9 +36,21 @@
     "typography-theme-wordpress-2016": "^0.16.18"
   },
   "devDependencies": {
-    "prettier": "^1.16.4"
+    "@types/react": "^16.8.6",
+    "@types/react-dom": "^16.8.2",
+    "@types/react-helmet": "^5.0.8",
+    "@types/typography": "^0.16.2",
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "@typescript-eslint/parser": "^1.4.2",
+    "eslint": "^5.15.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "^1.16.4",
+    "typescript": "^3.3.3333"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/poteto/no.lol",
   "keywords": [
     "gatsby"
   ],
@@ -46,7 +58,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/poteto/no.lol.git"
   },
   "scripts": {
     "build": "gatsby build",
@@ -54,6 +66,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "typecheck": "tsc",
+    "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
+    "lint:fix": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx --fix"
   }
 }

@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `no.lol`,
+    author: `Lauren Tan`,
+    description: `Lauren Tan's personal blog`,
+    siteUrl: `https://www.no.lol/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `sugarpirate_`,
     },
   },
   plugins: [
@@ -57,8 +57,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `no.lol`,
+        short_name: `no.lol`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
@@ -74,5 +74,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    `gatsby-plugin-typescript`,
   ],
-}
+};
