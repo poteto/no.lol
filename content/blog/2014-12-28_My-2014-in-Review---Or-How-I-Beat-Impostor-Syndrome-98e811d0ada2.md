@@ -9,7 +9,7 @@ keywords: ''
 slug: /@sugarpirate/my-2014-in-review-or-how-i-beat-impostor-syndrome-98e811d0ada2
 ---
 
-  
+
 
 I’ll remember 2014 as the year I was challenged and grew the most — both personally, and professionally as a UI designer and front end developer.
 
@@ -37,13 +37,15 @@ I felt horribly out of place in the rapidly moving world of web development, and
 
 I’ve been designing UIs and graphics since I was 15, when I ‘stumbled upon’ a copy of Macromedia Fireworks, and then later Adobe Photoshop. When we were still in high school, my friend introduced me to this cool thing called HTML that was “a way of making websites”, and he did that by showing me how to use the marquee tag. That’s right, my first line of HTML was:
 
+```html
 <marquee>Hello world</marquee>
+```
 
 From there, I discovered other aspects of basic HTML and CSS, and eventually, the wonderful world of slicing my Photoshop designs into tables. I was hooked on the idea that I, a nobody, could create and publish these websites to a potentially unlimited audience.
 
 With all my time spent tinkering around with HTML/CSS, FTP and graphic design (the Good Old Days™), my grades in high school suffered, and I barely made it into design school. I remember thinking at the time that all this web stuff was pretty neat, but I couldn’t imagine it being an actual career option, so I didn’t take any web development courses in school; instead focusing on game design and illustration for concept art. In hindsight, I’m pretty glad I took that path, as the skills I learnt — drawing, painting, anatomy, perspective, colour, lighting— have been very complementary to my professional life.
 
-  
+
 
 > I wasn’t aware of it back then, but if I immerse myself in something, I get good at it very quickly. I’m someone who learns best by trying, failing, and doing it all over again.
 
@@ -63,7 +65,7 @@ I spent 2013 working hard on [ThePriceGeek](http://www.thepricegeek.com) (our ne
 
 In late 2013, my good friend [Joe Valente](https://twitter.com/joeyvalente) asked if I was interested in working at a pre-product startup to do more front end development. Impostor syndrome struck again, so I put on a brave face and went for the interview, thinking I would give it a go even if I wasn’t very good.
 
-  
+
 
 > Every time I start something new, my confidence takes a hit and impostor syndrome strikes — “I don’t think I can do this.”
 
