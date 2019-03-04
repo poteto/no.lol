@@ -1,9 +1,12 @@
 language: node_js
+node_js:
+  - "11"
 
 branches:
   only:
     - master
-    - /^greenkeeper/.*$/
+    - staging # This is where pull requests from "bors r+" are built.
+    - trying # This is where pull requests from "bors try" are built.
 
 cache:
   yarn: true
@@ -12,9 +15,6 @@ cache:
 
 notifications:
   email: false
-
-node_js:
-  - node
 
 script:
   - yarn typecheck && yarn lint
