@@ -20,7 +20,7 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <h1>{post.frontmatter.title}</h1>
-        <p
+        <small
           style={{
             ...scale(-1 / 5),
             display: `block`,
@@ -29,7 +29,7 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           {post.frontmatter.date}
-        </p>
+        </small>
         <Image
           fluid={post.frontmatter.cover.childImageSharp.fluid}
           alt={post.frontmatter.coverAuthor}
