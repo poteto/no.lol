@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/skeleton-screen-loading-in-ember-js-2f7ac2384d63
 cover: ./francesco-ungaro-1401507-unsplash.jpg
-cover-author: Francesco Ungaro
-cover-original-url: https://unsplash.com/photos/vFuIriPcSiM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Francesco Ungaro
+coverOriginalUrl: https://unsplash.com/photos/vFuIriPcSiM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 Skeleton screen loading (also known as placeholder loading) is a technique that [enhances the perception](https://medium.com/ux-for-india/facilitating-better-interactions-using-skeleton-screens-a034a51120a5) of loading in your application. Typically, the loading state of an application is indicated by some kind of loading spinner or progress bar. Unfortunately, this can sometimes backfire and cause the app to feel slower than it actually is.

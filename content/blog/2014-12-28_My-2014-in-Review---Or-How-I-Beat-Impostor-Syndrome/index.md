@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/my-2014-in-review-or-how-i-beat-impostor-syndrome-98e811d0ada2
 cover: ./jason-leem-1404540-unsplash.jpg
-cover-author: Jason Leem
-cover-original-url: https://unsplash.com/photos/zi6-k5vNWZ8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Jason Leem
+coverOriginalUrl: https://unsplash.com/photos/zi6-k5vNWZ8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 I’ll remember 2014 as the year I was challenged and grew the most — both personally, and professionally as a UI designer and front end developer.

@@ -20,10 +20,6 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <h1>{post.frontmatter.title}</h1>
-        <Image
-          fluid={post.frontmatter.cover.childImageSharp.fluid}
-          alt={post.frontmatter.cover_author}
-        />
         <p
           style={{
             ...scale(-1 / 5),
@@ -34,7 +30,24 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Image
+          fluid={post.frontmatter.cover.childImageSharp.fluid}
+          alt={post.frontmatter.coverAuthor}
+        />
+        <small>
+          Photo by{' '}
+          <a href={post.frontmatter.coverOriginalUrl}>
+            {post.frontmatter.coverAuthor}
+          </a>{' '}
+          on{' '}
+          <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+            Unsplash
+          </a>
+        </small>
+        <div
+          style={{ marginTop: rhythm(1) }}
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -96,6 +109,8 @@ export const pageQuery = graphql`
             }
           }
         }
+        coverAuthor
+        coverOriginalUrl
       }
     }
   }

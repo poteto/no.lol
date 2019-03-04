@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/declarative-breadcrumb-navigation-in-ember-js-5908a92a5de3
 cover: ./sam-moghadam-1403544-unsplash.jpg
-cover-author: Sam Moghadam
-cover-original-url: https://unsplash.com/photos/1nP3Q9ZXcos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Sam Moghadam
+coverOriginalUrl: https://unsplash.com/photos/1nP3Q9ZXcos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 [Breadcrumb navigation](http://www.nngroup.com/articles/breadcrumb-navigation-useful/) isn’t a new concept, in fact, it’s usefulness has been endlessly debated about by UX designers all over. Today, I won’t get into the nitty gritty on whether or not your app should include one, but I’d like to share an [addon](https://github.com/poteto/ember-crumbly) I built for a project I’m working on that required it.

@@ -9,8 +9,8 @@ keywords: ''
 slug: >-
   /@sugarpirate/ember-js-reactive-programming-computed-properties-and-observers-cf80c2fbcfc
 cover: ./jason-leem-1404539-unsplash.jpg
-cover-author: Jason Leem
-cover-original-url: https://unsplash.com/photos/LOvWqTe1_9E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Jason Leem
+coverOriginalUrl: https://unsplash.com/photos/LOvWqTe1_9E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 Reactive Programming (or RP for short) is a programming paradigm that gets thrown around a lot, but its clear that there is much [confusion](http://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming?rq=1) about what it actually is. RP is a general programming paradigm, but is particularly suited to creating [reactive user interfaces](http://en.wikipedia.org/wiki/Reactive_user_interface).

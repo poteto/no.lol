@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/route-closure-actions-in-ember-js-d0a7a37a5d1b
 cover: ./devon-janse-van-rensburg-1405686-unsplash.jpg
-cover-author: Devon Janse van Rensburg
-cover-original-url: https://unsplash.com/photos/DU8Z5djVJtg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Devon Janse van Rensburg
+coverOriginalUrl: https://unsplash.com/photos/DU8Z5djVJtg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 In my [previous post](https://emberway.io/ember-js-goodbye-mvc-part-1-21777ecfd708#.cigfu5es3), I wrote about moving singleton state in Controllers into Services that back components. This means being able to lighten the responsibility of Controllers in your application, and in some cases even remove them completely. However, a common pain point that remains for many is that it isn’t really clear what _should live_ on a Controller, if anything.

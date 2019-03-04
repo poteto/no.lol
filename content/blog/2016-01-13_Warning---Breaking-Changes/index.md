@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/warning-breaking-changes-afeb2544d0f5
 cover: ./josh-applegate-1402894-unsplash.jpg
-cover-author: Josh Applegate
-cover-original-url: https://unsplash.com/photos/mLqoV-TR9zM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Josh Applegate
+coverOriginalUrl: https://unsplash.com/photos/mLqoV-TR9zM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 In the world of software releases, programmers call a significant change in existing behavior a _breaking change_. Typically, this means that upgrading that library will break something that already works.

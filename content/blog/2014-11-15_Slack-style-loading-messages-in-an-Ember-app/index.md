@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/slack-style-loading-messages-in-an-ember-app-6319559a19d0
 cover: ./alex-robert-222997-unsplash.jpg
-cover-author: Alex Robert
-cover-original-url: https://unsplash.com/photos/cPL7CRk4M8M?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Alex Robert
+coverOriginalUrl: https://unsplash.com/photos/cPL7CRk4M8M?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 If you haven’t used [Slack](http://www.slack.com) already, it’s an awesome chat app for teams that’s similar to IRC. I’ve been using it for a while now, and I’ve pretty much sworn off writing emails for internal communication in favour of Slack.

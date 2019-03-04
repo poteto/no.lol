@@ -8,11 +8,9 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/exploring-the-strongly-typed-graph-31fc27512326
 cover: ./benjamin-hung-340383-unsplash.jpg
-cover-author: Benjamin Hung
-cover-original-url: https://unsplash.com/photos/m7q5iX4L7vQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Benjamin Hung
+coverOriginalUrl: https://unsplash.com/photos/m7q5iX4L7vQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
-
-Photo by [Benjamin Hung](https://unsplash.com/photos/m7q5iX4L7vQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/CCKcwh7s9A4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 The “Strongly Typed Graph” is something I’ve been thinking about lately. I believe it could significantly improve developer productivity in large, microservice heavy organizations.
 

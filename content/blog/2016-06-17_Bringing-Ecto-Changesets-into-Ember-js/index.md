@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/bringing-ecto-changesets-into-ember-js-8e665ec70ab6
 cover: ./steven-su-1405584-unsplash.jpg
-cover-author: Steven Su
-cover-original-url: https://unsplash.com/photos/7Oc33M8vs0s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Steven Su
+coverOriginalUrl: https://unsplash.com/photos/7Oc33M8vs0s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 The past month or so, I’ve been working on an [Elixir](http://elixir-lang.org/) and [Phoenix](http://www.phoenixframework.org/) API for a client. I am blown away by how nice it is working with Elixir and functional programming (FP) concepts. FP feels more intuitive and less prone to “shoot yourself in the foot” scenarios compared to OOP. In fact, I try to use functional approaches wherever possible in JavaScript as well.

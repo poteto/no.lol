@@ -9,8 +9,8 @@ keywords: ''
 slug: >-
   /@sugarpirate/declarative-templating-in-ember-with-composable-helpers-a70f01d67165
 cover: ./tim-patch-1404785-unsplash.jpg
-cover-author: Tim Patch
-cover-original-url: https://unsplash.com/photos/IS3PDiWTgrM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Tim Patch
+coverOriginalUrl: https://unsplash.com/photos/IS3PDiWTgrM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 [Previously](https://emberway.io/route-closure-actions-in-ember-js-d0a7a37a5d1b#.ce4ri08c6), I mentioned that Ember’s new `Helper` implementation landed in [1.13](http://emberjs.com/blog/2015/06/12/ember-1-13-0-released.html#toc_new-ember-js-helper-api). In my opinion, helpers are one of the most useful, yet least talked about features in Ember.

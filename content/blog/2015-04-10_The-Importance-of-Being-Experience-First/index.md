@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/the-importance-of-being-experience-first-24bc261987fd
 cover: ./natalie-chaney-1400174-unsplash.jpg
-cover-author: Natalie Chaney
-cover-original-url: https://unsplash.com/photos/zhUzdTgtRP8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Natalie Chaney
+coverOriginalUrl: https://unsplash.com/photos/zhUzdTgtRP8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 We’re in the middle of a digital renaissance that has software eating the world. Like the industrial revolution, the digital revolution might see us eventually becoming obsolete, but that’s okay because that’s what progress looks like. To stay relevant, we need to place the Experience First.

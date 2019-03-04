@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/rise-from-the-ashes-incremental-apis-with-phoenix-b08cd66bd142
 cover: ./joshua-newton-274491-unsplash.jpg
-cover-author: Joshua Newton
-cover-original-url: https://unsplash.com/photos/Igct8iZucFI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Joshua Newton
+coverOriginalUrl: https://unsplash.com/photos/Igct8iZucFI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 Much has been said about the [Elixir](http://elixir-lang.org/) language and the [Phoenix framework](http://www.phoenixframework.org/) —Phoenix’s [performance](http://www.phoenixframework.org/blog/the-road-to-2-million-websocket-connections) [without compromise](https://dockyard.com/blog/2015/11/18/phoenix-is-not-rails) makes it a compelling choice in a world where problems are increasingly concurrent and [real-time](https://dockyard.com/blog/2016/08/09/phoenix-channels-vs-rails-action-cable).

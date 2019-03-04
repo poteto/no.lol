@@ -9,8 +9,8 @@ keywords: ''
 slug: >-
   /@sugarpirate/applying-the-adapter-pattern-for-analytics-in-ember-js-apps-29448cbcedf3
 cover: ./petri-r-1403845-unsplash.jpg
-cover-author: Petri R
-cover-original-url: https://unsplash.com/photos/6j_lmeycTrM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Petri R
+coverOriginalUrl: https://unsplash.com/photos/6j_lmeycTrM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 At [DockYard](https://dockyard.com/), most (if not all) Ember apps we build for our clients require analytics in some form or other. For many of these apps, including the Google Analytics tracking script is sufficient. However, we’ve begun to notice an increased interest in other services such as Mixpanel or Kissmetrics for more data minded clients.

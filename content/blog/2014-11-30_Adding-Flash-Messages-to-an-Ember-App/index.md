@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/adding-flash-messages-to-an-ember-app-437b13e49c1b
 cover: ./david-ngo-1404606-unsplash.jpg
-cover-author: David Ngo
-cover-original-url: https://unsplash.com/photos/UdToY22XYJQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: David Ngo
+coverOriginalUrl: https://unsplash.com/photos/UdToY22XYJQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 One of Jakob Nielsen’s [10 heuristics for user interface design](http://www.nngroup.com/articles/ten-usability-heuristics/) is **Visibility of System Status**, or in other words, keeping users informed about the status of the system through appropriate and timely feedback. A mechanic for fulfilling this heuristic is the use of flash messages, which are concise notifications that appear briefly in the user interface before being dismissed automatically (or manually).

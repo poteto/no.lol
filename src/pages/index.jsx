@@ -22,7 +22,7 @@ class BlogIndex extends React.Component {
         <MainBio />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
-          const imageAuthor = node.frontmatter.cover_author;
+          const imageAuthor = node.frontmatter.coverAuthor;
           const { fluid } = node.frontmatter.cover.childImageSharp;
           return (
             <div style={{ marginBottom: rhythm(1) }} key={node.fields.slug}>

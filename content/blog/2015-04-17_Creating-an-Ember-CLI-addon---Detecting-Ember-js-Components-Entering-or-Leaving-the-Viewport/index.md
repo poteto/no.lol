@@ -11,8 +11,8 @@ keywords: ''
 slug: >-
   /@sugarpirate/creating-an-ember-cli-addon-detecting-ember-js-components-entering-or-leaving-the-viewport-7d95ceb4f5ed
 cover: ./toa-heftiba-1399721-unsplash.jpg
-cover-author: Toa Heftiba
-cover-original-url: https://unsplash.com/photos/_2HNqkk6FEU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Toa Heftiba
+coverOriginalUrl: https://unsplash.com/photos/_2HNqkk6FEU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 I [wrote a post](https://medium.com/delightful-ui-for-ember-apps/ember-js-detecting-if-a-dom-element-is-in-the-viewport-eafcc77a6f86) last year about how I made an Ember Mixin that would let Ember Components or Views know if their DOM element had entered or left the viewport. If you’re unfamiliar with the [**getBoundingClientRect**](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) API or the approach in general (for determining if an element is in the viewport), please have a read of that post first!

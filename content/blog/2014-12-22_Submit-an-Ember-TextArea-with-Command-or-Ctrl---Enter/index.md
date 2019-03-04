@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/submit-an-ember-textarea-with-command-or-ctrl-enter-a933b4325b3b
 cover: ./pawel-czerwinski-1404603-unsplash.jpg
-cover-author: Paweł Czerwiński
-cover-original-url: https://unsplash.com/photos/1aMG_ShZCYg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Paweł Czerwiński
+coverOriginalUrl: https://unsplash.com/photos/1aMG_ShZCYg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 It’s Christmas in a few days, so I only have time for a short post this week.

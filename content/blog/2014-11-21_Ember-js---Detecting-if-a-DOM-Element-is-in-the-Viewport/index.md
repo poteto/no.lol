@@ -9,8 +9,8 @@ keywords: ''
 slug: >-
   /@sugarpirate/ember-js-detecting-if-a-dom-element-is-in-the-viewport-eafcc77a6f86
 cover: ./pawel-czerwinski-1404596-unsplash.jpg
-cover-author: Paweł Czerwiński
-cover-original-url: https://unsplash.com/photos/R7n2WIyFr3E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Paweł Czerwiński
+coverOriginalUrl: https://unsplash.com/photos/R7n2WIyFr3E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 Detecting whether or not an element is visible in the viewport is very useful when it comes to triggering animations or events. Before you drop in another jQuery plugin though, have a look at how easy it is to create a Mixin that you can add to any View or Component. Once added, you can simply ask that element if it’s in the viewport using the property the Mixin injects.

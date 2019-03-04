@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/ember-simple-text-search-computed-property-macro-1b7ca6a25ad2
 cover: ./philip-swinburn-60229-unsplash.jpg
-cover-author: Philip Swinburn
-cover-original-url: https://unsplash.com/photos/vS7LVkPyXJU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Philip Swinburn
+coverOriginalUrl: https://unsplash.com/photos/vS7LVkPyXJU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 Every now and then, you want to let your users quickly search for records that you’ve already loaded into your store. We can easily implement naïve search using Ember’s [Array#filter](http://emberjs.com/api/classes/Ember.Array.html#method_filter) and native String prototype methods, but let’s go a little step further and create a custom computed property macro (CPM) that wraps the search so we can easily drop it into other properties.

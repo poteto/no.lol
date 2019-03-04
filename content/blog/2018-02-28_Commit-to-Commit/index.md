@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/commit-to-commit-a18befcb5e26
 cover: ./matthias-schroder-1399823-unsplash.jpg
-cover-author: Matthias Schröder
-cover-original-url: https://unsplash.com/photos/v5ehDfMpUyA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Matthias Schröder
+coverOriginalUrl: https://unsplash.com/photos/v5ehDfMpUyA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 Commitment can be terrifying. Broken promises are the surest way down the waterslide of low morale.

@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/lazy-loading-videos-in-ember-7504a4abe34f
 cover: ./damian-markutt-1405941-unsplash.jpg
-cover-author: Damian Markutt
-cover-original-url: https://unsplash.com/photos/eCkmZ7f8oWY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Damian Markutt
+coverOriginalUrl: https://unsplash.com/photos/eCkmZ7f8oWY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 If you’re like me, every time you embed a video iframe into your app you feel a little dirty. Embedding an iframe means loading an entire html document and the crazy amounts of resources it brings along with it. What’s worse is having to embed multiple videos — you really start to feel the performance hit the more videos you add.

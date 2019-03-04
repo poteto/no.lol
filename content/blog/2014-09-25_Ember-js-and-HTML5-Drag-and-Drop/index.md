@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/ember-js-and-html5-drag-and-drop-fa5dfe478a9a
 cover: ./rawpixel-191157-unsplash.jpg
-cover-author: rawpixel
-cover-original-url: https://unsplash.com/photos/C05KN4h8WKw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: rawpixel
+coverOriginalUrl: https://unsplash.com/photos/C05KN4h8WKw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 It’s fairly trivial to add a ‘drag and drop’ interface to Ember.js with [html](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Drag_and_drop)5, without the need for external libraries, although the caveat is that mobile browsers don’t (yet) [support](http://caniuse.com/#feat=dragndrop) html5 drag and drop.

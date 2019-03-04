@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/component-dependency-injection-in-ember-js-a46a39a5d30a
 cover: ./andrew-buchanan-1404154-unsplash.jpg
-cover-author: Andrew Buchanan
-cover-original-url: https://unsplash.com/photos/UYJL-k9bkAY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Andrew Buchanan
+coverOriginalUrl: https://unsplash.com/photos/UYJL-k9bkAY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 The [Dependency Injection](http://martinfowler.com/articles/injection.html) (DI) pattern is a subset of [Inversion of Control](http://martinfowler.com/articles/injection.html#InversionOfControl), and is a useful technique for decoupling the creation of a dependency from the object itself. Don’t let the terminology scare you though! DI is really just [giving an object its instance variables](http://www.jamesshore.com/Blog/Dependency-Injection-Demystified.html).

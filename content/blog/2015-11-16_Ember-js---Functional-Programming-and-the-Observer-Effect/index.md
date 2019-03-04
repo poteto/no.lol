@@ -9,8 +9,8 @@ keywords: ''
 slug: >-
   /@sugarpirate/ember-js-functional-programming-and-the-observer-effect-48901c3b84d7
 cover: ./adam-sodek-1403521-unsplash.jpg
-cover-author: Adam Šodek
-cover-original-url: https://unsplash.com/photos/WF3shbZCOi4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Adam Šodek
+coverOriginalUrl: https://unsplash.com/photos/WF3shbZCOi4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 My awesome colleagues have written about patterns and [best practices](https://dockyard.com/blog/categories/best-practices) we use at [DockYard](https://dockyard.com/), covering everything from the [Ember](https://dockyard.com/blog/2015/10/19/2015-dont-dont-override-init) [Object](https://dockyard.com/blog/2015/09/18/ember-best-practices-avoid-leaking-state-into-factories) [model](https://dockyard.com/blog/2015/11/09/best-practices-extend-or-mixin) and [better acceptance tests](https://dockyard.com/blog/2015/09/25/ember-best-practices-acceptance-tests), to [native inputs](https://dockyard.com/blog/2015/10/05/ember-best-practices-using-native-input-elements) and [closure actions](https://dockyard.com/blog/2015/10/29/ember-best-practice-stop-bubbling-and-use-closure-actions).

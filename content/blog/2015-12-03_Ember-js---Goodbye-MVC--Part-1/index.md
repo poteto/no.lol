@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/ember-js-goodbye-mvc-part-1-21777ecfd708
 cover: ./sepp-rutz-1402081-unsplash.jpg
-cover-author: Sepp Rutz
-cover-original-url: https://unsplash.com/photos/ToKAuHu_hbU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Sepp Rutz
+coverOriginalUrl: https://unsplash.com/photos/ToKAuHu_hbU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 At EmberConf 2015, [Yehuda Katz](https://twitter.com/wycats) and [Tom Dale](https://twitter.com/tomdale) announced the arrival of certain changes to Ember 2. Most notably, the [routable components RFC](https://github.com/emberjs/rfcs/pull/38) attracted a lot of attention because of its proposal to deprecate and eventually remove controllers. Naturally, this was alarming to many existing Ember users, especially since Ember and Sproutcore have always been client-side MVC frameworks.

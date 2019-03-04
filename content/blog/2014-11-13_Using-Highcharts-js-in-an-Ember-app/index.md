@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/using-highcharts-js-in-an-ember-app-18a65d611644
 cover: ./tracy-thomas-56810-unsplash.jpg
-cover-author: Tracy Thomas
-cover-original-url: https://unsplash.com/photos/Y7SQO1p6B0A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Tracy Thomas
+coverOriginalUrl: https://unsplash.com/photos/Y7SQO1p6B0A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 [Highcharts](http://www.highcharts.com/) is one of the better supported and developed front end charting libraries out there, and it makes creating standard charts a breeze. If you have a custom chart the likes of which the world has never seen however, you might be better off building it in something like [D3.js](http://d3js.org/). If all you need is a vanilla chart in your Ember app, read on.

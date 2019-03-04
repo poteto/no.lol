@@ -8,8 +8,8 @@ categories: ''
 keywords: ''
 slug: /@sugarpirate/an-engineers-guide-to-communication-99180699a0e6
 cover: ./tom-sodoge-1169782-unsplash.jpg
-cover-author: Tom Sodoge
-cover-original-url: https://unsplash.com/photos/ul3ygBELnBw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+coverAuthor: Tom Sodoge
+coverOriginalUrl: https://unsplash.com/photos/ul3ygBELnBw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
 It’s far too easy to be misunderstood. Trying to get your idea or point across to someone can often feel frustrating and difficult.
