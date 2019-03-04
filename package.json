@@ -68,6 +68,7 @@
     "serve": "gatsby serve",
     "typecheck": "tsc",
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
-    "lint:fix": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx --fix"
+    "lint:fix": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx --fix",
+    "test": "npm run lint"
   }
 }

@@ -62,8 +62,8 @@ Wordpress2016.overrideThemeStyles = () => ({
     'justify-content': 'space-between',
   },
   small: {
-    color: 'var(--gray)'
-  }
+    color: 'var(--gray)',
+  },
 });
 
 delete Wordpress2016.googleFonts;
