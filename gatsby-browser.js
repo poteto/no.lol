@@ -1,3 +1,5 @@
-// custom typefaces
-import 'typeface-montserrat';
-import 'typeface-merriweather';
+// fonts
+import './static/fonts/firacode.css';
+
+// prism theme
+import './static/prism-custom.css';

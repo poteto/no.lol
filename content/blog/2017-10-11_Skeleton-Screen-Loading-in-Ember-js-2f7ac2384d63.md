@@ -25,6 +25,18 @@ I won’t delve into too much detail on the concept. In this post, I’d like to
 
 You’ve probably been told that you should always fetch data in the route, typically in the [model hook](https://guides.emberjs.com/v2.16.0/tutorial/model-hook/):
 
+```js
+import Ember from 'ember';
+
+const { Route } = Ember;
+
+export default Route.extend({
+  model({ fullName }) {
+    return this.store.queryRecord('user', { fullName });
+  }
+});
+```
+
 The nice thing about this approach, is that an unresolved promise returned in this hook will trigger the route’s [loading substate](https://guides.emberjs.com/v2.16.0/routing/loading-and-error-substates/). This is usually where you would place your loading spinner component, for example. This is fine when you’re working with a non-query-param-enabled route, but if you do have to support query params or refresh the model based on some user input, you might notice [annoying UX](https://ember-twiddle.com/b7489a0682f38df1f2d4a7aefe1eb9c4?openFiles=routes.application.js%2C&route=%2F%3Fgreeting%3DHallo!) (ember-twiddle example) as a result of this behavior.
 
 Whenever your user tries to change a query param linked value that refreshes the model, the model hook re-fires. If you’re trying to search for something, for example, this causes an unacceptable amount of jank.
@@ -41,28 +53,92 @@ However, moving this out from the route raises important questions. Without the 
 
 Instead of loading data in the route, you can do so in a controller or a component. I personally prefer using [non-presentational components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) to load data — I call them “loader” components, sometimes also known as container components.
 
+```js
+import Ember from 'ember';
+import { task, timeout } from 'ember-concurrency';
+
+const { Component, get, set } = Ember;
+
+export default Component.extend({
+  tagName: '',
+  init() {
+    this._super(...arguments);
+    this.data = [];
+  },
+
+  didReceiveAttrs() {
+    let query = get(this, 'query');
+    get(this, 'fetchData').perform(query);
+  },
+
+  fetchData: task(function*(query) {
+    yield timeout(1000);
+    let users = yield get(this, 'store').queryRecord('user', query);
+    return set(this, 'data', users);
+  }).restartable()
+});
+```
+
 This approach also works with a controller, but you won’t have any lifecycle hooks to work with. Instead you’ll have an action call the [ember-concurrency](http://ember-concurrency) task that fetches data in response to some user input.
 
 In its simplest form, a loader component is a tag-less component that performs an ember-concurrency task whenever some property being passed to it is changed. For example, this could be a query params hash, or other kind of user input. Then, all this loader component does is yield out specific properties:
 
+```handlebars
+{{yield (hash
+    isRunning=fetchData.isRunning
+    data=data)
+}}
+```
+
 With ember-concurrency, we don’t have to rebuild the wheel to recreate the loading substate within our component. We can instead leverage its “[derived state](https://ember-concurrency.com/#/docs/derived-state)” and change our UI accordingly. Here’s a simple example of how to use this loader component:
+
+```handlebars
+{{#my-loader query=query as |loader|}}
+  {{#if loader.isRunning}}
+    <p>Loading...</p>
+  {{else}}
+    {{#each loader.data as |user|}}
+      {{user.fullName}}
+    {{/each}}
+  {{/if}}
+{{/my-loader}}
+```
 
 With this change, we now have granular control over how our loading substate is rendered in our application. Most importantly, you’ll note that loading data this way will no longer block interactivity in your UI. Now, adding skeleton screens in its place is easy, thanks to the [ember-content-placeholders](https://github.com/michalsnik/ember-content-placeholders) addon by [Michał](https://github.com/michalsnik).
 
 Because the addon relies on ember-cli-sass, I wasn’t able to include it in my [ember-twiddle demo](https://ember-twiddle.com/c0f98a5b62287d4a88fa80be65d3ba0d?openFiles=templates.application.hbs%2C). I added a simple placeholder instead which provides a similar effect.
 
+<div style='position:relative; padding-bottom:calc(62.50% + 44px)'><iframe src='https://gfycat.com/ifr/WelltodoHeartyBabirusa' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div><p> <a href="https://gfycat.com/welltodoheartybabirusa">via Gfycat</a></p>
 Screencast taken with a terrible internet connection from an Airbnb in Berlin
 
 ### Data loading with query params
 
 If you do use query params, you can still adopt the same approach. [Offir](https://twitter.com/offirgolan) and I wrote an addon that improves upon the experience in working with query params.
 
-[**offirgolan/ember-parachute**  
+[**offirgolan/ember-parachute**
 _ember-parachute - Improved Query Params for Ember_github.com](https://github.com/offirgolan/ember-parachute "https://github.com/offirgolan/ember-parachute")[](https://github.com/offirgolan/ember-parachute)
 
 Instead of defining query params in _both_ your route and controller, with this addon you can define them in one place as a query param map.
 
 This map is the source of truth for your query params, and will generate a mixin that you can then add into your controller. The mixin adds very helpful properties and methods that makes working with query params a breeze! Once you’ve added ember-parachute to your app, you can move your query param configuration away from your route and into the controller.
+
+```js
+import Ember from 'ember';
+import QueryParams from 'ember-parachute';
+
+export const AppQueryParams = new QueryParams({
+  query: {
+    as: 'q',
+    defaultValue: 'puppy',
+    refresh: true
+  }
+});
+const { Controller, computed: { or } } = Ember;
+
+export default Controller.extend(AppQueryParams.Mixin, {
+  queryParamsChanged: or('queryParamsState.{query}.changed')
+});
+```
 
 Because your route no longer fetches data, you can fetch data in your controller or component with an ember-concurrency task. This task is performed in response to user input, either via a component’s lifecycle hook, or by an explicit action call. Use the task’s derived state to determine the loading substate instead.
 

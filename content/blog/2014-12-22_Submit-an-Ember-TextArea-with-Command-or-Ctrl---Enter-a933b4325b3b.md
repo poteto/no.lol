@@ -9,7 +9,7 @@ keywords: ''
 slug: /@sugarpirate/submit-an-ember-textarea-with-command-or-ctrl-enter-a933b4325b3b
 ---
 
-  
+
 
 It’s Christmas in a few days, so I only have time for a short post this week.
 
@@ -19,22 +19,47 @@ In this post, we’ll explore the few lines of code we need to extend the defaul
 
 ### JS Bin Demo
 
-[**JS Bin**  
+[**JS Bin**
 _Sample of the bin: Ctrl + Enter or ⌘ + Enter to submit {{outlet}} {{textarea class="form-control input-lg…_emberjs.jsbin.com](http://emberjs.jsbin.com/susipe/9/edit?html,js,output "http://emberjs.jsbin.com/susipe/9/edit?html,js,output")[](http://emberjs.jsbin.com/susipe/9/edit?html,js,output)
 
 ### Reopening Ember.TextArea
 
-Ember makes it really easy to [reopen](http://emberjs.com/guides/object-model/reopening-classes-and-instances/) classes so that we can add new methods and properties, or modify existing ones. It’s analogous to adding methods to some prototype instead of adding them to each and every instance of that class. Generally speaking, **reopenClass** adds methods to the class itself, while **reopen** adds methods to instances of that class.
+Ember makes it really easy to [reopen](http://emberjs.com/guides/object-model/reopening-classes-and-instances/) classes so that we can add new methods and properties, or modify existing ones. It’s analogous to adding methods to some prototype instead of adding them to each and every instance of that class. Generally speaking, `reopenClass` adds methods to the class itself, while `reopen` adds methods to instances of that class.
 
 > _‘reopen’ is used to add instance methods and properties that are shared across all instances of a class._
 
 For example, if you wanted your Ember app to use the browser’s history API instead of a hashchange event, you would have to reopen the Router, and set it’s location key/value to ‘history’:
 
-App.Router.reopen({  
-  location: 'history'  
-}); 
+```js
+App.Router.reopen({
+  location: 'history'
+});
+```
 
-In our case, we’re reopening **Ember.Textarea**, and modifying the default event **keyDown** to check if the event has the right keycode and modifier key (#\_isValidCombination). If it is, the TextArea (which extends Ember.Component — it’s just a special kind of component) sends an action we named **modifiedSubmit**. Then in our template, we just need to bind that action name to some controller action to handle it and we’re done!
+In our case, we’re reopening `Ember.Textarea`, and modifying the default event `keyDown` to check if the event has the right keycode and modifier key (`_isValidCombination`). If it is, the TextArea (which extends Ember.Component — it’s just a special kind of component) sends an action we named `modifiedSubmit`. Then in our template, we just need to bind that action name to some controller action to handle it and we’re done!
+
+```handlebars
+{{textarea modifiedSubmit="someControllerAction" value=someText}}
+```
+
+```js
+export default Ember.TextArea.reopen({
+  keyDown: function(event) {
+    if (this._isValidCombination(event)) {
+      this.sendAction('modifiedSubmit');
+    }
+  },
+  _hasCorrectModifier: function(event) {
+    return event.ctrlKey || event.metaKey;
+  },
+  _isCorrectKeyCode: function(keyCode) {
+    return keyCode === 13;
+  },
+  _isValidCombination: function(event) {
+    return this._hasCorrectModifier(event) && this._isCorrectKeyCode(event.keyCode);
+  }
+});
+```
 
 ### Reopening and Extending Other Classes to Keep Things DRY
 
@@ -44,27 +69,33 @@ As you can see, it’s really easy to reopen and add or overwrite existing metho
 
 This method extends a sub-class from some Ember Object. For example, you might have noticed that all your controllers extend Ember.Controller/ObjectController/ArrayController:
 
+```js
 export default Ember.Controller.extend({ ... });
+```
 
 That means we can also create our own controllers and other objects that can then be used as a new base class:
 
-// base.js  
-export default Ember.Controller.extend({   
-  someComputed: Ember.computed('foo', 'bar', function() {  
-    return get(this, 'foo') + ' ' + get(this, 'bar');  
-  })  
+```js
+// base.js
+export default Ember.Controller.extend({
+  someComputed: Ember.computed('foo', 'bar', function() {
+    return get(this, 'foo') + ' ' + get(this, 'bar');
+  })
 });
+```
 
 Then:
 
-// other.js  
-import BaseController from 'base';  
-  
-export default BaseController.extend({   
-  ... // some other classes that need the 'someComputed' property  
-});
+```js
+// other.js
+import BaseController from 'base';
 
-Now all classes that extend from ‘BaseController’ will automatically inherit the **someComputed** computed property, and you don’t have to define it a million times, keeping your code DRY. You can extend pretty much anything: computed properties, actions, and even lifecycle hooks.
+export default BaseController.extend({
+  ... // some other classes that need the 'someComputed' property
+});
+```
+
+Now all classes that extend from ‘BaseController’ will automatically inherit the `someComputed` computed property, and you don’t have to define it a million times, keeping your code DRY. You can extend pretty much anything: computed properties, actions, and even lifecycle hooks.
 
 This doesn’t just apply to controllers — you can do the same for models, components, views, routes… Basically anything that extends Ember.Object.
 
@@ -82,8 +113,8 @@ See you in the new year! — _Lauren_
 
 #### Follow my Ember Collections on Medium
 
-[**Delightful UI for Ember Apps**  
+[`Delightful UI for Ember Apps`
 _A curation of insights into building delightful user interfaces for your Ember application_medium.com](https://medium.com/delightful-ui-for-ember-apps "https://medium.com/delightful-ui-for-ember-apps")[](https://medium.com/delightful-ui-for-ember-apps)
 
-[**The Ember Way**  
+[`The Ember Way`
 _Doing things the Ember Way_medium.com](https://medium.com/the-ember-way "https://medium.com/the-ember-way")[](https://medium.com/the-ember-way)
