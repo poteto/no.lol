@@ -30,7 +30,7 @@ Using Terraform, you can create a Phoenix app that handles one or more endpoints
 
 The basic idea is this — if a route is defined on our Phoenix app, we’ll handle the request. If it’s not, we forward the request on, and send its response back to the user.
 
-In your Phoenix app, every incoming connection goes through a pipeline that you can readily examine at **lib/my\_app/endpoint.ex**. You can see how a connection flows through the different plugs specified in this file. The connection is then piped into the router:
+In your Phoenix app, every incoming connection goes through a pipeline that you can readily examine at `lib/my_app/endpoint.ex`. You can see how a connection flows through the different plugs specified in this file. The connection is then piped into the router:
 
 ```elixir
 # web/router.ex

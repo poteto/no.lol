@@ -76,7 +76,7 @@ As you can probably tell, this gets repetitive really quickly, and becomes hard 
 
 ![](https://cdn-images-1.medium.com/max/400/1*vhzVNLqZGOIHm-8UWW8UKQ.png)
 
-Diagram from [https://sourcemaking.com/design\_patterns/adapter](https://sourcemaking.com/design_patterns/adapter)
+Diagram from [https://sourcemaking.com/design_patterns/adapter](https://sourcemaking.com/design_patterns/adapter)
 
 We generally have a few players in the adapter pattern: the client, the adapter (or wrapper), and the adaptee.
 
@@ -440,7 +440,7 @@ At some point in the future, it would make sense for each adapter to have its ow
 
 ### Thanks for reading!
 
-I hope you’ve learned something about addon creation and the adapter pattern. As always, please direct any comments or criticism to [@sugarpirate\_](https://twitter.com/sugarpirate_).
+I hope you’ve learned something about addon creation and the adapter pattern. As always, please direct any comments or criticism to [@sugarpirate_](https://twitter.com/sugarpirate_).
 
 Until next time,
 

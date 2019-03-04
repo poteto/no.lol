@@ -25,7 +25,7 @@ Using [transclusion](http://en.wikipedia.org/wiki/Transclusion), we can then eas
 [http://gfycat.com/HarmfulQuarterlyBobwhite](http://gfycat.com/HarmfulQuarterlyBobwhite)
 
 [**JS Bin**
-_Sample of the bin: Ember Drag and Drop demo by @sugarpirate\_ {{outlet}} {{#draggable-dropzone dropped="addUser"}} {…_jsbin.com](http://jsbin.com/denep/9/edit?js,output "http://jsbin.com/denep/9/edit?js,output")[](http://jsbin.com/denep/9/edit?js,output)
+_Sample of the bin: Ember Drag and Drop demo by @sugarpirate_ {{outlet}} {{#draggable-dropzone dropped="addUser"}} {…_jsbin.com](http://jsbin.com/denep/9/edit?js,output "http://jsbin.com/denep/9/edit?js,output")[](http://jsbin.com/denep/9/edit?js,output)
 
 ### draggable-dropzone
 

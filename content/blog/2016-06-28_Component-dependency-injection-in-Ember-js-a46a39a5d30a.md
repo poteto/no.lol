@@ -15,7 +15,7 @@ Manik Rathee (via [unsplash](https://unsplash.com/photos/a8YV2C3yBMk))
 
 The [Dependency Injection](http://martinfowler.com/articles/injection.html) (DI) pattern is a subset of [Inversion of Control](http://martinfowler.com/articles/injection.html#InversionOfControl), and is a useful technique for decoupling the creation of a dependency from the object itself. Don’t let the terminology scare you though! DI is really just [giving an object its instance variables](http://www.jamesshore.com/Blog/Dependency-Injection-Demystified.html).
 
-For example, below is a simple example of the **Player** class being implicitly coupled to the **Bag** class. The **Player** is responsible for creating the dependent objects:
+For example, below is a simple example of the `Player` class being implicitly coupled to the `Bag` class. The `Player` is responsible for creating the dependent objects:
 
 ```js
 export default class Player {
@@ -31,7 +31,7 @@ export default class Player {
 let bob = new Player();
 ```
 
-Although the example is simple, it’s fairly easy to see that this implementation could be difficult to test in isolation, as you now need to know about the **Bag** class in the **Player** class’ test. DI can help us here:
+Although the example is simple, it’s fairly easy to see that this implementation could be difficult to test in isolation, as you now need to know about the `Bag` class in the `Player` class’ test. DI can help us here:
 
 ```js
 export default class Player {
@@ -58,7 +58,7 @@ test('it adds an item', function(assert) {
 });
 ```
 
-The **Player** class no longer needs to know anything about the **Bag**, and also allows other kinds of storage object classes to be used. Great!
+The `Player` class no longer needs to know anything about the `Bag`, and also allows other kinds of storage object classes to be used. Great!
 
 #### Component Dependency Injection
 
@@ -83,7 +83,7 @@ I recently realized that the DI pattern can also be used to great effect in Embe
 {{location-activity location=location}}
 ```
 
-The parent component **edit-location**’s primary responsibility is to provide UI to edit a location. It could have actions defined on it, like so:
+The parent component `edit-location`’s primary responsibility is to provide UI to edit a location. It could have actions defined on it, like so:
 
 ```js
 // components/edit-location.js
@@ -101,13 +101,13 @@ export default Component.extend({
 });
 ```
 
-The **google-map** component provides UI for the user to drop a marker on a map, and adjust the radius around the marker by using the radius control. Needless to say, that UI interaction is quite difficult to test, and is tested in the **google-map** component test itself. Because the **edit-location** component is tightly coupled to its child components, testing it is no easy task. We need to make sure all the child components are setup just right, which introduces a lot of boilerplate in our component integration test.
+The `google-map` component provides UI for the user to drop a marker on a map, and adjust the radius around the marker by using the radius control. Needless to say, that UI interaction is quite difficult to test, and is tested in the `google-map` component test itself. Because the `edit-location` component is tightly coupled to its child components, testing it is no easy task. We need to make sure all the child components are setup just right, which introduces a lot of boilerplate in our component integration test.
 
 #### Not my concern
 
-In this scenario, the **edit-location** component itself shouldn’t need to concern itself with _how_ the **latLng** and **radius** arguments are passed into its actions. The drag and drop UI is a concern of the **google-map** component, and as such should be tested in its own component integration test.
+In this scenario, the `edit-location` component itself shouldn’t need to concern itself with _how_ the `latLng` and `radius` arguments are passed into its actions. The drag and drop UI is a concern of the `google-map` component, and as such should be tested in its own component integration test.
 
-Using DI, we can decouple the **edit-location** component from its child components, and clean up our tests. This technique is currently only possible with [contextual components](http://emberjs.com/blog/2016/01/15/ember-2-3-released.html#toc_contextual-components) due to the use of the **component** and **hash** helpers, which were made available in [Ember 2.3.0](http://emberjs.com/blog/2016/01/15/ember-2-3-released.html).
+Using DI, we can decouple the `edit-location` component from its child components, and clean up our tests. This technique is currently only possible with [contextual components](http://emberjs.com/blog/2016/01/15/ember-2-3-released.html#toc_contextual-components) due to the use of the `component` and `hash` helpers, which were made available in [Ember 2.3.0](http://emberjs.com/blog/2016/01/15/ember-2-3-released.html).
 
 ```handlebars
 <!-- application.hbs -->
@@ -121,7 +121,7 @@ Using DI, we can decouple the **edit-location** component from its child compone
 }}
 ```
 
-We’ve passed in a hash of the child components using the **hash** and **component** helpers. This effectively inverts control to the template that calls the **edit-location** form:
+We’ve passed in a hash of the child components using the `hash` and `component` helpers. This effectively inverts control to the template that calls the `edit-location` form:
 
 ```handlebars
 <!-- components/edit-location.hbs -->

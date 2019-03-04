@@ -233,7 +233,7 @@ _setupElement: on('didInsertElement', function() {
 
 #### Checking if the DOM element is immediately in view
 
-After the element has been rendered into the DOM, we want to immediately check if it’s visible. This calls the **\_setViewportEntered** method in the afterRender queue of the Ember run loop.
+After the element has been rendered into the DOM, we want to immediately check if it’s visible. This calls the **_setViewportEntered** method in the afterRender queue of the Ember run loop.
 
 ```js
 _setInitialViewport(context=null) {
@@ -273,7 +273,7 @@ _viewportDidEnter() {
 
 #### Setting up event listeners
 
-Let’s look at binding our event listeners before we take a look at **\_setViewportEntered**, the main method for the mixin. We’ll be using the array of listeners we declared earlier at the top of the file, and binding the event to the appropriate context (_window_ or _document_), like so:
+Let’s look at binding our event listeners before we take a look at **_setViewportEntered**, the main method for the mixin. We’ll be using the array of listeners we declared earlier at the top of the file, and binding the event to the appropriate context (_window_ or _document_), like so:
 
 ```js
 _bindListeners(context=null, event=null) {

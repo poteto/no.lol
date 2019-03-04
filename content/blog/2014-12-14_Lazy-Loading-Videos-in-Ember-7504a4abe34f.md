@@ -25,7 +25,7 @@ In this post, we’ll build a simple component and service to handle lazy loadin
 ### JS Bin Demo
 
 [**JS Bin**
-_Sample of the bin: ember-lazy-video by @sugarpirate\_ The lazy-video component displays the video's thumbnail, and doesn…_emberjs.jsbin.com](http://emberjs.jsbin.com/qaribi/edit?html,js,output "http://emberjs.jsbin.com/qaribi/edit?html,js,output")[](http://emberjs.jsbin.com/qaribi/edit?html,js,output)
+_Sample of the bin: ember-lazy-video by @sugarpirate_ The lazy-video component displays the video's thumbnail, and doesn…_emberjs.jsbin.com](http://emberjs.jsbin.com/qaribi/edit?html,js,output "http://emberjs.jsbin.com/qaribi/edit?html,js,output")[](http://emberjs.jsbin.com/qaribi/edit?html,js,output)
 
 ### Retrieving the Right URLs
 

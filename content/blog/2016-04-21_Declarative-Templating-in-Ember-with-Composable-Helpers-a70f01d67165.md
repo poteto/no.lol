@@ -162,7 +162,7 @@ A well written view layer means that templates should be as declarative as possi
 
 If you’d like to see how the addon is being used, [Katherin Siracusa](https://twitter.com/katherinlaine) wrote an excellent [blog post](https://m.alphasights.com/composable-helpers-and-route-actions-two-ember-add-ons-you-should-know-655cf39fd9de#.y63wvqjpm) about how she uses `ember-composable-helpers` at [AlphaSights](https://www.alphasights.com):
 
-> This pattern, of performing some significant, data-changing action and subsequently performing a more ancillary, short-term state-like action, keeps arising in our application. Using \[…\] composable-helpers, we can take care of this in a fairly straightforward way, without much duplication and without having to worry about unintended side effects.
+> This pattern, of performing some significant, data-changing action and subsequently performing a more ancillary, short-term state-like action, keeps arising in our application. Using […] composable-helpers, we can take care of this in a fairly straightforward way, without much duplication and without having to worry about unintended side effects.
 
 You can also join in the discussion on our Slack channel [#e-composable-helpers](https://ember-community-slackin.herokuapp.com/).
 
