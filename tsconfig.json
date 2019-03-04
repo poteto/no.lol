@@ -9,7 +9,8 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "noUnusedLocals": true,
-    "noEmit": true
+    "noEmit": true,
+    "typeRoots": ["node_modules/@types", "typings"]
   },
   "include": ["src/**/*"]
 }

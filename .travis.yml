@@ -17,4 +17,4 @@ notifications:
   email: false
 
 script:
-  - yarn typecheck && yarn lint
+  - yarn test

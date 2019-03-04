@@ -82,5 +82,19 @@ module.exports = {
       resolve: `gatsby-plugin-favicon`,
       options: { logo: './static/favicon.png' },
     },
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        typekit: { id: `ldl2nlv` },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
   ],
 };

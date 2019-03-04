@@ -14,6 +14,7 @@
     "gatsby-plugin-manifest": "^2.0.20",
     "gatsby-plugin-offline": "^2.0.24",
     "gatsby-plugin-react-helmet": "^3.0.7",
+    "gatsby-plugin-react-svg": "^2.0.0",
     "gatsby-plugin-sharp": "^2.0.23",
     "gatsby-plugin-typescript": "^2.0.9",
     "gatsby-plugin-typography": "^2.2.7",
@@ -31,7 +32,8 @@
     "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.18",
-    "typography": "^0.16.18"
+    "typography": "^0.16.18",
+    "typography-theme-wordpress-2016": "^0.16.18"
   },
   "devDependencies": {
     "@types/react": "^16.8.6",
@@ -67,6 +69,7 @@
     "serve": "gatsby serve",
     "typecheck": "tsc",
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
-    "lint:fix": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx --fix"
+    "lint:fix": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx --fix",
+    "test": "npm run lint"
   }
 }
