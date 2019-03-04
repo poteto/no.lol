@@ -88,5 +88,13 @@ module.exports = {
         typekit: { id: `ldl2nlv` },
       },
     },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
   ],
 };

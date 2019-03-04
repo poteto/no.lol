@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import { rhythm, scale } from '../utils/typography';
+import Logo from '../../content/assets/donut.svg';
 
 class Layout extends React.Component {
   render() {
@@ -14,9 +15,8 @@ class Layout extends React.Component {
         <h2
           style={{
             ...scale(0.3),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
             fontStyle: 'italic',
+            display: 'inline',
           }}
         >
           <Link
@@ -36,8 +36,8 @@ class Layout extends React.Component {
         <h2
           style={{
             ...scale(0.3),
-            marginTop: 0,
             fontStyle: 'italic',
+            display: 'inline',
           }}
         >
           <Link
@@ -62,7 +62,22 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <header>{header}</header>
+        <header
+          style={{
+            marginTop: 0,
+            marginBottom: rhythm(1.5),
+          }}
+        >
+          <Logo
+            style={{
+              height: 50,
+              width: 50,
+              verticalAlign: 'middle',
+              marginRight: rhythm(1 / 4),
+            }}
+          />
+          {header}
+        </header>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()} Lauren Tan
