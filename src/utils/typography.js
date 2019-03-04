@@ -17,13 +17,13 @@ const BODY_FONT_FAMILY = [
 Wordpress2016.overrideThemeStyles = () => ({
   'h1, h2': {
     fontFamily: HEADER_FONT_FAMILY.join(','),
+    lineHeight: `1.3em`,
   },
   'h3, h4, h5, h6': {
     fontFamily: BODY_FONT_FAMILY.join(','),
   },
   a: {
     color: 'var(--textLink)',
-    boxShadow: 'none',
   },
   hr: {
     background: 'var(--hr)',
