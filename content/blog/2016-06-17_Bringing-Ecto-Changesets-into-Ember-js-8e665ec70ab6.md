@@ -27,40 +27,141 @@ The idea for bringing changesets into Ember occurred to me while I was working o
 
 In my mind, I could see a solution using changesets. Each form would have a separate changeset, so changes (and validations) would be independent. It turns out that this approach works really well, and I’m happy to announce that you can [install it today as an addon](https://github.com/poteto/ember-changeset) with:
 
-ember install ember-changeset  
+```
+ember install ember-changeset
 ember install ember-changeset-validations
+```
 
-[**poteto/ember-changeset**  
+[**poteto/ember-changeset**
 _ember-changeset - Ember.js flavored changesets, inspired by Ecto_github.com](https://github.com/poteto/ember-changeset "https://github.com/poteto/ember-changeset")[](https://github.com/poteto/ember-changeset)
 
 I wrote the addon with compatibility in mind, so it’s easy to wire up with your favorite validation library. The simplest way to incorporate validations is to use [ember-changeset-validations](https://github.com/poteto/ember-changeset-validations/), a companion addon. It has a simple mental model, and there are no observers or CPs involved — just pure, plain JavaScript functions.
 
-[**poteto/ember-changeset-validations**  
+[**poteto/ember-changeset-validations**
 _ember-changeset-validations - Validations for ember-changeset_github.com](https://github.com/poteto/ember-changeset-validations "https://github.com/poteto/ember-changeset-validations")[](https://github.com/poteto/ember-changeset-validations)
 
 Let’s take a look at how [ember-changeset](https://github.com/poteto/ember-changeset) is implemented, and we’ll also demonstrate how they align with Ember’s Data Down Actions Up (DDAU) philosophy.
 
 #### Virtual Properties with unknownProperty and setUnknownProperty
 
-The core concept behind ember-changeset is the definition of **unknownProperty** and **setUnknownProperty**. These methods are invoked (if present) in **Ember.get** or **Ember.set** whenever an Ember Object does not define a property. Ruby developers would be familiar with this behavior via the **method\_missing** method. A colleague I used to work with wrote an excellent [blog post](https://emberway.io/metaprogramming-in-emberjs-627921395299#.8m07o1i8u) on this topic, please check it out if you’re interested in finding out more!
+The core concept behind ember-changeset is the definition of `unknownProperty` and `setUnknownProperty`. These methods are invoked (if present) in `Ember.get` or `Ember.set` whenever an Ember Object does not define a property. Ruby developers would be familiar with this behavior via the `method_missing` method. A colleague I used to work with wrote an excellent [blog post](https://emberway.io/metaprogramming-in-emberjs-627921395299#.8m07o1i8u) on this topic, please check it out if you’re interested in finding out more!
 
 For example:
 
-When a **Person** is created, trying to **get** or **set** a property other than **firstName** and **lastName** will invoke the **unknownProperty** and **setUnknownProperty** methods respectively:
+```js
+let Person = EmberObject.extend({
+  firstName: null,
+  lastName: null,
 
-These two methods allow us to _proxy_ our changeset to the actual model, meaning we can hold back changes but still forward **get**s to the model.
+  unknownProperty(key) {
+    console.log(`Could not get ${key}!`);
+  },
+
+  setUnknownProperty(key, value) {
+    console.log(`Could not set `${key} with ${value}!`);
+  }
+});
+```
+
+When a `Person` is created, trying to `get` or `set` a property other than `firstName` and `lastName` will invoke the `unknownProperty` and `setUnknownProperty` methods respectively:
+
+```js
+let jim = Person.create({ firstName: 'Jim', lastName: 'Bob' });
+jim.get('firstName'); // "Jim"
+jim.get('fullName'); // "Could not get fullName!"
+jim.set('age', 25); // "Could not set age with 25!"
+```
+
+These two methods allow us to _proxy_ our changeset to the actual model, meaning we can hold back changes but still forward `get`s to the model.
 
 #### Storing Changes
 
-Our changeset needs a reference to the underlying model, as well as an internal list of changes to be applied. We can set this up in the **init** method of our object, which is invoked whenever a new instance is created.
+Our changeset needs a reference to the underlying model, as well as an internal list of changes to be applied. We can set this up in the `init` method of our object, which is invoked whenever a new instance is created.
 
-We want to be able to forward **get**s to **\_content**, but hold back **set**s on **\_changes**, and this is easy enough to set up via virtual properties:
+```js
+export function changeset(obj, validateFn/*, validationMap */) {
+  return EmberObject.extend({
+    init() {
+      this._super(...arguments);
+      this._content = obj;
+      this._changes = {};
+      this._errors = {};
+      this._validator = validateFn;
+    }
+  });
+}
 
-Since a changeset should only allow valid changes to be set, we validate the change using the **validateFn** function that was passed in to the changeset factory. If a change is valid, we add it to the hash of changes in **\_changes**, and if it’s invalid and returns an error message, we add it to the hash of **\_errors**.
+export default class Changeset {
+  constructor() {
+    return changeset(...arguments).create();
+  }
+}
+```
+
+We want to be able to forward `get`s to `_content`, but hold back `set`s on `_changes`, and this is easy enough to set up via virtual properties:
+
+```js
+{
+  unknownProperty(key) {
+    let content = get(this, '_content');
+    return get(content, key);
+  },
+
+  setUnknownProperty(key, value) {
+    return this._validateAndSet(key, value);
+  },
+
+  _validateAndSet(key, value) {
+    // if valid, set it on `_changes`
+    // otherwise set it on `_errors`
+  }
+}
+```
+
+Since a changeset should only allow valid changes to be set, we validate the change using the `validateFn` function that was passed in to the changeset factory. If a change is valid, we add it to the hash of changes in `_changes`, and if it’s invalid and returns an error message, we add it to the hash of `_errors`.
 
 Of course, there are more implementation details than that, but the concept remains unchanged. After defining a simple public API for using changesets, there wasn’t too much more code to add! For example, this is how you would use a changeset:
 
+```js
+let changeset = new Changeset(user, validatorFn);
+user.get('firstName'); // "Michael"
+user.get('lastName'); // "Bolton"
+
+changeset.set('firstName', 'Jim');
+changeset.set('lastName', 'B');
+changeset.get('isInvalid'); // true
+changeset.get('errors'); // [{ key: 'lastName', validation: 'too short', value: 'B' }]
+changeset.set('lastName', 'Bob');
+changeset.get('isValid'); // true
+
+user.get('firstName'); // "Michael"
+user.get('lastName'); // "Bolton"
+
+changeset.save(); // sets and saves valid changes on the user
+user.get('firstName'); // "Jim"
+user.get('lastName'); // "Bob"
+```
+
 Rolling back changes, and even merging them, becomes trivial with a changeset:
+
+```js
+changeset.set('firstName', 'Milton');
+changeset.get('isDirty'); // true
+changeset.rollback();
+changeset.get('isDirty'); // false
+```
+
+```js
+let changesetA = new Changeset(user, validatorFn);
+let changesetB = new Changeset(user, validatorFn);
+changesetA.set('firstName', 'Jim');
+changesetB.set('firstName', 'Jimmy');
+changesetB.set('lastName', 'Fallon');
+let changesetC = changesetA.merge(changesetB);
+changesetC.execute();
+user.get('firstName'); // "Jimmy"
+user.get('lastName'); // "Fallon"
+```
 
 #### Data Down Actions Up, Not 2-Way Bindings
 
@@ -74,23 +175,101 @@ Using changesets in Ember takes the DDAU philosophy used in rendering into the r
 
 #### Is This Real Life?
 
-When I dropped in **ember-changeset** and **ember-changeset-validations** into my client app, it instantly clicked with the way I’ve been writing Ember, using DDAU. My complex forms now have independent validations and changes, and I no longer need to worry about saving an unintended change in one form when I submit another.
+When I dropped in `ember-changeset` and `ember-changeset-validations` into my client app, it instantly clicked with the way I’ve been writing Ember, using DDAU. My complex forms now have independent validations and changes, and I no longer need to worry about saving an unintended change in one form when I submit another.
 
-Because **ember-changeset** can be used directly in place of an ember-data model, using it with a form library like **ember-form-for** is trivial using the **changeset** helper:
+Because `ember-changeset` can be used directly in place of an ember-data model, using it with a form library like `ember-form-for` is trivial using the `changeset` helper:
+
+```handlebars
+{{dummy-form changeset=(changeset model (action "validate"))}}
+```
+
+```handlebars
+{{#form-for changeset as |f|}}
+  {{f.text-field "firstName"}}
+  {{f.text-field "lastName"}}
+  {{f.date-field "birthDate"}}
+
+  {{f.submit "Save"}}
+{{/form-for}}
+```
 
 #### Validating Changesets
 
 Validation becomes even simpler with changesets. Throughout Ember’s history, we have largely relied on addons like [ember-validations](https://github.com/DockYard/ember-validations) which make extensive use of observers. Newer libraries like [ember-cp-validations](https://github.com/offirgolan/ember-cp-validations) use computed properties (CPs) instead, but that still relies on 2WBs.
 
-Using **ember-changeset** and **ember-changeset-validations** you can take a functional approach with validations. A validator function is passed into the changeset, that is invoked whenever a property is set. This validator function then looks up the appropriate validator (say **presence** or **format**) on the validation map, and returns **true** or an error message.
+Using `ember-changeset` and `ember-changeset-validations` you can take a functional approach with validations. A validator function is passed into the changeset, that is invoked whenever a property is set. This validator function then looks up the appropriate validator (say `presence` or `format`) on the validation map, and returns `true` or an error message.
 
-A validator like **validatePresence** is simply a function that returns a function:
+```js
+import {
+  validatePresence,
+  validateLength,
+  validateConfirmation,
+  validateFormat
+} from 'ember-changeset-validations/validators';
+import validateCustom from '../validators/custom'; // local validator
+import validatePasswordStrength from '../validators/password-strength'; // local validator
+
+export default {
+  firstName: [
+    validatePresence(true),
+    validateLength({ min: 4 })
+  ],
+  lastName: validatePresence(true),
+  age: validateCustom({ foo: 'bar' }),
+  email: validateFormat({ type: 'email' }),
+  password: [
+    validateLength({ min: 8 }),
+    validatePasswordStrength({ minScore: 80 })
+  ],
+  passwordConfirmation: validateConfirmation({ on: 'password' })
+};
+```
+
+A validator like `validatePresence` is simply a function that returns a function:
+
+```js
+// validators/custom.js
+export default function validateCustom({ foo, bar } = {}) {
+  return (key, newValue, oldValue, changes) => {
+    // validation logic
+    // return `true` if valid || error message string if invalid
+  }
+}
+```
 
 Which is simpler to reason about compared to an OOP implementation that relies on extending base classes and holding on to state. Because validation maps are simply POJOs, composing validators is intuitive:
 
-You can easily import other validations and combine them using **Ember.assign** or **Ember.merge**.
+```js
+// validations/user.js
+import {
+  validatePresence,
+  validateLength
+} from 'ember-changeset-validations/validators';
 
-This approach lets you build up validations independent of the model. Ember Data models aren’t 1 to 1 representations of server-side records, they’re View Models. This means we shouldn’t need to validate them the same way we would a server-side model. For example, you might have **User** models in your application, and some of these users might have different roles that require different validation. Best of all, we don’t need to use observers or CPs!
+export default {
+  firstName: validatePresence(true),
+  lastName: validatePresence(true)
+};
+```
+
+You can easily import other validations and combine them using `Ember.assign` or `Ember.merge`.
+
+```js
+// validations/adult.js
+import Ember from 'ember';
+import UserValidations from './user';
+import { validateNumber } from 'ember-changeset-validations/validators';
+
+const { assign } = Ember;
+
+export const AdultValidations = {
+  age: validateNumber({ gt: 18 })
+};
+
+export default assign({}, UserValidations, AdultValidations);
+```
+
+This approach lets you build up validations independent of the model. Ember Data models aren’t 1 to 1 representations of server-side records, they’re View Models. This means we shouldn’t need to validate them the same way we would a server-side model. For example, you might have `User` models in your application, and some of these users might have different roles that require different validation. Best of all, we don’t need to use observers or CPs!
 
 #### The Only Constant is Change
 

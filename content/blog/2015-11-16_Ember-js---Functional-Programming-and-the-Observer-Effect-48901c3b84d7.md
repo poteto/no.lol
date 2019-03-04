@@ -40,13 +40,13 @@ FP is not a new programming paradigm — it’s been around for a while sinc
 
 > The combination of Ember’s conventions (over configuration), Glimmer, and DDAU means that just like Elixir, Ember developers too can find the sweet spot of having both productivity and performance.
 
-Why is [FP useful](https://www.youtube.com/watch?v=aeh5Fmh_tmw) for building front end applications? [React](https://facebook.github.io/react/) taught us that it is surprisingly cheap to diff the changes on the DOM, and to perform a series of updates to sync the DOM with its virtual representation. In other words, React made its **render** function a pure one (one of the core principles of FP) — you always get the same output (HTML) for a given input (state).
+Why is [FP useful](https://www.youtube.com/watch?v=aeh5Fmh_tmw) for building front end applications? [React](https://facebook.github.io/react/) taught us that it is surprisingly cheap to diff the changes on the DOM, and to perform a series of updates to sync the DOM with its virtual representation. In other words, React made its `render` function a pure one (one of the core principles of FP) — you always get the same output (HTML) for a given input (state).
 
 With the [Flux pattern](https://facebook.github.io/flux/docs/overview.html#content), that is taken a step further and the entire application is treated as a pure function — for a given serialized state, we can predictably render the same output each time. This has allowed Flux implementations like [Redux](http://redux.js.org/) the ability to have a [“time traveling debugger”](https://www.youtube.com/watch?v=xsSnOQynTHs), which is only possible when you model your architecture with a FP paradigm.
 
 #### Object.observe is not the answer
 
-These philosophies have had resounding success, so much so that **Object.observe** was [withdrawn](https://mail.mozilla.org/pipermail/es-discuss/2015-November/044684.html) from TC39. All this means is that _observing property changes_ are no longer the best way of building web applications, and Ember in general is moving in that direction with it’s “Data Down, Actions Up” (DDAU) philosophy.
+These philosophies have had resounding success, so much so that `Object.observe` was [withdrawn](https://mail.mozilla.org/pipermail/es-discuss/2015-November/044684.html) from TC39. All this means is that _observing property changes_ are no longer the best way of building web applications, and Ember in general is moving in that direction with it’s “Data Down, Actions Up” (DDAU) philosophy.
 
 In 1.13.x, [Glimmer](https://www.youtube.com/watch?v=o12-90Dm-Qs) landed — it is Ember’s new rendering engine based on the same pure render semantics, and gives us fast, idempotent re-renders. The combination of Ember’s conventions (over configuration), Glimmer, and DDAU means that just like Elixir, Ember developers too can find the sweet spot of having both productivity and performance.
 
@@ -68,7 +68,61 @@ Instead, let’s continue the discussion above on how best to refactor away obse
 
 Let’s say we have an observer in our application that needs to check a user’s birthday ([demo](http://emberjs.jsbin.com/citiwi/edit?js,output)):
 
-In the above example, we’re using an observer to set the **isBirthday** flag if it is the user’s birthday.
+```js
+// birth-day/component.js
+import Ember from 'ember';
+import moment from 'moment';
+
+const {
+  Component,
+  computed,
+  get,
+  set
+} = Ember;
+
+export default Component.extend({
+  isBirthday: false,
+  birthDate: null,
+
+  age: computed('birthDate', {
+    get() {
+      return moment().diff(moment(get(this, 'birthDate')), 'years');
+    }
+  }),
+
+  checkBirthday() {
+    let today = moment();
+    let birthDate = moment(get(this, 'birthDate'));
+    let isBirthday = (today.month() === birthDate.month()) &&
+      (today.day() === birthDate.day());
+
+    set(this, 'isBirthday', isBirthday);
+  },
+
+  init() {
+    this._super(...arguments);
+    this.addObserver('birthDate', this, this.checkBirthday);
+  },
+
+  willDestroy() {
+    this.removeObserver('birthDate', this, this.checkBirthday);
+  }
+});
+```
+
+In the above example, we’re using an observer to set the `isBirthday` flag if it is the user’s birthday.
+
+```handlebars
+{{!birth-day/template.hbs}}
+{{input value=birthDate placeholder="Your birthday"}}
+
+<p>
+  You are currently {{age}} years old.
+  {{#if isBirthday}}
+    Happy birthday!
+  {{/if}}
+</p>
+```
 
 When you find yourself setting some value (be in on the component, record or somewhere else), you can easily refactor away the observer.
 
@@ -76,21 +130,172 @@ When you find yourself setting some value (be in on the component, record or som
 
 In this scenario, you can simply replace the observer with a CP.
 
+```js
+// birth-day/component.js
+import Ember from 'ember';
+import moment from 'moment';
+
+const {
+  Component,
+  computed,
+  get
+} = Ember;
+
+export default Component.extend({
+  // ...
+  isBirthday: computed('birthDate', {
+    get() {
+      let today = moment();
+      let birthDate = moment(get(this, 'birthDate'));
+
+      return (today.month() === birthDate.month()) &&
+        (today.day() === birthDate.day());
+    }
+  })
+});
+```
+
 #### Using component lifecycle hooks
 
-We could also move the **input** logic out of this component, and use the [new component lifecycle hooks](https://github.com/emberjs/ember.js/pull/11127) to set the **isBirthday** flag on the component.
+We could also move the `input` logic out of this component, and use the [new component lifecycle hooks](https://github.com/emberjs/ember.js/pull/11127) to set the `isBirthday` flag on the component.
 
-Both approaches let you remove the observer, but the **didReceiveAttrs** example is slightly more explicit, and transforms the component into a pure one. By limiting the scope of the component, we can easily isolate the origins of data mutations.
+```js
+// birth-day/component.js
+import Ember from 'ember';
+import moment from 'moment';
+
+const {
+  Component,
+  computed,
+  get
+} = Ember;
+
+export default Component.extend({
+  birthDate: null,
+  today: null,
+  isBirthday: false,
+
+  didReceiveAttrs() {
+    let isBirthday = this.checkBirthday(
+      moment(get(this, 'today')),
+      moment(get(this, 'birthDate'))
+    );
+
+    set(this, 'isBirthday', isBirthday);
+  },
+
+  checkBirthday(today, birthDate)
+    return (today.month() === birthDate.month()) &&
+      (today.day() === birthDate.day());
+  })
+});
+```
+
+```handlebars
+{{!index/template.hbs}}
+{{one-way-input
+    value=user.birthDate
+    update=(action (mut user.birthDate))
+    placeholder="Your birthday"
+}}
+{{happy-birthday today=today birthDate=user.birthDate}}
+```
+
+```handlebars
+{{!birth-day/template.hbs}}
+<p>
+  You are currently {{age}} years old.
+  {{#if isBirthday}}
+    Happy birthday!
+  {{/if}}
+</p>
+```
+
+Both approaches let you remove the observer, but the `didReceiveAttrs` example is slightly more explicit, and transforms the component into a pure one. By limiting the scope of the component, we can easily isolate the origins of data mutations.
 
 #### Removing an observer that sets a value outside the component
 
-In this situation, let’s say we want to update the user record’s **isBirthday** flag instead. We can remove the observer by using one way input actions:
+In this situation, let’s say we want to update the user record’s `isBirthday` flag instead. We can remove the observer by using one way input actions:
 
 By bringing in the [ember-one-way-input](https://github.com/dockyard/ember-one-way-input) addon, we can eliminate the coupling of the component to the user record:
 
+```js
+// birth-day/component.js
+import Ember from 'ember';
+import moment from 'moment';
+
+const {
+  Component,
+  computed,
+  get
+} = Ember;
+
+export default Component.extend({
+  // ...
+  actions: {
+    checkBirthday(birthDate) {
+      birthDate = moment(birthDate);
+      let today = moment();
+      let isBirthday = (today.month() === birthDate.month()) &&
+        (today.day() === birthDate.day());
+
+      this.attrs.setIsBirthday(isBirthday);
+      this.attrs.setBirthDate(birthDate.toDate());
+    }
+  }
+});
+```
+
+```handlebars
+{{!birth-day/template.hbs}}
+{{one-way-input
+    value=birthDate
+    update=(action "checkBirthday")
+    placeholder="Your birthday"
+}}
+
+<p>
+  You are currently {{age}} years old.
+  {{#if isBirthday}}
+    Happy birthday!
+  {{/if}}
+</p>
+```
+
 And then in the Controller:
 
-In the above example, we moved the logic for setting the **isBirthday** flag out of the **happy-birthday** component into its Controller. The component no longer needs to directly mutate state (an anti-pattern would be to set **user.isBirthday** directly in the component), and can instead send a closure action up, leaving the Controller to decide how to handle the actions. Data now flows down to the Component, and any changes to the **input** sends actions back up.
+```js
+// index/controller.js
+import Ember from 'ember';
+
+const { Controller, set } = Ember;
+
+export default Controller.extend({
+  actions: {
+    setIsBirthday(isBirthday) {
+      set(this, 'user.isBirthday', isBirthday);
+      user.save();
+    },
+
+    setBirthDate(birthDate) {
+      set(this, 'user.birthDate', birthDate);
+      user.save();
+    }
+  }
+});
+```
+
+```handlebars
+{{!index/template.hbs}}
+{{happy-birthday
+    setIsBirthday=(action "setIsBirthday")
+    setBirthdate=(action "setBirthdate")
+    isBirthday=user.isBirthday
+    birthDate=user.birthDate
+}}
+```
+
+In the above example, we moved the logic for setting the `isBirthday` flag out of the `happy-birthday` component into its Controller. The component no longer needs to directly mutate state (an anti-pattern would be to set `user.isBirthday` directly in the component), and can instead send a closure action up, leaving the Controller to decide how to handle the actions. Data now flows down to the Component, and any changes to the `input` sends actions back up.
 
 #### Who should use observers?
 

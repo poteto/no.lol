@@ -43,17 +43,109 @@ In the following example, I’ll demonstrate how you can use services and one-wa
 
 Our little application consists of a couple of checkboxes for selecting animals. This selection needs to persist across different routes, and restore state when returning back to the route. All we need is to define a simple service that holds state for the selected items, and then inject it into the routable component.
 
-In the route’s template, we can just render the injected service’s state using the **each** helper.
+In the route’s template, we can just render the injected service’s state using the `each` helper.
+
+```handlebars
+{{! animals/index.hbs }}
+<div class="row">
+  <div class="col-md-3">
+    <h2>Select Animals</h2>
+
+    {{checkbox-group
+        group=animals
+        selectedItems=checkboxGroup.selectedItems
+        check=(action "check")
+    }}
+  </div>
+
+  <div class="col-md-9">
+    <h3>Selected Animals</h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Species</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {{#each checkboxGroup.selectedItems as |animal|}}
+          <tr>
+            <td>{{animal.id}}</td>
+            <td>{{animal.species}}</td>
+            <td>{{animal.name}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
+```
 
 In our controller or routable component, we inject the service and define the action for handling the checked animal. The service’s bag of state is then passed into the component, keeping it as pure as possible. Although you could have just injected the service into the component, doing it this way makes things more explicit and allows the component to be decoupled from the service.
 
+```js
+// animals/controller.js
+import Ember from 'ember';
+
+const { inject: { service }, Controller } = Ember;
+const OPERATION_MAP = {
+  true: 'addObject',
+  false: 'removeObject'
+};
+
+export default Controller.extend({
+  checkboxGroup: service(),
+
+  // In the future, actions will be defined in the route and passed into the
+  // routable component as `attributes`.
+  actions: {
+    check(group, item, isChecked) {
+      return group[OPERATION_MAP[isChecked]](item);
+    }
+  }
+});
+```
+
 As mentioned, the service itself is simple. We can define more complex behavior later, but the underlying persistence for its state is just a JavaScript array.
 
-Because our behavior is simple, we don’t need to define a sub-classed component in this example. The **check** action is passed in from the routable component / controller, so using closure actions in the component’s template means that we don’t have to cast **sendActions** into the void.
+```js
+// checkbox-group/service.js
+import Ember from 'ember';
+
+const { Service } = Ember;
+
+export default Service.extend({
+  init() {
+    this._super(...arguments);
+    this.selectedItems = [];
+  }
+});
+```
+
+Because our behavior is simple, we don’t need to define a sub-classed component in this example. The `check` action is passed in from the routable component / controller, so using closure actions in the component’s template means that we don’t have to cast `sendActions` into the void.
 
 In our component’s template, we make use of small, composable helpers. These helpers are just simple JavaScript functions under the hood, and because they have return values, we can use them as Handlebars sub-expressions where we might have once defined a computed property.
 
-The **contains** helper doesn’t ship with Ember, but the function itself is [one line of code](https://github.com/poteto/component-best-practices/blob/master/app%2Fhelpers%2Fcontains.js?ts=2). There are a bunch of useful addons that add helpers such as these to your application — for example, [ember-truth-helpers](https://www.npmjs.com/package/ember-truth-helpers) is an addon I find myself using in almost all my apps.
+The `contains` helper doesn’t ship with Ember, but the function itself is [one line of code](https://github.com/poteto/component-best-practices/blob/master/app%2Fhelpers%2Fcontains.js?ts=2). There are a bunch of useful addons that add helpers such as these to your application — for example, [ember-truth-helpers](https://www.npmjs.com/package/ember-truth-helpers) is an addon I find myself using in almost all my apps.
+
+```handlebars
+{{! checkbox-group/template.hbs }}
+{{#each group as |item|}}
+  <div class="checkbox">
+    <label for={{concat "item-" item.id}}>
+      {{one-way-input
+          id=(concat "item-" item.id)
+          class="checkbox"
+          type="checkbox"
+          checked=(contains selectedItems item)
+          update=(action this.attrs.check selectedItems item)
+      }} {{item.name}} <span class="label label-default">{{item.species}}</span>
+    </label>
+  </div>
+{{/each}}
+```
 
 As mentioned in my [previous post](https://medium.com/the-ember-way/ember-js-functional-programming-and-the-observer-effect-48901c3b84d7#.1205bzvwx), the [ember-one-way-input](https://github.com/dockyard/ember-one-way-input) addon is an easy way to start using one-way bindings today.
 

@@ -9,7 +9,7 @@ keywords: ''
 slug: /@sugarpirate/the-importance-of-being-experience-first-24bc261987fd
 ---
 
-  
+
 
 We’re in the middle of a digital renaissance that has software eating the world. Like the industrial revolution, the digital revolution might see us eventually becoming obsolete, but that’s okay because that’s what progress looks like. To stay relevant, we need to place the Experience First.
 
