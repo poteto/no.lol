@@ -3,7 +3,9 @@ import Typography from 'typography';
 const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.666,
-  headerFontFamily: [
+  headerFontFamily: ['granville', 'serif'],
+  bodyFontFamily: [
+    'neue-haas-unica',
     '-apple-system',
     'BlinkMacSystemFont',
     'Segoe UI',
@@ -12,7 +14,6 @@ const typography = new Typography({
     'Arial',
     'sans-serif',
   ],
-  bodyFontFamily: ['Georgia', 'serif'],
 });
 
 // Hot reload typography in development.
