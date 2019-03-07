@@ -4,8 +4,13 @@ description: >-
   Commitment can be terrifying. Broken promises are the surest way down the
   waterslide of low morale.
 date: '2018-02-28T18:01:00.960Z'
-categories: ''
-keywords: ''
+categories:
+  - leadership
+  - management
+keywords:
+  - commitment
+  - communication
+  - five dysfunctions of a team
 slug: /@sugarpirate/commit-to-commit-a18befcb5e26
 cover: ./matthias-schroder-1399823-unsplash.jpg
 coverAuthor: Matthias Schröder
@@ -26,6 +31,6 @@ Commitment is important, because it creates clarity around direction and priorit
 
 When you commit to commit, your team has a chance to understand what your customer is saying, why they’re feeling that way, and where they’re coming from. You get the chance to come back with a solid answer that the whole team has bought into.
 
-In my next post, I plan to write about what I’ve learned [Patrick Lencioni](https://twitter.com/patricklencioni)’s book, “The Five Dysfunctions of Team”. I’ll also share how my team applies it.
+In my next post, I plan to write about what I’ve learned [Patrick Lencioni](https://twitter.com/patricklencioni)’s book, “The Five Dysfunctions of a Team”. I’ll also share how my team applies it.
 
 Thanks for reading! 😊

@@ -4,8 +4,13 @@ description: >-
   It’s far too easy to be misunderstood. Trying to get your idea or point across
   to someone can often feel frustrating and difficult.
 date: '2018-02-26T07:06:39.249Z'
-categories: ''
-keywords: ''
+categories:
+  - leadership
+  - management
+keywords:
+  - communication
+  - non-violent communication
+  - highly aligned loosely coupled
 slug: /@sugarpirate/an-engineers-guide-to-communication-99180699a0e6
 cover: ./tom-sodoge-1169782-unsplash.jpg
 coverAuthor: Tom Sodoge

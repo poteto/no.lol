@@ -4,8 +4,11 @@ description: >-
   If you haven’t used Slack already, it’s an awesome chat app for teams that’s
   similar to IRC. I’ve been using it for a while now, and I’ve…
 date: '2014-11-15T00:21:24.720Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - emberjs
+  - loading messages
 slug: /@sugarpirate/slack-style-loading-messages-in-an-ember-app-6319559a19d0
 cover: ./alex-robert-222997-unsplash.jpg
 coverAuthor: Alex Robert
@@ -139,7 +142,6 @@ i.ellipsis i+i+i {
   }
 }
 
-
 @-o-keyframes dot {
   0%, 50% {
     opacity: 0;
@@ -175,7 +177,6 @@ The above lets us animate the opacity of each individual dot in the ellipsis. Us
 {{#if showLoadingMessages}}
   <small>{{randomLoadingMessage}}</small>
 {{/if}}
-view raw
 ```
 
 The template for the component.
@@ -191,17 +192,8 @@ The loading template that’s rendered in the loading route.
 ### The Final Product
 
 ![](https://cdn-images-1.medium.com/max/800/1*FwmSrN52_-sAv7JV7yybgw.gif)
-
-The finished product
+<small>The finished product</small>
 
 ### In Closing
 
 Ember makes front end development such a joy. I hope you’ve enjoyed how easy it is to add Slack-like loading messages into your app!
-
-For more Ember.js posts, follow my two collections on Medium:
-
-[`Delightful UI for Ember Apps`
-_A curation of insights into building delightful user interfaces for your Ember application_medium.com](https://medium.com/delightful-ui-for-ember-apps "https://medium.com/delightful-ui-for-ember-apps")[](https://medium.com/delightful-ui-for-ember-apps)
-
-[`The Ember Way`
-_Doing things the Ember Way_medium.com](https://medium.com/the-ember-way "https://medium.com/the-ember-way")[](https://medium.com/the-ember-way)

@@ -4,8 +4,13 @@ description: >-
   Previously, I mentioned that Ember’s new Helper implementation landed in 1.13.
   In my opinion, helpers are one of the most useful, yet least…
 date: '2016-04-21T17:24:46.876Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - emberjs
+  - presentational components
+  - ember-composable-helpers
+  - principle of least power
 slug: >-
   /@sugarpirate/declarative-templating-in-ember-with-composable-helpers-a70f01d67165
 cover: ./tim-patch-1404785-unsplash.jpg

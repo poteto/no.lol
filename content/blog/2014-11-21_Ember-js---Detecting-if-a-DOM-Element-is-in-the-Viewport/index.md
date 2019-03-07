@@ -4,8 +4,11 @@ description: >-
   Detecting whether or not an element is visible is very useful when it comes to
   triggering animations or events. Before you drop in another…
 date: '2014-11-21T14:27:45.612Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - emberjs
+  - in viewport
 slug: >-
   /@sugarpirate/ember-js-detecting-if-a-dom-element-is-in-the-viewport-eafcc77a6f86
 cover: ./pawel-czerwinski-1404596-unsplash.jpg
@@ -17,10 +20,7 @@ Detecting whether or not an element is visible in the viewport is very useful wh
 
 Let’s get started!
 
-### The JS Bin Demo
-
-[`JS Bin`
-_Sample of the bin: Scroll to the bottom! {{outlet}} {{#each item in model}} {{this-is-dog item=item}} {{/each}} {{item…_emberjs.jsbin.com](http://emberjs.jsbin.com/jitehe/6/edit?html,js,output "http://emberjs.jsbin.com/jitehe/6/edit?html,js,output")[](http://emberjs.jsbin.com/jitehe/6/edit?html,js,output)
+[JS Bin Demo](http://emberjs.jsbin.com/jitehe/6/edit?html,js,output)
 
 ### InViewportMixin
 

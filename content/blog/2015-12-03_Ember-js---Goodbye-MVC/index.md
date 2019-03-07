@@ -1,11 +1,17 @@
 ---
-title: Ember.js — Goodbye MVC (Part 1)
+title: Ember.js — Goodbye MVC
 description: >-
   At EmberConf 2015, Yehuda Katz and Tom Dale announced the arrival of certain
   changes to Ember 2. Most notably, the routable components RFC…
 date: '2015-12-03T16:49:32.589Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - emberjs
+  - mvc
+  - routable components
+  - data down actions up
+  - one way data flow
 slug: /@sugarpirate/ember-js-goodbye-mvc-part-1-21777ecfd708
 cover: ./sepp-rutz-1402081-unsplash.jpg
 coverAuthor: Sepp Rutz
@@ -22,7 +28,7 @@ DDAU avoids the traditional client-side MVC pattern in favor of a single flow of
 
 ![](https://cdn-images-1.medium.com/max/1000/1*MjgBefc-yauK1zWrtCX1Bg.png)
 
-This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+<small>This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).</small>
 
 In the DDAU pattern, data flows one-way and there are no two-way bindings. Different parts of your application can remain highly decoupled and predictable, which means you will always know the source of an object’s change. If you’ve read my post on [functional programming and the observer effect](https://medium.com/the-ember-way/ember-js-functional-programming-and-the-observer-effect-48901c3b84d7#.1205bzvwx), you’ll understand why it’s important to keep your components free from side effects.
 

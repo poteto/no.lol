@@ -4,8 +4,11 @@ description: >-
   In the world of software releases, programmers call a significant change in
   existing behavior a breaking change. Typically, this means that…
 date: '2016-01-13T01:16:06.410Z'
-categories: ''
-keywords: ''
+categories:
+  - leadership
+keywords:
+  - loneliness
+  - relocation
 slug: /@sugarpirate/warning-breaking-changes-afeb2544d0f5
 cover: ./josh-applegate-1402894-unsplash.jpg
 coverAuthor: Josh Applegate
@@ -18,7 +21,7 @@ As someone who fell in love with programming and made it a career despite not ha
 
 2015 was a year of remarkable change for me —I took up a new job at [DockYard](https://dockyard.com/), moved for the second time in my life to a new country, conquered my greatest fear (public speaking) at [EmberConf](http://2015.emberconf.com/speakers.html), and adopted an adorable sweetheart. Writing on this blog has been very rewarding — my posts have been read almost 70,000 times since its inception in September 2014. It’s perhaps the best thing I’ve done for my programming career, and I don’t intend to stop.
 
-My baby Zelda
+![My baby Zelda](https://cdn-images-1.medium.com/max/1600/1*TrzX0rM0lDavSWU0WF-NWw.jpeg)
 
 Moving to America was particularly tough for me. I’m even further from my family and friends, I broke up with my boyfriend, and despite the things I’ve [accomplished](http://npm-stat.com/charts.html?package=&author=sugarpirate&from=&to=) in the face of my [relative inexperience](https://medium.com/@sugarpirate/my-2014-in-review-or-how-i-beat-impostor-syndrome-98e811d0ada2#.5nirgkdoa), I still feel _empty_.
 

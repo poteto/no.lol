@@ -4,8 +4,12 @@ description: >-
   Breadcrumb navigation isn’t a new concept, in fact, it’s usefulness has been
   endlessly debated about by UX designers all over. Today, I…
 date: '2015-06-01T22:48:44.818Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - emberjs
+  - breadcrumbs
+  - ember-crumbly
 slug: /@sugarpirate/declarative-breadcrumb-navigation-in-ember-js-5908a92a5de3
 cover: ./sam-moghadam-1403544-unsplash.jpg
 coverAuthor: Sam Moghadam
@@ -27,11 +31,6 @@ I will steal your croissant and eat it. Does anyone even read this caption?
 One True God
 
 You can take a look at the [demo app](http://development.ember-crumbly-demo.divshot.io) to see ember-crumbly in action. What’s cool about it is how little code it takes to add dynamic breadcrumbs to your app, and how declarative it is. The source is on GitHub, as always.
-
-[**poteto/ember-crumbly**
-_ember-crumbly - Declarative breadcrumb navigation for Ember apps_github.com](https://github.com/poteto/ember-crumbly "https://github.com/poteto/ember-crumbly")[](https://github.com/poteto/ember-crumbly)
-
-P.S. Why is my face the thumbnail? 😐
 
 ### The idea
 

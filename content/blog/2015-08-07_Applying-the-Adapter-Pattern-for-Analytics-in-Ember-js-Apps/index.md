@@ -4,8 +4,13 @@ description: >-
   At DockYard, most (if not all) Ember apps we build for our clients require
   analytics in some form or other. For many of these apps…
 date: '2015-08-07T18:12:11.856Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - adapter pattern
+  - emberjs
+  - analytics
+  - ember-metrics
 slug: >-
   /@sugarpirate/applying-the-adapter-pattern-for-analytics-in-ember-js-apps-29448cbcedf3
 cover: ./petri-r-1403845-unsplash.jpg
@@ -26,11 +31,6 @@ To install the addon:
 ```
 $ ember install ember-metrics
 ```
-
-You can also find the source below.
-
-[**poteto/ember-metrics**
-_ember-metrics - Send data to multiple analytics integrations without re-implementing new API_github.com](https://github.com/poteto/ember-metrics)[](https://github.com/poteto/ember-metrics)
 
 The [ember-metrics](https://github.com/poteto/ember-metrics) addon adds a simple metrics service and customized _LinkComponent_ to your app that makes it simple to send data to multiple analytics services without having to implement a new API each time.
 

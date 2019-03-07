@@ -4,8 +4,10 @@ description: >-
   In my previous post, I wrote about moving singleton state in Controllers into
   Services that back components. This means being able to…
 date: '2016-04-21T17:08:25.092Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  -
 slug: /@sugarpirate/route-closure-actions-in-ember-js-d0a7a37a5d1b
 cover: ./devon-janse-van-rensburg-1405686-unsplash.jpg
 coverAuthor: Devon Janse van Rensburg
@@ -18,7 +20,7 @@ In my [previous post](https://emberway.io/ember-js-goodbye-mvc-part-1-21777ecfd7
 
 [Locks](https://twitter.com/locks) has written an excellent [blog post](https://locks.svbtle.com/controllers-are-dead-long-life-controllers) on this sometimes controversial topic, and I expanded upon it a little in my [podcast episode](https://emberweekend.com/episodes/like-stealing-candy-from-a-baby) with Ember Weekend. [Erik Hanchett](https://twitter.com/erikch) also did a video demo showcasing what I mentioned:
 
-Are Ember.js Controllers Dead? by Erik Hanchett
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ovgDR2qAl-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Basically, you still require a Controller if you use query parameters, and in certain cases of bubbling actions.
 
