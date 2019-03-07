@@ -4,8 +4,12 @@ description: >-
   It’s fairly trivial to add a ‘drag and drop’ interface to Ember.js with html5,
   without the need for external libraries, although…
 date: '2014-09-25T02:38:31.953Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - emberjs
+  - drag and drop
+  - html5
 slug: /@sugarpirate/ember-js-and-html5-drag-and-drop-fa5dfe478a9a
 cover: ./rawpixel-191157-unsplash.jpg
 coverAuthor: rawpixel
@@ -25,12 +29,11 @@ Using [transclusion](http://en.wikipedia.org/wiki/Transclusion), we can then eas
 
 [http://gfycat.com/HarmfulQuarterlyBobwhite](http://gfycat.com/HarmfulQuarterlyBobwhite)
 
-[**JS Bin**
-_Sample of the bin: Ember Drag and Drop demo by @sugarpirate_ {{outlet}} {{#draggable-dropzone dropped="addUser"}} {…_jsbin.com](http://jsbin.com/denep/9/edit?js,output "http://jsbin.com/denep/9/edit?js,output")[](http://jsbin.com/denep/9/edit?js,output)
+[JSBin demo](http://jsbin.com/denep/9/edit?js,output)
 
 ### draggable-dropzone
 
-Let’s first define our ‘draggable-dropzone’ component:
+Let’s first define our `draggable-dropzone` component:
 
 ```js
 import Ember from 'ember';
@@ -65,7 +68,7 @@ export default Ember.Component.extend({
 {{yield}}
 ```
 
-Ember includes [built-in events](http://emberjs.com/api/classes/Ember.View.html#toc_event-names) for the html5 drag and drop API, so we can make use of them right out of the box. We also set up a **classNamebinding** to provide visual cues to our user that the element is a dropzone for dragging things into.
+Ember includes [built-in events](http://emberjs.com/api/classes/Ember.View.html#toc_event-names) for the html5 drag and drop API, so we can make use of them right out of the box. We also set up a `classNamebinding` to provide visual cues to our user that the element is a dropzone for dragging things into.
 
 ### draggable-item
 
@@ -91,7 +94,7 @@ export default Ember.Component.extend({
 {{yield}}
 ```
 
-**draggable** is, as you’d expect, the attribute that makes a DOM node draggable. We simply set the attribute of the component, and handle the **dragStart** event to get the content of the component. Unfortunately, the HTML5 API does not allow for draggables to transfer JavaScript, so we’ll have to perform a workaround.
+`draggable` is, as you’d expect, the attribute that makes a DOM node draggable. We simply set the attribute of the component, and handle the `dragStart` event to get the content of the component. Unfortunately, the HTML5 API does not allow for draggables to transfer JavaScript, so we’ll have to perform a workaround.
 
 ### Using the components in our application
 
@@ -119,7 +122,7 @@ Here’s a simple example of an interface for adding users to a new ‘team’ r
 </div>
 ```
 
-If you recall, we sent an action on **‘drop’** in the ‘draggable-dropzone’ component:
+If you recall, we sent an action on **‘drop’** in the `draggable-dropzone` component:
 
 ```js
 drop(event) {
@@ -166,8 +169,7 @@ export default Ember.ArrayController.extend({
 });
 ```
 
-
-In our Controller, we simply find the appropriate user record from the store (using the **userId** we get from the draggable-item component), and then push it into an array called **selectedUsers**. We can then do whatever we want with this array (e.g. create a new team with the selected users).
+In our Controller, we simply find the appropriate user record from the store (using the `userId` we get from the `draggable-item` component), and then push it into an array called `selectedUsers`. We can then do whatever we want with this array (e.g. create a new team with the selected users).
 
 Some basic styling:
 

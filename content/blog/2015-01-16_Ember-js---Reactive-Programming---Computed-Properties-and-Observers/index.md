@@ -4,8 +4,12 @@ description: >-
   Reactive Programming (or RP for short) is a programming paradigm that gets
   thrown around a lot, but its clear that there is much confusion…
 date: '2015-01-16T22:08:07.852Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - emberjs
+  - reactive programming
+  - observer pattern
 slug: >-
   /@sugarpirate/ember-js-reactive-programming-computed-properties-and-observers-cf80c2fbcfc
 cover: ./jason-leem-1404539-unsplash.jpg

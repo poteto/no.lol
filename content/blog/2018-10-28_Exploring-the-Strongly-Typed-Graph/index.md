@@ -4,8 +4,11 @@ description: >-
   The “Strongly Typed Graph” is something I’ve been thinking about lately. I
   believe it could significantly improve developer productivity in…
 date: '2018-10-28T01:53:04.094Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - graphql
+  - microservices
 slug: /@sugarpirate/exploring-the-strongly-typed-graph-31fc27512326
 cover: ./benjamin-hung-340383-unsplash.jpg
 coverAuthor: Benjamin Hung

@@ -4,8 +4,12 @@ description: >-
   Every now and then, you want to let your users quickly search for records that
   you’ve already loaded into your store. We can easily…
 date: '2014-11-19T10:48:11.952Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - emberjs
+  - computed property macros
+  - search
 slug: /@sugarpirate/ember-simple-text-search-computed-property-macro-1b7ca6a25ad2
 cover: ./philip-swinburn-60229-unsplash.jpg
 coverAuthor: Philip Swinburn
@@ -20,10 +24,7 @@ Source: [Unsplash](https://unsplash.com/photos/IClZBVw5W5A/) | By Todd Quackenbu
 
 ![](https://cdn-images-1.medium.com/max/800/1*LObyCCcVsFUPWE5VJ5gAwg.gif)
 
-Example use case
-
-[`JS Bin`
-_Sample of the bin: Welcome to Ember.js {{outlet}} {{input value=searchQuery}} Results {{#each item in searchResults}} …_emberjs.jsbin.com](http://emberjs.jsbin.com/piyoba/1/edit?html,js,output "http://emberjs.jsbin.com/piyoba/1/edit?html,js,output")[](http://emberjs.jsbin.com/piyoba/1/edit?html,js,output)
+[JSBin](http://emberjs.jsbin.com/piyoba/1/edit?html,js,output)
 
 ### The search macro
 

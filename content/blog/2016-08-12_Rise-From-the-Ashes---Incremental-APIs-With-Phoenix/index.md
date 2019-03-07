@@ -4,8 +4,14 @@ description: >-
   Much has been said about the Elixir language and the Phoenix framework
   —Phoenix’s performance without compromise makes it a compelling…
 date: '2016-08-12T17:26:46.769Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - elixir
+  - phoenix
+  - terraform
+  - incremental rewrites
+  - plug
 slug: /@sugarpirate/rise-from-the-ashes-incremental-apis-with-phoenix-b08cd66bd142
 cover: ./joshua-newton-274491-unsplash.jpg
 coverAuthor: Joshua Newton

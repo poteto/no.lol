@@ -4,8 +4,11 @@ description: >-
   Highcharts is one of the better supported and developed front end charting
   libraries out there, and it makes creating standard charts a…
 date: '2014-11-13T14:46:31.759Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - emberjs
+  - highcharts
 slug: /@sugarpirate/using-highcharts-js-in-an-ember-app-18a65d611644
 cover: ./tracy-thomas-56810-unsplash.jpg
 coverAuthor: Tracy Thomas
@@ -223,7 +226,9 @@ Finally, for performance issues, we want to teardown and destroy the chart when 
 
 Using the Highcharts component is as simple as:
 
+```handlebars
 {{high-charts content=someController.chartData chartOptions=someController.chartOptions class="some-custom-class"}}
+```
 
 As you can see, it’s really easy to integrate Highcharts into your Ember application. It’s not free if you’re building a non-personal project, but the support from the Highcharts team is amazing and they update the library very frequently.
 

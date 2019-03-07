@@ -4,8 +4,18 @@ description: >-
   The past month or so, I’ve been working on an Elixir and Phoenix API for a
   client. I am blown away by how nice it is working with Elixir…
 date: '2016-06-17T23:47:26.143Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - elixir
+  - ecto
+  - emberjs
+  - changesets
+  - ember-changeset
+  - ember-changeset-validations
+  - functional validations
+  - virtual properties
+  - method missing
 slug: /@sugarpirate/bringing-ecto-changesets-into-ember-js-8e665ec70ab6
 cover: ./steven-su-1405584-unsplash.jpg
 coverAuthor: Steven Su
@@ -31,13 +41,7 @@ ember install ember-changeset
 ember install ember-changeset-validations
 ```
 
-[**poteto/ember-changeset**
-_ember-changeset - Ember.js flavored changesets, inspired by Ecto_github.com](https://github.com/poteto/ember-changeset "https://github.com/poteto/ember-changeset")[](https://github.com/poteto/ember-changeset)
-
 I wrote the addon with compatibility in mind, so it’s easy to wire up with your favorite validation library. The simplest way to incorporate validations is to use [ember-changeset-validations](https://github.com/poteto/ember-changeset-validations/), a companion addon. It has a simple mental model, and there are no observers or CPs involved — just pure, plain JavaScript functions.
-
-[**poteto/ember-changeset-validations**
-_ember-changeset-validations - Validations for ember-changeset_github.com](https://github.com/poteto/ember-changeset-validations "https://github.com/poteto/ember-changeset-validations")[](https://github.com/poteto/ember-changeset-validations)
 
 Let’s take a look at how [ember-changeset](https://github.com/poteto/ember-changeset) is implemented, and we’ll also demonstrate how they align with Ember’s Data Down Actions Up (DDAU) philosophy.
 

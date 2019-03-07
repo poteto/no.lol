@@ -4,8 +4,11 @@ description: >-
   We’re in the middle of a digital renaissance that has software eating the
   world. Like the industrial revolution, the digital revolution…
 date: '2015-04-10T18:17:53.149Z'
-categories: ''
-keywords: ''
+categories:
+  - user experience
+keywords:
+  - user experience
+  - website builders
 slug: /@sugarpirate/the-importance-of-being-experience-first-24bc261987fd
 cover: ./natalie-chaney-1400174-unsplash.jpg
 coverAuthor: Natalie Chaney

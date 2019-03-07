@@ -4,8 +4,11 @@ description: >-
   I’ll remember this year as the year I was challenged and grew the most — both
   personally, and professionally as a UI designer and front end…
 date: '2014-12-28T11:05:41.814Z'
-categories: ''
-keywords: ''
+categories:
+  - leadership
+keywords:
+  - imposter syndrome
+  - year in review
 slug: /@sugarpirate/my-2014-in-review-or-how-i-beat-impostor-syndrome-98e811d0ada2
 cover: ./jason-leem-1404540-unsplash.jpg
 coverAuthor: Jason Leem
@@ -65,8 +68,6 @@ After my first startup failed and months spent learning front end development, S
 I spent 2013 working hard on [ThePriceGeek](http://www.thepricegeek.com) (our new name), building it mostly with jQuery spaghetti and Sass. I learnt a lot, but I still felt like a wannabe front end developer. We were in the [Melbourne Accelerator Program](http://map.eng.unimelb.edu.au/about/alumni/), and featured on [CNN Money](http://money.cnn.com/2013/10/09/technology/silk-road-drug-prices/), [Lifehacker](http://lifehacker.com/5986983/market-price-calculates-what-youll-get-for-an-item-on-ebay), the [IBTimes](http://www.ibtimes.com/sell-your-old-iphone-how-much-you-can-expect-get-charts-1381989), and various other internet media. Although we achieved some success with ThePriceGeek, it was a highly competitive landscape, and after a year of working on it with limited traction, we made the difficult decision to stop. At its peak, we only made about a thousand dollars in monthly affiliate revenues, which wasn’t enough to sustain itself.
 
 In late 2013, my good friend [Joe Valente](https://twitter.com/joeyvalente) asked if I was interested in working at a pre-product startup to do more front end development. Impostor syndrome struck again, so I put on a brave face and went for the interview, thinking I would give it a go even if I wasn’t very good.
-
-
 
 > Every time I start something new, my confidence takes a hit and impostor syndrome strikes — “I don’t think I can do this.”
 

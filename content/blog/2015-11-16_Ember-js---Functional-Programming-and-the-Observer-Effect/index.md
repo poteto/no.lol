@@ -4,8 +4,14 @@ description: >-
   My awesome colleagues have written about patterns and best practices we use at
   DockYard, covering everything from the Ember Object model…
 date: '2015-11-16T16:06:28.547Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - functional programming
+  - emberjs
+  - observers
+  - data down actions up
+  - one way data flow
 slug: >-
   /@sugarpirate/ember-js-functional-programming-and-the-observer-effect-48901c3b84d7
 cover: ./adam-sodek-1403521-unsplash.jpg

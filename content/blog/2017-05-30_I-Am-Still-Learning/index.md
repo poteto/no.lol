@@ -4,8 +4,13 @@ description: >-
   Learn to welcome fear. Learn from fear. No one learns and develops skills in a
   bubble.
 date: '2017-05-30T14:01:45.307Z'
-categories: ''
-keywords: ''
+categories:
+  - leadership
+keywords:
+  - learning from fear
+  - ancora imparo
+  - i am still learning
+  - imposter syndrome
 slug: /@sugarpirate/i-am-still-learning-f61c765d657c
 cover: ./david-clarke-1400883-unsplash.jpg
 coverAuthor: David Clarke

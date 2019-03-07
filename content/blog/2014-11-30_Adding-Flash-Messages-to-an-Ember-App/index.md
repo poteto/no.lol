@@ -4,8 +4,12 @@ description: >-
   One of Jakob Nielsen’s 10 heuristics for user interface design is Visibility
   of System Status, or in other words, keeping users informed…
 date: '2014-11-30T06:40:17.224Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - emberjs
+  - flash messages
+  - ember-cli-flash
 slug: /@sugarpirate/adding-flash-messages-to-an-ember-app-437b13e49c1b
 cover: ./david-ngo-1404606-unsplash.jpg
 coverAuthor: David Ngo
@@ -40,10 +44,7 @@ or:
 $ npm install --save ember-cli-flash
 ```
 
-### JS Bin Demo (globals)
-
-[**JS Bin**
-_Sample of the bin: Ember Flash Messages demo by @sugarpirate_ Add flash messages with different types by clicking on…_jsbin.com](http://jsbin.com/ranewo/37/edit?js,output "http://jsbin.com/ranewo/37/edit?js,output")[](http://jsbin.com/ranewo/37/edit?js,output)
+[JS Bin Demo](http://jsbin.com/ranewo/37/edit?js,output)
 
 ### The Flash Message Service
 

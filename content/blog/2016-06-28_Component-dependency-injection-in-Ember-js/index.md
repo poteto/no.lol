@@ -4,8 +4,11 @@ description: >-
   The Dependency Injection (DI) pattern is a subset of Inversion of Control, and
   is a useful technique for decoupling the creation of a…
 date: '2016-06-28T17:01:02.519Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - emberjs
+  - dependency injection
 slug: /@sugarpirate/component-dependency-injection-in-ember-js-a46a39a5d30a
 cover: ./andrew-buchanan-1404154-unsplash.jpg
 coverAuthor: Andrew Buchanan
@@ -135,10 +138,7 @@ We’ve passed in a hash of the child components using the `hash` and `component
 {{ui.location-activity location=location}}
 ```
 
-Install the test helper here:
-
-[**poteto/ember-test-component**
-_ember-test-component — Test helper for using dependency injected components_github.com](https://github.com/poteto/ember-test-component "https://github.com/poteto/ember-test-component")[](https://github.com/poteto/ember-test-component)
+Install the [test helper](https://github.com/poteto/ember-test-component):
 
 ```
 ember install ember-test-component

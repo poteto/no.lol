@@ -6,8 +6,15 @@ description: >-
   I wrote a post last year about how I made an Ember Mixin that would let Ember
   Components or Views know if their DOM element had entered or…
 date: '2015-04-17T23:02:16.905Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - emberjs
+  - requestAnimationFrame
+  - ember-in-viewport
+  - in viewport
+  - getBoundingClientRect
+  - ember addons
 slug: >-
   /@sugarpirate/creating-an-ember-cli-addon-detecting-ember-js-components-entering-or-leaving-the-viewport-7d95ceb4f5ed
 cover: ./toa-heftiba-1399721-unsplash.jpg

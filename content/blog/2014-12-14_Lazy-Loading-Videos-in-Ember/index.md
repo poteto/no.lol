@@ -4,8 +4,11 @@ description: >-
   If you’re like me, every time you embed a video iframe into your app you feel
   a little bit dirty for having to load an entire html document…
 date: '2014-12-14T10:28:26.243Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - ember-lazy-video
+  - lazy loading videos
 slug: /@sugarpirate/lazy-loading-videos-in-ember-7504a4abe34f
 cover: ./damian-markutt-1405941-unsplash.jpg
 coverAuthor: Damian Markutt
@@ -23,10 +26,7 @@ In this post, we’ll build a simple component and service to handle lazy loadin
 {{lazy-video provider="vimeo"   videoId="51771300"}}
 ```
 
-### JS Bin Demo
-
-[**JS Bin**
-_Sample of the bin: ember-lazy-video by @sugarpirate_ The lazy-video component displays the video's thumbnail, and doesn…_emberjs.jsbin.com](http://emberjs.jsbin.com/qaribi/edit?html,js,output "http://emberjs.jsbin.com/qaribi/edit?html,js,output")[](http://emberjs.jsbin.com/qaribi/edit?html,js,output)
+[JS Bin Demo](http://emberjs.jsbin.com/qaribi/edit?html,js,output)
 
 ### Retrieving the Right URLs
 

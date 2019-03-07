@@ -4,8 +4,11 @@ description: >-
   You might have an Ember TextArea in your app somewhere, perhaps as a comment
   form or some other input, for submitting multi-line strings…
 date: '2014-12-22T12:17:33.263Z'
-categories: ''
-keywords: ''
+categories:
+  - engineering
+keywords:
+  - emberjs
+  - keyboard
 slug: /@sugarpirate/submit-an-ember-textarea-with-command-or-ctrl-enter-a933b4325b3b
 cover: ./pawel-czerwinski-1404603-unsplash.jpg
 coverAuthor: Paweł Czerwiński
@@ -18,10 +21,7 @@ You might have an [Ember TextArea](http://emberjs.com/api/classes/Ember.Handleba
 
 In this post, we’ll explore the few lines of code we need to extend the default Ember TextArea to do just that.
 
-### JS Bin Demo
-
-[**JS Bin**
-_Sample of the bin: Ctrl + Enter or ⌘ + Enter to submit {{outlet}} {{textarea class="form-control input-lg…_emberjs.jsbin.com](http://emberjs.jsbin.com/susipe/9/edit?html,js,output "http://emberjs.jsbin.com/susipe/9/edit?html,js,output")[](http://emberjs.jsbin.com/susipe/9/edit?html,js,output)
+[JS Bin Demo](http://jsbin.com/susipe/9/embed?html,js,output)
 
 ### Reopening Ember.TextArea
 
