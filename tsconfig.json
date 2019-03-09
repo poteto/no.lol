@@ -10,7 +10,9 @@
     "esModuleInterop": true,
     "noUnusedLocals": true,
     "noEmit": true,
-    "typeRoots": ["node_modules/@types", "typings"]
+    "typeRoots": ["node_modules/@types", "./src/typings"],
+    "jsx": "react",
+    "downlevelIteration": true,
   },
   "include": ["src/**/*"]
 }
