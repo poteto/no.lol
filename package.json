@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Lauren Tan <arr@sugarpirate.com>",
   "dependencies": {
+    "@weknow/gatsby-remark-twitter": "^0.2.0",
     "gatsby": "^2.1.19",
     "gatsby-image": "^2.0.30",
     "gatsby-plugin-eslint": "^2.0.4",

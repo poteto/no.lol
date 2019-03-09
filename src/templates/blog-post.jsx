@@ -5,18 +5,19 @@ import Image from 'gatsby-image';
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Pills from '../components/pills';
 import { rhythm, scale } from '../utils/typography';
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark;
-    const siteTitle = this.props.data.site.siteMetadata.title;
+    const { markdownRemark: post, site } = this.props.data;
+    const { title: siteTitle } = site.siteMetadata;
     const { previous, next } = this.props.pageContext;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title={post.frontmatter.title}
+          title={`${post.frontmatter.title} by ${site.siteMetadata.author}`}
           description={post.frontmatter.description || post.excerpt}
         />
         <h1>{post.frontmatter.title}</h1>
@@ -24,16 +25,19 @@ class BlogPostTemplate extends React.Component {
           style={{
             ...scale(-1 / 5),
             display: `block`,
-            marginBottom: rhythm(1),
             marginTop: rhythm(-1),
           }}
         >
           {post.frontmatter.date}
         </small>
+        <Pills items={post.frontmatter.categories} />
         <Image
           fluid={post.frontmatter.cover.childImageSharp.fluid}
           alt={post.frontmatter.coverAuthor}
           className="full-width"
+          style={{
+            marginTop: rhythm(1),
+          }}
         />
         <small>
           Photo by{' '}
@@ -103,6 +107,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        categories
         cover {
           childImageSharp {
             fluid(maxWidth: 1200) {

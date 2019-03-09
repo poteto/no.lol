@@ -37,7 +37,7 @@ Wordpress2016.overrideThemeStyles = () => ({
     boxShadow: 'none',
   },
   'a.anchor svg[aria-hidden="true"]': {
-    stroke: 'var(--textLink)',
+    stroke: 'var(--gray)',
   },
   'p code': {
     fontSize: '1rem',

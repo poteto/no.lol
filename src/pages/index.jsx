@@ -5,6 +5,7 @@ import Image from 'gatsby-image';
 import MainBio from '../components/main-bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Pills from '../components/pills';
 import { rhythm } from '../utils/typography';
 
 class BlogIndex extends React.Component {
@@ -16,8 +17,16 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          title="Lauren Tan | All posts"
+          keywords={[
+            `blog`,
+            `gatsby`,
+            `javascript`,
+            `react`,
+            `lauren tan`,
+            `engineering manager`,
+            `engineering leader`,
+          ]}
         />
         <MainBio />
         {posts.map(({ node }) => {
@@ -36,6 +45,7 @@ class BlogIndex extends React.Component {
                 </Link>
               </h2>
               <small>{node.frontmatter.date}</small>
+              <Pills items={node.frontmatter.categories} />
               <Image
                 style={{ marginTop: rhythm(0.5), marginBottom: rhythm(0.5) }}
                 fluid={fluid}
@@ -81,6 +91,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            categories
             cover {
               childImageSharp {
                 fluid(maxWidth: 1200) {

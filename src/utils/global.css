@@ -4,6 +4,11 @@ body {
   --yellow: #fde248;
   --pink: #ff7a60;
   --gray: #717171;
+  --gray-medium: #dfe3e6;
+  --white: #fff;
+  --black: #000;
+
+  --textLink: var(--black);
   background-color: var(--bg);
 }
 
@@ -13,7 +18,7 @@ a:hover {
 }
 
 a.squiggly {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--black);
   padding-bottom: 0.1em;
   background-position: bottom;
   background-size: 20%;
@@ -41,4 +46,43 @@ a.squiggly:hover {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+}
+
+.pills {
+  display: flex;
+}
+.pill {
+  font-size: 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  height: 1.25rem;
+  margin: 0.125rem;
+  border-radius: 0.9375rem;
+}
+.pill:not(:first-child) {
+  margin-left: 0;
+}
+
+/* carbon design tag colors */
+.pill--leadership {
+  background-color: #ffd4a0;
+  color: #a53725;
+}
+.pill--management {
+  background-color: #fde876;
+  color: #735f00;
+}
+.pill--engineering {
+  background-color: #c0e6ff;
+  color: #325c80;
+}
+.pill--11s {
+  background-color: #eed2ff;
+  color: #734098;
+}
+
+/* embedded tweets */
+.twitter-tweet {
+  margin: 0 auto;
 }
