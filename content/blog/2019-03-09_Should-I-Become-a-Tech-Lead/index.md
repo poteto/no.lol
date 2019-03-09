@@ -1,7 +1,7 @@
 ---
 title: "#1 Should I Become a Tech Lead?"
 description: >-
-  "I recently tweeted that I was starting an experiment. 26 people applied to try this out! Over the next couple of weeks, I'll be speaking to as many of them as I can in one-on-one (1:1) meetings over Google Hangouts. With their permission, I hope to be able to share some of the advice I've given them with you. Here is today's topic: growing as an engineer in the context of becoming a tech lead."
+  I recently tweeted that I was starting an experiment. 26 people applied to try this out! Over the next couple of weeks, I'll be speaking to as many of them as I can in one-on-one (1:1) meetings over Google Hangouts. With their permission, I hope to be able to share some of the advice I've given them with you. Here is today's topic - growing as an engineer in the context of becoming a tech lead.
 date: "2019-03-09T19:21:07.439Z"
 categories:
   - 1:1s
@@ -17,7 +17,7 @@ I recently [tweeted](https://twitter.com/sugarpirate_/status/1101943502592602113
 
 https://twitter.com/sugarpirate_/status/1101943502592602113
 
-Here is today's topic: growing as an engineer in the context of becoming a tech lead. The person I spoke to has been doing frontend development for most of their career, but was wondering if they needed to become fullstack in order to do a good job as a lead.
+Here is today's topic -- growing as an engineer in the context of becoming a tech lead. The person I spoke to has been doing frontend development for most of their career, but was wondering if they needed to become fullstack in order to do a good job as a lead.
 
 When we spoke, they told me that they didn't feel like they were ready because they didn't feel good enough yet on a technical level. That reminded me of myself when I first took on the role of a tech lead a few years ago. At the time, I didn't understand what being a tech lead really meant.
 
