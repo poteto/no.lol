@@ -43,7 +43,7 @@ function MainBio() {
               marginBottom: rhythm(2.5),
             }}
           >
-            <div className="main-bio" style={{ marginRight: rhythm(1) }}>
+            <div className="main-bio">
               <h1 className="heroine" style={{ marginBottom: rhythm(1 / 5) }}>
                 <span role="image" aria-label="woman technologist">
                   👩🏻‍💻
