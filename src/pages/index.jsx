@@ -36,7 +36,11 @@ class BlogIndex extends React.Component {
           const imageAuthor = node.frontmatter.coverAuthor;
           const { fluid } = node.frontmatter.cover.childImageSharp;
           return (
-            <div style={{ marginBottom: rhythm(1) }} key={node.fields.slug}>
+            <div
+              className="blog-post-preview"
+              style={{ marginBottom: rhythm(1) }}
+              key={node.fields.slug}
+            >
               <h2
                 style={{
                   marginBottom: 0,
@@ -46,7 +50,9 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h2>
-              <small>{node.frontmatter.date}</small>
+              <small title={node.frontmatter.longDate}>
+                {node.frontmatter.shortDate}
+              </small>
               <Pills items={node.frontmatter.categories} />
               <Image
                 style={{ marginTop: rhythm(0.5), marginBottom: rhythm(0.5) }}
@@ -90,7 +96,8 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            shortDate: date(formatString: "MMMM DD, YYYY")
+            longDate: date(formatString: "MMMM DD, YYYY, h:mm:ss a")
             title
             description
             categories
