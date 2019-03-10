@@ -17,8 +17,9 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title={`${post.frontmatter.title} by ${site.siteMetadata.author}`}
+          title={`${post.frontmatter.title}`}
           description={post.frontmatter.description || post.excerpt}
+          keywords={post.frontmatter.keywords}
         />
         <h1 style={{ marginTop: 0 }}>{post.frontmatter.title}</h1>
         <small
@@ -27,8 +28,9 @@ class BlogPostTemplate extends React.Component {
             display: `block`,
             marginTop: rhythm(-1),
           }}
+          title={post.frontmatter.longDate}
         >
-          {post.frontmatter.date}
+          {post.frontmatter.shortDate}
         </small>
         <Pills items={post.frontmatter.categories} />
         <Image
@@ -105,7 +107,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        shortDate: date(formatString: "MMMM DD, YYYY")
+        longDate: date(formatString: "MMMM DD, YYYY, h:mm:ss a")
         description
         categories
         cover {
@@ -117,6 +120,7 @@ export const pageQuery = graphql`
         }
         coverAuthor
         coverOriginalUrl
+        keywords
       }
     }
   }

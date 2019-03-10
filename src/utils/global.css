@@ -2,16 +2,24 @@ body {
   --bg: #fcfcfc;
   --purple: #2c1e58;
   --yellow: #fde248;
+  --yellow-light: #fff6b7;
   --pink: #ff7a60;
+  --red: #f6416c;
   --gray: #717171;
   --gray-medium: #dfe3e6;
   --white: #fff;
   --black: #000;
 
   --textLink: var(--black);
+  --hr: var(--gray-medium);
   background-color: var(--bg);
+  border-width: 10px;
+  border-style: solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to bottom, var(--yellow-light), var(--red));
 }
 
+/* main bio thing */
 .main-bio-container {
   display: flex;
 }
@@ -34,6 +42,7 @@ body {
   }
 }
 
+/* horizontal lists of links */
 .horizontal-links {
   list-style-type: none;
   margin-bottom: 0;
@@ -57,6 +66,7 @@ a:hover {
   transition: all 0.2s;
 }
 
+/* a tags */
 a.squiggly {
   border-bottom: 1px solid var(--black);
   padding-bottom: 0.15em;
@@ -80,14 +90,15 @@ a.squiggly:hover {
 
 /* https://css-tricks.com/full-width-containers-limited-width-parents/ */
 .full-width {
-  width: 100vw;
+  width: calc(100vw - 20px);
   position: relative;
   left: 50%;
   right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  margin-left: calc(-50vw + 10px);
+  margin-right: calc(-50vw + 10px);
 }
 
+/* pills */
 .pills {
   display: flex;
 }
@@ -127,6 +138,7 @@ a.squiggly:hover {
   margin: 0 auto;
 }
 
+/* utils */
 .u-no-box-shadow {
   box-shadow: none;
 }

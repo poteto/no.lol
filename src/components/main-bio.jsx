@@ -44,7 +44,7 @@ function MainBio() {
             }}
           >
             <div className="main-bio" style={{ marginRight: rhythm(1) }}>
-              <h1 style={{ marginBottom: rhythm(1 / 5) }}>
+              <h1 style={{ color: 'var(--red)', marginBottom: rhythm(1 / 5) }}>
                 <span role="image" aria-label="woman technologist">
                   👩🏻‍💻
                 </span>{' '}
