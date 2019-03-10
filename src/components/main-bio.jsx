@@ -12,7 +12,7 @@ import { rhythm } from '../utils/typography';
 
 const mainBioQuery = graphql`
   query MainBioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.png/" }) {
+    avatar: file(absolutePath: { regex: "/profile-pic2.png/" }) {
       childImageSharp {
         fixed(width: 250, height: 250) {
           ...GatsbyImageSharpFixed
@@ -44,7 +44,7 @@ function MainBio() {
             }}
           >
             <div className="main-bio" style={{ marginRight: rhythm(1) }}>
-              <h1 style={{ color: 'var(--red)', marginBottom: rhythm(1 / 5) }}>
+              <h1 className="heroine" style={{ marginBottom: rhythm(1 / 5) }}>
                 <span role="image" aria-label="woman technologist">
                   👩🏻‍💻
                 </span>{' '}
@@ -100,10 +100,10 @@ function MainBio() {
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
               style={{
-                marginRight: rhythm(1 / 2),
                 marginBottom: 0,
                 minWidth: 250,
                 borderRadius: `100%`,
+                border: `8px solid var(--blue)`,
               }}
               imgStyle={{
                 borderRadius: `50%`,

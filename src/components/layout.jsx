@@ -57,9 +57,7 @@ class Layout extends React.Component {
       <>
         <header
           style={{
-            display: 'flex',
             padding: rhythm(1),
-            justifyContent: 'space-between',
             marginTop: 0,
             marginBottom: 0,
           }}
@@ -67,8 +65,6 @@ class Layout extends React.Component {
           <div className="logo">
             <Logo
               style={{
-                height: 50,
-                width: 50,
                 verticalAlign: 'middle',
                 marginRight: rhythm(1 / 4),
               }}

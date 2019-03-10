@@ -64,11 +64,7 @@ class BlogIndex extends React.Component {
                   __html: node.frontmatter.description || node.excerpt,
                 }}
               />
-              <Link
-                className={`squiggly`}
-                style={{ boxShadow: `none` }}
-                to={node.fields.slug}
-              >
+              <Link className={`squiggly`} to={node.fields.slug}>
                 Read more
               </Link>
             </div>
