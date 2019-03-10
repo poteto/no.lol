@@ -20,8 +20,8 @@ It’s fairly trivial to add a ‘drag and drop’ interface to Ember.js with [h
 
 The basic premise is to create 2 components:
 
-*   a **draggable-dropzone** component, that handles when an item is dropped into it (e.g. a shopping cart)
-*   a **draggable-item** component, that sets up the data transfer into the dropzone
+*   a `draggable-dropzone` component, that handles when an item is dropped into it (e.g. a shopping cart)
+*   a `draggable-item` component, that sets up the data transfer into the dropzone
 
 Using [transclusion](http://en.wikipedia.org/wiki/Transclusion), we can then easily add our ‘drag and drop’ functionality into our Ember application with different UI.
 
@@ -122,7 +122,7 @@ Here’s a simple example of an interface for adding users to a new ‘team’ r
 </div>
 ```
 
-If you recall, we sent an action on **‘drop’** in the `draggable-dropzone` component:
+If you recall, we sent an action on `drop` in the `draggable-dropzone` component:
 
 ```js
 drop(event) {

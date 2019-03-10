@@ -122,10 +122,7 @@ Screencast taken with a terrible internet connection from an Airbnb in Berlin
 
 ### Data loading with query params
 
-If you do use query params, you can still adopt the same approach. [Offir](https://twitter.com/offirgolan) and I wrote an addon that improves upon the experience in working with query params.
-
-[**offirgolan/ember-parachute**
-_ember-parachute - Improved Query Params for Ember_github.com](https://github.com/offirgolan/ember-parachute "https://github.com/offirgolan/ember-parachute")[](https://github.com/offirgolan/ember-parachute)
+If you do use query params, you can still adopt the same approach. [Offir](https://twitter.com/offirgolan) and I wrote an [addon](https://github.com/offirgolan/ember-parachute) that improves upon the experience in working with query params.
 
 Instead of defining query params in _both_ your route and controller, with this addon you can define them in one place as a query param map.
 

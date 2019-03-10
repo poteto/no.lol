@@ -38,7 +38,7 @@ We work on many Ember apps at [DockYard](https://dockyard.com/), and one particu
 
 #### The Ember Container and currentRouteName
 
-The Component relies mainly on Ember’s container and the current route name. On a high level, the Component is injected with the Application Controller’s **currentRouteName** prop, then looks up the appropriate route in the Container to check if it has a **breadCrumb** prop defined. If it does, we display whatever the POJO is, or else we show its route name in the Component.
+The Component relies mainly on Ember’s container and the current route name. On a high level, the Component is injected with the Application Controller’s `currentRouteName` prop, then looks up the appropriate route in the Container to check if it has a `breadCrumb` prop defined. If it does, we display whatever the POJO is, or else we show its route name in the Component.
 
 ### Intended usage
 
@@ -91,7 +91,7 @@ export default {
 
 ### Declaring your variables
 
-We typically declare our variables and functions used at the top of each file, to make code easier to read and refactor in the future. For ember-crumbly’s **bread-crumbs** component, we’re using the usual suspects:
+We typically declare our variables and functions used at the top of each file, to make code easier to read and refactor in the future. For ember-crumbly’s `bread-crumbs` component, we’re using the usual suspects:
 
 ```js
 import Ember from 'ember';
@@ -124,7 +124,7 @@ const {
 } = Logger;
 ```
 
-You might be wondering why we declare **const get = Ember.get;** by itself on line 4 — currently there are issues with destructuring **{ get }** and [bugs in Esprima](https://github.com/dockyard/ember-suave/issues/5), so we do it by itself as temporary workaround.
+You might be wondering why we declare `const get = Ember.get;` by itself on line 4 — currently there are issues with destructuring `{ get }` and [bugs in Esprima](https://github.com/dockyard/ember-suave/issues/5), so we do it by itself as temporary workaround.
 
 ### Component props
 
@@ -141,11 +141,11 @@ export default Component.extend({
   currentRouteName: computed.readOnly('applicationController.currentRouteName'),
 ```
 
-We’ve injected the Application Controller into the component in our initializer, so getting the current route’s name is as simple as setting a computed property macro. We make it [**readOnly**](http://emberjs.com/api/classes/Ember.ComputedProperty.html#method_readOnly) so we don’t set it by accident.
+We’ve injected the Application Controller into the component in our initializer, so getting the current route’s name is as simple as setting a computed property macro. We make it [`readOnly`](http://emberjs.com/api/classes/Ember.ComputedProperty.html#method_readOnly) so we don’t set it by accident.
 
 ### Computing the route hierarchy
 
-Ember’s **currentRouteName** prop returns the current route hierarchy separated by periods. For example, if you were on /foo/bar/baz, your route would probably be something like ‘**foo.bar.baz.index’**. Knowing this, the goal would be to split the string by the period, and then working out the route name for each of its parts. With the correct route name, we can then lookup the route on the container and extract the breadCrumb POJO we need for our bread-crumb.
+Ember’s `currentRouteName` prop returns the current route hierarchy separated by periods. For example, if you were on `/foo/bar/baz`, your route would probably be something like `foo.bar.baz.index`. Knowing this, the goal would be to split the string by the period, and then working out the route name for each of its parts. With the correct route name, we can then lookup the route on the container and extract the breadCrumb POJO we need for our bread-crumb.
 
 ```js
   routeHierarchy: computed('currentRouteName', 'reverse', {
@@ -171,7 +171,7 @@ You’ll notice straight away that we’re using new Ember computed property syn
 
 ### Figuring out the route name
 
-First, we split the **currentRouteName** string into an array, and then filter out any **index** routes. This is because the string splits into an array with all the parts, so foo/bar/baz would yield **[ ‘foo’, ‘bar’, ‘baz’, ‘index’ ]**, while we only want the first 3.
+First, we split the `currentRouteName` string into an array, and then filter out any `index` routes. This is because the string splits into an array with all the parts, so foo/bar/baz would yield `['foo', 'bar', 'baz', 'index']`, while we only want the first 3.
 
 ```js
   _splitCurrentRouteName(currentRouteName) {
@@ -192,7 +192,7 @@ Now with the array of parts, we need to piece them together again bit by bit to 
 In here, we:
 
 1.  Map over the filtered route names individually
-2.  Reconstruct the route name by slicing the original array of route names with the [right **end** argument](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+2.  Reconstruct the route name by slicing the original array of route names with the [right `end` argument](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 3.  Look the reconstructed route name up on the container
 4.  Retrieve the breadCrumb POJO, add props to it, and return an Ember Array that our component can iterate over in its template
 
@@ -230,7 +230,7 @@ In here, we:
 
 #### Reconstructing the route name
 
-Each time map runs in the previous method, we get a single piece of the route name, e.g. **bar**. We know that its correct route name is **foo.bar**, so we can slice the original array with the [map’s **index** argument](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map#Syntax) to piece those bits together. When we start with the first piece (**foo**), we know that we need to look up **foo.index** so that we can generate the correct link-to, so we check for that.
+Each time map runs in the previous method, we get a single piece of the route name, e.g. `bar`. We know that its correct route name is `foo.bar`, so we can slice the original array with the [map’s `index` argument](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map#Syntax) to piece those bits together. When we start with the first piece (`foo`), we know that we need to look up `foo.index` so that we can generate the correct link-to, so we check for that.
 
 ```js
   _guessRoutePath(routeNames, name, index) {
@@ -248,7 +248,7 @@ Now that we have the correct route name for each path, we can look up the actual
 
 #### Looking up the route on the Container
 
-The Ember Container (basically how Ember keeps track of all its different objects) isn’t well documented because it is originally intended to be private API. However, many addons and apps make use of it to do certain things, and this one is no exception. There is an [RFC on the table](https://github.com/emberjs/rfcs/pull/46) with reforming the Registry and Container, so this might have to be changed in the future. For now, we can still get the Container from the Component, and then use its **lookup(‘type:name’)** method to find the route.
+The Ember Container (basically how Ember keeps track of all its different objects) isn’t well documented because it is originally intended to be private API. However, many addons and apps make use of it to do certain things, and this one is no exception. There is an [RFC on the table](https://github.com/emberjs/rfcs/pull/46) with reforming the Registry and Container, so this might have to be changed in the future. For now, we can still get the Container from the Component, and then use its `lookup('type:name')` method to find the route.
 
 ```js
   _lookupRoute(routeName) {
@@ -286,7 +286,7 @@ if (breadCrumbType === 'undefined') {
 return breadCrumb;
 ```
 
-In certain scenarios, you might want to opt-out of displaying a specific route in the breadcrumb. We allow that by setting **breadCrumb: null** inside of that route. If no breadCrumb POJO is found, we set the title to be the route’s capitalized name by default, and if we do find one, we simply add the path and linkable keys to it.
+In certain scenarios, you might want to opt-out of displaying a specific route in the breadcrumb. We allow that by setting `breadCrumb: null` inside of that route. If no breadCrumb POJO is found, we set the title to be the route’s capitalized name by default, and if we do find one, we simply add the path and linkable keys to it.
 
 Finally, we return an [Ember Array](http://emberjs.com/api/classes/Ember.html#method_A) so that the resulting array is iterable in the template, and filter out any undefined breadcrumbs.
 

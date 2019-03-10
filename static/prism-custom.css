@@ -60,7 +60,7 @@ pre[class*='language-'] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #cc66ff;
+  color: var(--red);
 }
 
 .token.boolean,
@@ -92,7 +92,7 @@ pre[class*='language-'] {
 .token.atrule,
 .token.attr-value,
 .token.function {
-  color: #ff9b50;
+  color: var(--coral);
 }
 
 .token.class-name {
@@ -100,7 +100,7 @@ pre[class*='language-'] {
 }
 
 .token.keyword {
-  color: #ff2afc;
+  color: var(--pink-medium);
 }
 
 .token.regex,
