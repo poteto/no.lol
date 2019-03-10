@@ -17,7 +17,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title={`${post.frontmatter.title} by ${site.siteMetadata.author}`}
+          title={`${post.frontmatter.title}`}
           description={post.frontmatter.description || post.excerpt}
         />
         <h1 style={{ marginTop: 0 }}>{post.frontmatter.title}</h1>
