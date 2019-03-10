@@ -63,13 +63,13 @@ header {
 .heroine {
   color: var(--red);
 }
-@media (max-width: 320px) {
+@media (max-width: 414px) {
   .heroine {
     font-size: 1.75rem;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 1024px) {
   .avatar {
     margin: 0 auto;
   }
@@ -88,6 +88,7 @@ header {
 }
 .main-bio {
   flex: 0 0 80%;
+  margin-right: 1.5rem;
 }
 .main-bio h1 {
   margin-top: 0;
@@ -102,9 +103,10 @@ header {
   .main-bio {
     order: 1;
     flex: 0 0 100%;
+    margin-right: 0;
   }
   .main-bio h1 {
-    margin-top: 3.5rem;
+    margin-top: 2.5rem;
   }
 }
 
