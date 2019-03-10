@@ -197,7 +197,7 @@ test('it ...', function(assert) {
 });
 ```
 
-Now we can test the **edit-location** component itself without worrying about setting up child components. That said, DI still allows us to test those child components integrating with **edit-location**, in a more controlled environment:
+Now we can test the `edit-location` component itself without worrying about setting up child components. That said, DI still allows us to test those child components integrating with `edit-location`, in a more controlled environment:
 
 ```js
 // tests/integration/edit-location-test.js

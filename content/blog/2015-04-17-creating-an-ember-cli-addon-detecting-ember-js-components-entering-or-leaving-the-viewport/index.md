@@ -22,9 +22,9 @@ coverAuthor: Toa Heftiba
 coverOriginalUrl: https://unsplash.com/photos/_2HNqkk6FEU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
-I [wrote a post](https://medium.com/delightful-ui-for-ember-apps/ember-js-detecting-if-a-dom-element-is-in-the-viewport-eafcc77a6f86) last year about how I made an Ember Mixin that would let Ember Components or Views know if their DOM element had entered or left the viewport. If you’re unfamiliar with the [**getBoundingClientRect**](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) API or the approach in general (for determining if an element is in the viewport), please have a read of that post first!
+I [wrote a post](https://medium.com/delightful-ui-for-ember-apps/ember-js-detecting-if-a-dom-element-is-in-the-viewport-eafcc77a6f86) last year about how I made an Ember Mixin that would let Ember Components or Views know if their DOM element had entered or left the viewport. If you’re unfamiliar with the [`getBoundingClientRect`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) API or the approach in general (for determining if an element is in the viewport), please have a read of that post first!
 
-This time, I want to talk about how I improved the original Mixin to use the [**requestAnimationFrame**](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame)  API for improved performance at close to 60FPS, as well as to go through the process of creating a simple [ember-cli addon](http://www.ember-cli.com/#developing-addons-and-blueprints). Because certain browsers (mainly IE) don’t support rAF, we’ll also setup an automatic fallback to using the Ember run loop method I used in my previous post.
+This time, I want to talk about how I improved the original Mixin to use the [`requestAnimationFrame`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame)  API for improved performance at close to 60FPS, as well as to go through the process of creating a simple [ember-cli addon](http://www.ember-cli.com/#developing-addons-and-blueprints). Because certain browsers (mainly IE) don’t support rAF, we’ll also setup an automatic fallback to using the Ember run loop method I used in my previous post.
 
 Let’s get started!
 
@@ -45,9 +45,6 @@ $ ember install ember-in-viewport
 ```
 
 The source for the addon is available at [dockyard/ember-in-viewport](https://github.com/dockyard/ember-in-viewport).
-
-[**dockyard/ember-in-viewport**
-_ember-in-viewport - Detect if an Ember View or Component is in the viewport @ 60FPS_github.com](https://github.com/dockyard/ember-in-viewport "https://github.com/dockyard/ember-in-viewport")[](https://github.com/dockyard/ember-in-viewport)
 
 ### Creating your first ember-cli addon
 

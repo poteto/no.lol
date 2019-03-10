@@ -24,10 +24,7 @@ Despite Phoenix’s attractiveness, chances are you have business requirements t
 
 What if we could incrementally replace our legacy API with Phoenix, one endpoint at a time? We could make a compelling argument by showcasing performance and maintainability gains, without committing to a rewrite.
 
-In science fiction (and perhaps someday reality), transforming an uninhabitable planet into an inhabitable one is known as _“_[_terraforming_](https://en.wikipedia.org/wiki/Terraforming)_”_, or literally “Earth-shaping”. It’s an apt metaphor for a little [plug](https://github.com/elixir-lang/plug) I co-authored with [Dan McClain](https://twitter.com/_danmcclain).
-
-[**poteto/terraform**
-_terraform - A plug for incrementally transforming an API into Phoenix_github.com](https://github.com/poteto/terraform "https://github.com/poteto/terraform")[](https://github.com/poteto/terraform)
+In science fiction (and perhaps someday reality), transforming an uninhabitable planet into an inhabitable one is known as _“_[_terraforming_](https://en.wikipedia.org/wiki/Terraforming)_”_, or literally “Earth-shaping”. It’s an apt metaphor for a little [plug](https://github.com/elixir-lang/plug) I co-authored with [Dan McClain](https://twitter.com/_danmcclain). It's available on [GitHub](https://github.com/poteto/terraform).
 
 Using Terraform, you can create a Phoenix app that handles one or more endpoints, and forward un-handled requests to your legacy API. If some network latency is not a significant issue, you might find this plug useful.
 
@@ -50,7 +47,7 @@ Add Terraform to your router
 
 #### Terraforming the legacy API
 
-By adding the Terraform plug to your router, it will then re-route those missing route connections to a plug that you define. And because this plug uses [**Plug.Router**](https://hexdocs.pm/plug/Plug.Router.html), you have an elegant DSL in which you can handle them:
+By adding the Terraform plug to your router, it will then re-route those missing route connections to a plug that you define. And because this plug uses [`Plug.Router`](https://hexdocs.pm/plug/Plug.Router.html), you have an elegant DSL in which you can handle them:
 
 ```elixir
 # terraformers/foo.ex
