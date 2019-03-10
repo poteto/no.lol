@@ -9,7 +9,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.7.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@weknow/gatsby-remark-twitter": "^0.2.0",
-    "gatsby": "^2.1.19",
+    "gatsby": "^2.1.27",
     "gatsby-image": "^2.0.30",
     "gatsby-plugin-eslint": "^2.0.4",
     "gatsby-plugin-favicon": "^3.1.5",
@@ -35,9 +35,9 @@
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0",
-    "react-typography": "^0.16.18",
-    "typography": "^0.16.18",
-    "typography-theme-wordpress-2016": "^0.16.18"
+    "react-typography": "^0.16.19",
+    "typography": "^0.16.19",
+    "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
     "@types/react": "^16.8.6",
@@ -46,7 +46,7 @@
     "@types/typography": "^0.16.2",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
-    "eslint": "^5.15.0",
+    "eslint": "^5.15.1",
     "eslint-config-prettier": "^4.1.0",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-prettier": "^3.0.1",
