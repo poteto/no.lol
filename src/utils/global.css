@@ -1,5 +1,6 @@
 body {
   --bg: #fcfcfc;
+  --purple-light: #f4f3ff;
   --purple-dark: #2c1e58;
   --yellow: #fde248;
   --yellow-light: #fff6b7;
@@ -48,6 +49,10 @@ header {
 .logo > svg {
   height: 3rem;
   width: 3rem;
+  background-image: -webkit-linear-gradient(92deg, var(--coral), var(--pink));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: lavalamp 15s infinite linear;
 }
 @media (max-width: 320px) {
   .logo {
@@ -72,13 +77,6 @@ header {
 @media (max-width: 1024px) {
   .avatar {
     margin: 0 auto;
-  }
-}
-
-/* footer */
-@media (max-width: 375px) {
-  footer {
-    display: block;
   }
 }
 
@@ -138,6 +136,14 @@ header {
   }
 }
 
+/* footer */
+@media (max-width: 375px) {
+  footer {
+    display: block;
+  }
+}
+
+/* a tags */
 a {
   transition: color 0.2s ease;
 }
@@ -145,15 +151,12 @@ a:hover {
   color: var(--coral);
   transition: color 0.3s ease;
 }
-
-/* a tags */
 a.squiggly {
   padding-bottom: 0.15em;
   background-position: bottom;
   background-size: 20%;
   transition: none;
 }
-
 a.squiggly:hover {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='coral' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
   background-position: 0 26px;
@@ -163,16 +166,6 @@ a.squiggly:hover {
   background-clip: initial;
   -webkit-text-fill-color: initial;
   box-decoration-break: initial;
-}
-
-/* https://css-tricks.com/full-width-containers-limited-width-parents/ */
-.full-width {
-  width: calc(100vw - var(--mega-border) * 2);
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: calc(-50vw + var(--mega-border));
-  margin-right: calc(-50vw + var(--mega-border));
 }
 
 /* pills */
@@ -191,7 +184,6 @@ a.squiggly:hover {
 .pill:not(:first-child) {
   margin-left: 0;
 }
-
 /* carbon design tag colors */
 .pill--leadership {
   background-color: #ffd4a0;
@@ -218,4 +210,23 @@ a.squiggly:hover {
 /* utils */
 .u-no-box-shadow {
   box-shadow: none;
+}
+/* https://css-tricks.com/full-width-containers-limited-width-parents/ */
+.u-full-width {
+  width: calc(100vw - var(--mega-border) * 2);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: calc(-50vw + var(--mega-border));
+  margin-right: calc(-50vw + var(--mega-border));
+}
+
+/* animations */
+@keyframes lavalamp {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(-360deg);
+  }
 }

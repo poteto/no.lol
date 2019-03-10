@@ -36,7 +36,7 @@ class BlogPostTemplate extends React.Component {
         <Image
           fluid={post.frontmatter.cover.childImageSharp.fluid}
           alt={post.frontmatter.coverAuthor}
-          className="full-width"
+          className="u-full-width"
           style={{
             marginTop: rhythm(1),
           }}
