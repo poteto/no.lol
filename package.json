@@ -56,7 +56,11 @@
   },
   "homepage": "https://github.com/poteto/no.lol",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "blog",
+    "lauren tan",
+    "sugarpirate",
+    "no.lol"
   ],
   "license": "MIT",
   "main": "n/a",

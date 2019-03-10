@@ -26,6 +26,8 @@ class BlogIndex extends React.Component {
             `elixir`,
             `react`,
             `lauren tan`,
+            `sugarpirate`,
+            `no.lol`,
             `engineering manager`,
             `engineering leader`,
           ]}
