@@ -34,6 +34,24 @@ body {
   }
 }
 
+.horizontal-links {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+.horizontal-links > li {
+  display: inline-block;
+  margin-right: 1.5rem;
+  margin-bottom: 0;
+}
+.horizontal-links > li:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 480px) {
+  .horizontal-links {
+    margin-left: 0;
+  }
+}
+
 a:hover {
   color: var(--pink);
   transition: all 0.2s;
@@ -41,7 +59,7 @@ a:hover {
 
 a.squiggly {
   border-bottom: 1px solid var(--black);
-  padding-bottom: 0.1em;
+  padding-bottom: 0.15em;
   background-position: bottom;
   background-size: 20%;
   text-decoration: none;
@@ -54,7 +72,7 @@ a.squiggly:hover {
   background-position: 0 26px;
   background-size: auto 3px;
   background-repeat: repeat-x;
-  padding-bottom: 0.1em;
+  padding-bottom: 0.15em;
   border-bottom: 0;
   text-decoration: none;
   box-shadow: none;
@@ -107,4 +125,8 @@ a.squiggly:hover {
 /* embedded tweets */
 .twitter-tweet {
   margin: 0 auto;
+}
+
+.u-no-box-shadow {
+  box-shadow: none;
 }

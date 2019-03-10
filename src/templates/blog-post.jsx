@@ -20,7 +20,7 @@ class BlogPostTemplate extends React.Component {
           title={`${post.frontmatter.title} by ${site.siteMetadata.author}`}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1>{post.frontmatter.title}</h1>
+        <h1 style={{ marginTop: 0 }}>{post.frontmatter.title}</h1>
         <small
           style={{
             ...scale(-1 / 5),

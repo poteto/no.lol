@@ -54,42 +54,61 @@ class Layout extends React.Component {
       );
     }
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
+      <>
         <header
           style={{
+            display: 'flex',
+            padding: rhythm(1),
+            justifyContent: 'space-between',
             marginTop: 0,
-            marginBottom: rhythm(1.5),
+            marginBottom: 0,
           }}
         >
-          <Logo
-            style={{
-              height: 50,
-              width: 50,
-              verticalAlign: 'middle',
-              marginRight: rhythm(1 / 4),
-            }}
-          />
-          {header}
-        </header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()} Lauren Tan
-          <div>
-            <a href="https://twitter.com/sugarpirate_">Twitter</a> /{' '}
-            <a href="https://github.com/poteto">GitHub</a> /{' '}
-            <a href="https://www.linkedin.com/in/laurenelizabethtan/">
-              LinkedIn
-            </a>
+          <div className="logo">
+            <Logo
+              style={{
+                height: 50,
+                width: 50,
+                verticalAlign: 'middle',
+                marginRight: rhythm(1 / 4),
+              }}
+            />
+            {header}
           </div>
-        </footer>
-      </div>
+          <ul className="horizontal-links">
+            <li>
+              <Link className="squiggly" to={'/'}>
+                Writing
+              </Link>
+            </li>
+            <li>
+              <a className="squiggly" href="http://bit.ly/lauren-tan-speaking">
+                Speaking
+              </a>{' '}
+            </li>
+          </ul>
+        </header>
+        <div
+          style={{
+            marginLeft: `auto`,
+            marginRight: `auto`,
+            maxWidth: rhythm(24),
+            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          }}
+        >
+          <main>{children}</main>
+          <footer>
+            © {new Date().getFullYear()} Lauren Tan
+            <div>
+              <a href="https://github.com/poteto">GitHub</a> /{' '}
+              <a href="https://twitter.com/sugarpirate_">Twitter</a> /{' '}
+              <a href="https://www.linkedin.com/in/laurenelizabethtan/">
+                LinkedIn
+              </a>
+            </div>
+          </footer>
+        </div>
+      </>
     );
   }
 }
