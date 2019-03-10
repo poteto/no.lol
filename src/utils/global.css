@@ -12,6 +12,28 @@ body {
   background-color: var(--bg);
 }
 
+.main-bio-container {
+  display: flex;
+}
+.main-bio {
+  flex: 0 0 80%;
+}
+.main-bio h1 {
+  margin-top: 0;
+}
+@media (max-width: 1024px) {
+  .main-bio-container {
+    flex-wrap: wrap;
+  }
+  .main-bio {
+    order: 1;
+    flex: 0 0 100%;
+  }
+  .main-bio h1 {
+    margin-top: 3.5rem;
+  }
+}
+
 a:hover {
   color: var(--pink);
   transition: all 0.2s;

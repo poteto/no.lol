@@ -39,13 +39,13 @@ function MainBio() {
         const { author } = data.site.siteMetadata;
         return (
           <div
+            className="main-bio-container"
             style={{
-              display: `flex`,
               marginBottom: rhythm(2.5),
             }}
           >
-            <div style={{ flex: `0 0 80%`, marginRight: rhythm(1) }}>
-              <h1 style={{ marginTop: 0 }}>
+            <div className="main-bio" style={{ marginRight: rhythm(1) }}>
+              <h1>
                 👩🏻‍💻 Hello! Lauren Tan is a leader, speaker, and software engineer
               </h1>
               <p>
@@ -61,6 +61,7 @@ function MainBio() {
               </p>
             </div>
             <Image
+              className="avatar"
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
               style={{
