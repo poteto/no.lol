@@ -201,6 +201,10 @@ a.squiggly:hover {
   background-color: #eed2ff;
   color: #734098;
 }
+.pill--userexperience {
+  background-color: #a7fae6;
+  color: #006d5d;
+}
 
 /* embedded tweets */
 .twitter-tweet {
