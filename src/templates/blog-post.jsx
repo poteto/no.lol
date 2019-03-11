@@ -7,6 +7,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Pills from '../components/pills';
 import { rhythm, scale } from '../utils/typography';
+import pluralizeReadingTime from '../utils/pluralize-reading-time';
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -30,7 +31,8 @@ class BlogPostTemplate extends React.Component {
           }}
           title={post.frontmatter.longDate}
         >
-          {post.frontmatter.shortDate}
+          {post.frontmatter.shortDate} &middot;{' '}
+          {pluralizeReadingTime(post.timeToRead)}
         </small>
         <Pills items={post.frontmatter.categories} />
         <Image
@@ -105,6 +107,7 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      timeToRead
       frontmatter {
         title
         shortDate: date(formatString: "MMMM DD, YYYY")

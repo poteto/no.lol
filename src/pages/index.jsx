@@ -7,6 +7,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Pills from '../components/pills';
 import { rhythm } from '../utils/typography';
+import pluralizeReadingTime from '../utils/pluralize-reading-time';
 
 class BlogIndex extends React.Component {
   render() {
@@ -53,7 +54,8 @@ class BlogIndex extends React.Component {
                 </Link>
               </h2>
               <small title={node.frontmatter.longDate}>
-                {node.frontmatter.shortDate}
+                {node.frontmatter.shortDate} &middot;{' '}
+                {pluralizeReadingTime(node.timeToRead)}
               </small>
               <Pills items={node.frontmatter.categories} />
               <Image
@@ -93,6 +95,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          timeToRead
           frontmatter {
             shortDate: date(formatString: "MMMM DD, YYYY")
             longDate: date(formatString: "MMMM DD, YYYY, h:mm:ss a")
