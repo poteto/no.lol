@@ -102,5 +102,6 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-netlify`, // must be last
   ],
 };
