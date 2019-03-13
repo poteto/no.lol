@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 
 import { rhythm, scale } from '../utils/typography';
 import Logo from '../../content/assets/donut.svg';
+import SOCIAL from '../constants/social';
 
 class Layout extends React.Component {
   render() {
@@ -96,11 +97,12 @@ class Layout extends React.Component {
           <footer>
             © {new Date().getFullYear()} Lauren Tan
             <div>
-              <a href="https://github.com/poteto">GitHub</a> /{' '}
-              <a href="https://twitter.com/sugarpirate_">Twitter</a> /{' '}
-              <a href="https://www.linkedin.com/in/laurenelizabethtan/">
-                LinkedIn
-              </a>
+              {SOCIAL.map((s, idx) => (
+                <React.Fragment key={s.kind}>
+                  <a href={s.url}>{s.kind}</a>
+                  {idx === SOCIAL.length - 1 ? '' : <span> / </span>}
+                </React.Fragment>
+              ))}
             </div>
           </footer>
         </div>
