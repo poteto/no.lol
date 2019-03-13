@@ -34,7 +34,6 @@ body {
   );
   /* reduce flash of top/bottom borders when body initially loads with no height */
   min-height: calc(100vh + var(--mega-border-width));
-  transition: border 0.5s ease-out;
 }
 
 /* header */
