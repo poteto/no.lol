@@ -5,7 +5,10 @@ module.exports = {
     description: `Lauren Tan's personal blog`,
     siteUrl: `https://www.no.lol/`,
     social: {
+      github: `poteto`,
       twitter: `sugarpirate_`,
+      linkedin: `laurenelizabethtan`,
+      medium: `sugarpirate`,
     },
   },
   plugins: [
