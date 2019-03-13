@@ -41,11 +41,11 @@ function MainBio() {
           >
             <div className="main-bio">
               <h1 className="heroine" style={{ marginBottom: rhythm(1 / 5) }}>
-                <span role="image" aria-label="woman technologist">
+                <span role="img" aria-label="woman technologist">
                   👩🏻‍💻
                 </span>{' '}
                 Hello! Lauren Tan is a leader, speaker, and software engineer{' '}
-                <span role="image" aria-label="sparkles">
+                <span role="img" aria-label="sparkles">
                   ✨
                 </span>
               </h1>
@@ -65,7 +65,7 @@ function MainBio() {
                 Hi there! I&apos;m a polyglot Engineering Manager at Netflix,
                 accomplished public speaker, thoughtful software engineer at
                 heart, and{' '}
-                <span role="image" aria-label="woman surfing">
+                <span role="img" aria-label="woman surfing">
                   🏄🏻‍♀️
                 </span>{' '}
                 webmaster of this little website. I started my career in tech as
