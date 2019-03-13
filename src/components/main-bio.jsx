@@ -56,7 +56,11 @@ function MainBio() {
                 {SOCIAL.map(s => (
                   <li key={s.kind}>
                     <a className="u-no-box-shadow" href={s.url}>
-                      <FontAwesomeIcon icon={s.icon} color="var(--gray)" />
+                      <FontAwesomeIcon
+                        icon={s.icon}
+                        color="var(--gray)"
+                        title={`Link to my ${s.kind}`}
+                      />
                     </a>
                   </li>
                 ))}
