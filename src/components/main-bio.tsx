@@ -26,7 +26,7 @@ const mainBioQuery = graphql`
   }
 `;
 
-function MainBio() {
+const MainBio: React.FunctionComponent<{}> = () => {
   return (
     <StaticQuery
       query={mainBioQuery}
@@ -97,6 +97,6 @@ function MainBio() {
       }}
     />
   );
-}
+};
 
 export default MainBio;
