@@ -51,6 +51,7 @@ module.exports = {
               align: `center`,
             },
           },
+          `gatsby-remark-external-links`,
         ],
       },
     },
