@@ -28,10 +28,11 @@ module.exports = {
   rules: {
     'react/prop-types': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
   },
   overrides: [
     {
-      files: ['*.js', '*.jsx'],
+      files: ['*.js', '*.jsx', '*.ts', "*.tsx"],
       rules: {
         '@typescript-eslint/no-var-requires': 'off',
         '@typescript-eslint/camelcase': 'off',
