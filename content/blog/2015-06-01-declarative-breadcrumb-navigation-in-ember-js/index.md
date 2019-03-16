@@ -10,7 +10,6 @@ keywords:
   - emberjs
   - breadcrumbs
   - ember-crumbly
-slug: /@sugarpirate/declarative-breadcrumb-navigation-in-ember-js-5908a92a5de3
 cover: ./sam-moghadam-1403544-unsplash.jpg
 coverAuthor: Sam Moghadam
 coverOriginalUrl: https://unsplash.com/photos/1nP3Q9ZXcos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

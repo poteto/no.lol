@@ -10,7 +10,6 @@ keywords:
   - emberjs
   - flash messages
   - ember-cli-flash
-slug: /@sugarpirate/adding-flash-messages-to-an-ember-app-437b13e49c1b
 cover: ./david-ngo-1404606-unsplash.jpg
 coverAuthor: David Ngo
 coverOriginalUrl: https://unsplash.com/photos/UdToY22XYJQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

@@ -9,7 +9,6 @@ categories:
 keywords:
   - emberjs
   - loading messages
-slug: /@sugarpirate/slack-style-loading-messages-in-an-ember-app-6319559a19d0
 cover: ./alex-robert-222997-unsplash.jpg
 coverAuthor: Alex Robert
 coverOriginalUrl: https://unsplash.com/photos/cPL7CRk4M8M?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

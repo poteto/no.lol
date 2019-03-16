@@ -12,7 +12,6 @@ keywords:
   - routable components
   - data down actions up
   - one way data flow
-slug: /@sugarpirate/ember-js-goodbye-mvc-part-1-21777ecfd708
 cover: ./sepp-rutz-1402081-unsplash.jpg
 coverAuthor: Sepp Rutz
 coverOriginalUrl: https://unsplash.com/photos/ToKAuHu_hbU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

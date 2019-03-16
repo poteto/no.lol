@@ -7,7 +7,6 @@ categories:
   - 1:1s
 keywords:
   - becoming a tech lead
-slug: should-i-become-a-tech-lead
 cover: ./ian-cylkowski-1413275-unsplash.jpg
 coverAuthor: Ian Cylkowski
 coverOriginalUrl: https://unsplash.com/photos/ut2Gmr3nOII?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

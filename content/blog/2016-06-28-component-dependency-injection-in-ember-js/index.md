@@ -9,7 +9,6 @@ categories:
 keywords:
   - emberjs
   - dependency injection
-slug: /@sugarpirate/component-dependency-injection-in-ember-js-a46a39a5d30a
 cover: ./andrew-buchanan-1404154-unsplash.jpg
 coverAuthor: Andrew Buchanan
 coverOriginalUrl: https://unsplash.com/photos/UYJL-k9bkAY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

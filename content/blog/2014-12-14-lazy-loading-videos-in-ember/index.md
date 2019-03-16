@@ -9,7 +9,6 @@ categories:
 keywords:
   - ember-lazy-video
   - lazy loading videos
-slug: /@sugarpirate/lazy-loading-videos-in-ember-7504a4abe34f
 cover: ./damian-markutt-1405941-unsplash.jpg
 coverAuthor: Damian Markutt
 coverOriginalUrl: https://unsplash.com/photos/eCkmZ7f8oWY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

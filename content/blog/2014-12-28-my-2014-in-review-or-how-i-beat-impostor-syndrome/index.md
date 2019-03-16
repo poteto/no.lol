@@ -9,7 +9,6 @@ categories:
 keywords:
   - imposter syndrome
   - year in review
-slug: /@sugarpirate/my-2014-in-review-or-how-i-beat-impostor-syndrome-98e811d0ada2
 cover: ./jason-leem-1404540-unsplash.jpg
 coverAuthor: Jason Leem
 coverOriginalUrl: https://unsplash.com/photos/zi6-k5vNWZ8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
