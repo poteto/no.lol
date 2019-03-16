@@ -9,7 +9,6 @@ categories:
 keywords:
   - graphql
   - microservices
-slug: /@sugarpirate/exploring-the-strongly-typed-graph-31fc27512326
 cover: ./benjamin-hung-340383-unsplash.jpg
 coverAuthor: Benjamin Hung
 coverOriginalUrl: https://unsplash.com/photos/m7q5iX4L7vQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

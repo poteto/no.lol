@@ -11,8 +11,6 @@ keywords:
   - presentational components
   - ember-composable-helpers
   - principle of least power
-slug: >-
-  /@sugarpirate/declarative-templating-in-ember-with-composable-helpers-a70f01d67165
 cover: ./tim-patch-1404785-unsplash.jpg
 coverAuthor: Tim Patch
 coverOriginalUrl: https://unsplash.com/photos/IS3PDiWTgrM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

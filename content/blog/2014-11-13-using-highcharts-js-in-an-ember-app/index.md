@@ -9,7 +9,6 @@ categories:
 keywords:
   - emberjs
   - highcharts
-slug: /@sugarpirate/using-highcharts-js-in-an-ember-app-18a65d611644
 cover: ./tracy-thomas-56810-unsplash.jpg
 coverAuthor: Tracy Thomas
 coverOriginalUrl: https://unsplash.com/photos/Y7SQO1p6B0A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

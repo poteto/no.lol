@@ -11,7 +11,6 @@ keywords:
   - communication
   - non-violent communication
   - highly aligned loosely coupled
-slug: /@sugarpirate/an-engineers-guide-to-communication-99180699a0e6
 cover: ./tom-sodoge-1169782-unsplash.jpg
 coverAuthor: Tom Sodoge
 coverOriginalUrl: https://unsplash.com/photos/ul3ygBELnBw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

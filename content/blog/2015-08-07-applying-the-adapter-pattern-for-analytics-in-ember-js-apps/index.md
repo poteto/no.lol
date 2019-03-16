@@ -11,8 +11,6 @@ keywords:
   - emberjs
   - analytics
   - ember-metrics
-slug: >-
-  /@sugarpirate/applying-the-adapter-pattern-for-analytics-in-ember-js-apps-29448cbcedf3
 cover: ./petri-r-1403845-unsplash.jpg
 coverAuthor: Petri R
 coverOriginalUrl: https://unsplash.com/photos/6j_lmeycTrM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

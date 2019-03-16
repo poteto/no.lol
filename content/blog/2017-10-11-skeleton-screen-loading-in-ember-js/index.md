@@ -12,7 +12,6 @@ keywords:
   - query params
   - ember-concurrency
   - ember-parachute
-slug: /@sugarpirate/skeleton-screen-loading-in-ember-js-2f7ac2384d63
 cover: ./francesco-ungaro-1401507-unsplash.jpg
 coverAuthor: Francesco Ungaro
 coverOriginalUrl: https://unsplash.com/photos/vFuIriPcSiM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

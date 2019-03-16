@@ -15,8 +15,6 @@ keywords:
   - in viewport
   - getBoundingClientRect
   - ember addons
-slug: >-
-  /@sugarpirate/creating-an-ember-cli-addon-detecting-ember-js-components-entering-or-leaving-the-viewport-7d95ceb4f5ed
 cover: ./toa-heftiba-1399721-unsplash.jpg
 coverAuthor: Toa Heftiba
 coverOriginalUrl: https://unsplash.com/photos/_2HNqkk6FEU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

@@ -10,7 +10,6 @@ keywords:
   - emberjs
   - drag and drop
   - html5
-slug: /@sugarpirate/ember-js-and-html5-drag-and-drop-fa5dfe478a9a
 cover: ./rawpixel-191157-unsplash.jpg
 coverAuthor: rawpixel
 coverOriginalUrl: https://unsplash.com/photos/C05KN4h8WKw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

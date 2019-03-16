@@ -9,7 +9,6 @@ categories:
 keywords:
   - user experience
   - website builders
-slug: /@sugarpirate/the-importance-of-being-experience-first-24bc261987fd
 cover: ./natalie-chaney-1400174-unsplash.jpg
 coverAuthor: Natalie Chaney
 coverOriginalUrl: https://unsplash.com/photos/zhUzdTgtRP8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

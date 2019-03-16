@@ -11,7 +11,6 @@ keywords:
   - commitment
   - communication
   - five dysfunctions of a team
-slug: /@sugarpirate/commit-to-commit-a18befcb5e26
 cover: ./matthias-schroder-1399823-unsplash.jpg
 coverAuthor: Matthias Schröder
 coverOriginalUrl: https://unsplash.com/photos/v5ehDfMpUyA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

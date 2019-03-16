@@ -7,8 +7,8 @@ date: '2016-04-21T17:08:25.092Z'
 categories:
   - engineering
 keywords:
-  -
-slug: /@sugarpirate/route-closure-actions-in-ember-js-d0a7a37a5d1b
+  - ember
+  - ember-route-action-helper
 cover: ./devon-janse-van-rensburg-1405686-unsplash.jpg
 coverAuthor: Devon Janse van Rensburg
 coverOriginalUrl: https://unsplash.com/photos/DU8Z5djVJtg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

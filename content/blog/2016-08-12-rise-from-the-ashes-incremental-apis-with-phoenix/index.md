@@ -12,7 +12,6 @@ keywords:
   - terraform
   - incremental rewrites
   - plug
-slug: /@sugarpirate/rise-from-the-ashes-incremental-apis-with-phoenix-b08cd66bd142
 cover: ./joshua-newton-274491-unsplash.jpg
 coverAuthor: Joshua Newton
 coverOriginalUrl: https://unsplash.com/photos/Igct8iZucFI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
