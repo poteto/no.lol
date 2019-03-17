@@ -100,7 +100,7 @@ Getting your blog deployed with [Netlify](https://netlify.com) is a breeze. Once
 
 After some headscratching, I finally figured out how to get the [lighthousebot](https://github.com/GoogleChromeLabs/lighthousebot) to automatically run in CI for every pull request. If you're not familiar with [Lighthouse](https://developers.google.com/web/tools/lighthouse/), it's a developer tool released by the Chrome team that helps you audit your site for performance, accessibility, progressive web apps, and more. You can run a lighthouse audit in your Chrome DevTools without installing anything:
 
-![Run a lighthouse audit on your site in the Chrome DevTools](./Screenshot 2019-03-16 19.49.09.png "Run a lighthouse audit on your site in the Chrome DevTools")
+![Run a lighthouse audit on your site in the Chrome DevTools](./Screenshot 2019-03-16 22.30.11.png "Run a lighthouse audit on your site in the Chrome DevTools")
 
 To get started with lighthousebot, follow the instructions in the [lighthousebot](https://github.com/GoogleChromeLabs/lighthousebot) repo. You'll need to:
 
