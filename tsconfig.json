@@ -13,6 +13,7 @@
     "typeRoots": ["node_modules/@types", "./src/typings"],
     "jsx": "react",
     "downlevelIteration": true,
+    "skipLibCheck": true,
   },
   "include": ["src/**/*"]
 }

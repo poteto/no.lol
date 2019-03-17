@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Image from 'gatsby-image';
+import { window } from 'browser-monads';
 
 import Bio from '../components/bio';
 import Layout from '../components/layout';
