@@ -16,19 +16,12 @@ cache:
 notifications:
   email: false
 
-# https://github.com/browniebroke/carriere-web/blob/master/.travis.yml
-matrix:
+jobs:
   include:
-    - name: Performance
-      script: |
-        if [ "$TRAVIS_PULL_REQUEST" != "false" ]
-          then sleep 200; yarn run lh \
-          --perf 90 \
-          --pwa 90 \
-          --a11y 90 \
-          --bp 90 \
-          --seo 90 \
-          https://deploy-preview-${TRAVIS_PULL_REQUEST}--no-lol.netlify.com
-        fi
-    - name: Test
+    - stage: Test
+      install: yarn install --frozen-lockfile
       script: yarn test
+    - stage: Lighthouse
+      if: type = pull_request
+      install: yarn install --frozen-lockfile
+      script: yarn run lh --perf 90 --pwa 90 --a11y 90 --bp 90 --seo 90 "$(wait-for-netlify-preview)"
