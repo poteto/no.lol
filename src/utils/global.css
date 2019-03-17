@@ -145,7 +145,21 @@ header {
   }
 }
 
+/* gatsby-highlight */
+.gatsby-highlight {
+  margin-bottom: 1.75em;
+}
+
+/* blog post detail */
+.blog-post img,
+.blog-post figcaption {
+  margin: 0 auto;
+}
+
 /* a tags */
+small > a {
+  color: var(--gray);
+}
 a {
   transition: color 0.2s ease;
 }

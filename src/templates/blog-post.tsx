@@ -31,72 +31,86 @@ const BlogPostTemplate: React.FunctionComponent<BlogPostTemplateProps> = ({
         description={post.frontmatter.description || post.excerpt}
         keywords={post.frontmatter.keywords}
       />
-      <h1 style={{ marginTop: 0 }}>{post.frontmatter.title}</h1>
-      <small
-        style={{
-          ...scale(-1 / 5),
-          display: `block`,
-          marginTop: rhythm(-1),
-        }}
-        title={post.frontmatter.longDate}
-      >
-        {post.frontmatter.shortDate} &middot;{' '}
-        {pluralizeReadingTime(post.timeToRead)}
-      </small>
-      <Pills items={post.frontmatter.categories} />
-      <Image
-        fluid={post.frontmatter.cover.childImageSharp.fluid}
-        alt={post.frontmatter.coverAuthor}
-        className="u-full-width"
-        style={{
-          marginTop: rhythm(1),
-        }}
-      />
-      <small>
-        Photo by{' '}
-        <a href={post.frontmatter.coverOriginalUrl}>
-          {post.frontmatter.coverAuthor}
-        </a>{' '}
-        on{' '}
-        <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-          Unsplash
-        </a>
-      </small>
-      <div
-        style={{ marginTop: rhythm(1) }}
-        dangerouslySetInnerHTML={{ __html: post.html }}
-      />
-      <hr
-        style={{
-          marginBottom: rhythm(1),
-        }}
-      />
-      <Bio />
+      <div className="blog-post">
+        <h1 style={{ marginTop: 0 }}>{post.frontmatter.title}</h1>
+        <small
+          style={{
+            ...scale(-1 / 5),
+            display: `block`,
+            marginTop: rhythm(-1),
+          }}
+          title={post.frontmatter.longDate}
+        >
+          {post.frontmatter.shortDate} &middot;{' '}
+          {pluralizeReadingTime(post.timeToRead)}
+        </small>
+        <Pills items={post.frontmatter.categories} />
+        <Image
+          fluid={post.frontmatter.cover.childImageSharp.fluid}
+          alt={post.frontmatter.coverAuthor}
+          className="u-full-width"
+          style={{
+            marginTop: rhythm(1),
+          }}
+        />
+        <small>
+          Photo by{' '}
+          <a href={post.frontmatter.coverOriginalUrl}>
+            {post.frontmatter.coverAuthor}
+          </a>{' '}
+          on{' '}
+          <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+            Unsplash
+          </a>
+        </small>
+        <div
+          style={{ marginTop: rhythm(1) }}
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+        <small>
+          {' '}
+          <a
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            href={`https://github.com/poteto/no.lol/tree/master/content/blog${
+              window.location.pathname
+            }`}
+          >
+            Edit this post on GitHub
+          </a>
+        </small>
+        <hr
+          style={{
+            margin: `${rhythm(1)} 0`,
+          }}
+        />
+        <Bio />
 
-      <ul
-        style={{
-          display: `flex`,
-          flexWrap: `wrap`,
-          justifyContent: `space-between`,
-          listStyle: `none`,
-          padding: 0,
-        }}
-      >
-        <li>
-          {previous && (
-            <Link to={previous.fields.slug} rel="prev">
-              ← {previous.frontmatter.title}
-            </Link>
-          )}
-        </li>
-        <li>
-          {next && (
-            <Link to={next.fields.slug} rel="next">
-              {next.frontmatter.title} →
-            </Link>
-          )}
-        </li>
-      </ul>
+        <ul
+          style={{
+            display: `flex`,
+            flexWrap: `wrap`,
+            justifyContent: `space-between`,
+            listStyle: `none`,
+            padding: 0,
+          }}
+        >
+          <li>
+            {previous && (
+              <Link to={previous.fields.slug} rel="prev">
+                ← {previous.frontmatter.title}
+              </Link>
+            )}
+          </li>
+          <li>
+            {next && (
+              <Link to={next.fields.slug} rel="next">
+                {next.frontmatter.title} →
+              </Link>
+            )}
+          </li>
+        </ul>
+      </div>
     </Layout>
   );
 };
