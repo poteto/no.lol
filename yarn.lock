@@ -4653,7 +4653,7 @@ gatsby-plugin-manifest@2.0.24:
     bluebird "^3.5.0"
     sharp "^0.21.3"
 
-gatsby-plugin-netlify-cache@^1.1.0:
+gatsby-plugin-netlify-cache@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cache/-/gatsby-plugin-netlify-cache-1.1.0.tgz#82630a380324b2e5d0a77eed46d3e91cdb09de6f"
   integrity sha512-4aYOiLuWE5Eltc8Jm7c9Fss4Ab3I9O/xeOWw6dRnPjEuIL5AGT6Eshsfq3CZllxC+/pbkADshGfZNoowri14ng==
@@ -4767,7 +4767,7 @@ gatsby-react-router-scroll@^2.0.5:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-remark-code-titles@^1.1.0-rc.0:
+gatsby-remark-code-titles@1.1.0-rc.0:
   version "1.1.0-rc.0"
   resolved "https://registry.yarnpkg.com/gatsby-remark-code-titles/-/gatsby-remark-code-titles-1.1.0-rc.0.tgz#8992211d9799edae21f597aa3dcf28a97d882654"
   integrity sha512-9Sq7xHg+vuFB0j6r3e52Xn5wpZ9cjpajN23Tn2+hkfvBDrwMbWKzyErDGYFO1hcXFGvkapsfVghmUyLxVKIjbw==
