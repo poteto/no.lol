@@ -1978,10 +1978,9 @@ brorand@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
 
-browser-monads@^1.0.0:
+"browser-monads@github:poteto/browser-monads#b8477ba":
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/browser-monads/-/browser-monads-1.0.0.tgz#c9a210ef3793cae7016440d9a9adfedd9a5ad7bd"
-  integrity sha1-yaIQ7zeTyucBZEDZqa3+3Zpa170=
+  resolved "https://codeload.github.com/poteto/browser-monads/tar.gz/b8477ba62bfdc80d54fb469fb52cabc72879c7a8"
   dependencies:
     nothing-mock "^1.0.0"
 
