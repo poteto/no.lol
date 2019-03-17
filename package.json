@@ -9,7 +9,6 @@
     "@fortawesome/free-brands-svg-icons": "5.7.2",
     "@fortawesome/react-fontawesome": "0.1.4",
     "@weknow/gatsby-remark-twitter": "0.2.0",
-    "browser-monads": "github:poteto/browser-monads#b8477ba",
     "gatsby": "2.1.35",
     "gatsby-image": "2.0.34",
     "gatsby-plugin-eslint": "2.0.4",

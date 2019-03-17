@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Image from 'gatsby-image';
-import { window } from 'browser-monads';
 
 import Bio from '../components/bio';
 import Layout from '../components/layout';
@@ -24,6 +23,7 @@ const BlogPostTemplate: React.FunctionComponent<BlogPostTemplateProps> = ({
   const { markdownRemark: post, site } = data;
   const { title: siteTitle } = site.siteMetadata;
   const { previous, next } = pageContext;
+  const publicUrl = `https://www.no.lol${post.fields.slug}`;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -69,12 +69,15 @@ const BlogPostTemplate: React.FunctionComponent<BlogPostTemplateProps> = ({
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
         <small>
-          {' '}
+          <a href={`https://twitter.com/search?q=${publicUrl}`}>
+            Discuss on Twitter
+          </a>{' '}
+          &middot;{' '}
           <a
             target="_blank"
             rel="nofollow noopener noreferrer"
             href={`https://github.com/poteto/no.lol/tree/master/content/blog${
-              window.location.pathname
+              post.fields.slug
             }`}
           >
             Edit this post on GitHub
@@ -131,6 +134,9 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 160)
       html
       timeToRead
+      fields {
+        slug
+      }
       frontmatter {
         title
         shortDate: date(formatString: "MMMM DD, YYYY")
