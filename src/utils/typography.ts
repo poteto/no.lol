@@ -66,7 +66,7 @@ Wordpress2016.overrideThemeStyles = () => ({
     fontSize: '0.8rem',
     color: 'var(--gray)',
     textAlign: 'center',
-  }
+  },
 });
 
 delete Wordpress2016.googleFonts;
