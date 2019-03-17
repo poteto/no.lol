@@ -69,7 +69,11 @@ const BlogPostTemplate: React.FunctionComponent<BlogPostTemplateProps> = ({
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
         <small>
-          <a href={`https://twitter.com/search?q=${publicUrl}`}>
+          <a
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            href={`https://twitter.com/search?q=${publicUrl}`}
+          >
             Discuss on Twitter
           </a>{' '}
           &middot;{' '}
