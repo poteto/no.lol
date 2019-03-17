@@ -33,8 +33,8 @@ The basic idea is this — if a route is defined on our Phoenix app, we’ll
 
 In your Phoenix app, every incoming connection goes through a pipeline that you can readily examine at `lib/my_app/endpoint.ex`. You can see how a connection flows through the different plugs specified in this file. The connection is then piped into the router:
 
-```elixir
-# web/router.ex
+```elixir:title=web/router.ex
+# Add Terraform to your router
 defmodule MyApp.Router do
   use Terraform, terraformer: MyApp.Terraformers.LegacyApi
 
@@ -42,14 +42,12 @@ defmodule MyApp.Router do
 end
 ```
 
-Add Terraform to your router
-
 #### Terraforming the legacy API
 
 By adding the Terraform plug to your router, it will then re-route those missing route connections to a plug that you define. And because this plug uses [`Plug.Router`](https://hexdocs.pm/plug/Plug.Router.html), you have an elegant DSL in which you can handle them:
 
-```elixir
-# terraformers/foo.ex
+```elixir:title=terraformers/foo.ex
+# Write a Terraformer to forward requests
 defmodule MyApp.Terraformers.Foo do
   use Plug.Router
 
@@ -69,11 +67,10 @@ defmodule MyApp.Terraformers.Foo do
 end
 ```
 
-Write a Terraformer to forward requests
-
 Basic example aside, we’d probably want to do an actual request on your API, and you can do so by writing a client for it. There are [many ways](https://github.com/h4cc/awesome-elixir#third-party-apis) to do it, and I’ve had success in doing so with [HTTPoison](https://github.com/edgurgel/httpoison) and its [Base](https://hexdocs.pm/httpoison/HTTPoison.Base.html) module. For example:
 
-```elixir
+```elixir:title=terraformers/legacy_api.ex
+# Use a client for your legacy API
 defmodule MyApp.Terraformers.LegacyApi do
   alias MyApp.Clients.LegacyApi
   use Plug.Router
@@ -94,12 +91,11 @@ defmodule MyApp.Terraformers.LegacyApi do
 end
 ```
 
-Use a client for your legacy API
-
 And here is what a client might look like:
 
 ```elixir
 # Example taken from https://github.com/edgurgel/httpoison
+# GitHub client example written with HTTPoison
 defmodule GitHub do
   use HTTPoison.Base
 
@@ -123,8 +119,6 @@ defmodule GitHub do
   end
 end
 ```
-
-GitHub client example written with HTTPoison
 
 This forwards all un-handled GETs to our legacy API via our client, and sends the response back with the right headers as well. Since this is just a plug, you have access to the connection, so you can easily handle things like sessions and auth as well.
 

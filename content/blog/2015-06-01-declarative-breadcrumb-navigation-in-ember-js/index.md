@@ -49,9 +49,7 @@ The goal was to have an API as declarative as the following:
 
 And the route:
 
-```js
-// foo/route.js
-
+```js:title=foo/route.js
 export default Ember.Route.extend({
   breadCrumb: {
     title: 'Animals'

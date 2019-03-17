@@ -51,8 +51,7 @@ ember install ember-route-action-helper
 
 And to use it, you can just use `route-action` in place of `action` inside of your route’s template, like so:
 
-```handlebars
-{{! foo/template.hbs }}
+```handlebars:title=foo/template.hbs
 {{foo-bar click=(route-action "updateFoo" "Hello" "world")}}
 ```
 

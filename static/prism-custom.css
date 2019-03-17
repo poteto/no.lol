@@ -1,6 +1,21 @@
+/* gatsby-remark-code-titles */
+.gatsby-code-title {
+  font-size: 0.8rem;
+  margin-bottom: -0.6rem;
+  padding: 0.5em 1em;
+  font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+    monospace;
+  background-color: black;
+  color: var(--white);
+  z-index: 0;
+
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+}
+
 code[class*='language-'],
 pre[class*='language-'] {
-  color: #f9faff;
+  color: var(--gray-medium);
   background: none;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
@@ -11,12 +26,7 @@ pre[class*='language-'] {
   word-break: normal;
   word-wrap: normal;
   line-height: 1.5;
-  -moz-tab-size: 2;
-  -o-tab-size: 2;
   tab-size: 2;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
   hyphens: none;
 }
 

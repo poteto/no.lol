@@ -15,6 +15,9 @@ const BODY_FONT_FAMILY = [
 ];
 
 Wordpress2016.overrideThemeStyles = () => ({
+  'h1, h2, h3, h4, h5, h6': {
+    marginTop: `2.5rem`,
+  },
   'h1, h2': {
     fontFamily: HEADER_FONT_FAMILY.join(','),
     lineHeight: `1.3em`,
@@ -39,15 +42,9 @@ Wordpress2016.overrideThemeStyles = () => ({
   'a.anchor svg[aria-hidden="true"]': {
     stroke: 'var(--gray)',
   },
-  'p code': {
-    fontSize: '1rem',
-  },
   // TODO: why tho
   'h1 code, h2 code, h3 code, h4 code, h5 code, h6 code': {
     fontSize: 'inherit',
-  },
-  'li code': {
-    fontSize: '1rem',
   },
   blockquote: {
     color: 'inherit',
@@ -55,15 +52,20 @@ Wordpress2016.overrideThemeStyles = () => ({
     opacity: '0.8',
   },
   'blockquote.translation': {
-    fontSize: '1em',
+    fontSize: '1rem',
   },
   footer: {
-    fontSize: '0.8em',
+    fontSize: '0.8rem',
     display: 'flex',
     'justify-content': 'space-between',
   },
   small: {
     color: 'var(--gray)',
+  },
+  '.blog-post figcaption': {
+    fontSize: '0.8rem',
+    color: 'var(--gray)',
+    textAlign: 'center',
   },
 });
 
