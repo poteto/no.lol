@@ -20,8 +20,7 @@ Implementing Highcharts in your Ember application so that it live binds to your 
 
 #### The component and theme mixin
 
-```js
-// component
+```js:title=component.js
 App.HighChartsComponent = Ember.Component.extend(App.HighchartsThemeMixin, {
   classNames:   [ 'highcharts-wrapper' ],
   content:      undefined,
@@ -85,8 +84,7 @@ App.HighChartsComponent = Ember.Component.extend(App.HighchartsThemeMixin, {
 });
 ```
 
-```js
-// mixin
+```js:title=mixin.js
 App.HighchartsThemeMixin = Ember.Mixin.create({
   buildTheme: function() {
     Highcharts.theme = {

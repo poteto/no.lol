@@ -27,8 +27,7 @@ Source: [Unsplash](https://unsplash.com/photos/IClZBVw5W5A/) | By Todd Quackenbu
 
 ### The search macro
 
-```js
-// utils/computed/search.js
+```js:title=utils/computed/search.js
 import Ember from 'ember';
 var computed = Ember.computed;
 

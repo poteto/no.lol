@@ -65,15 +65,11 @@ The `Player` class no longer needs to know anything about the `Bag`, and also al
 
 I recently realized that the DI pattern can also be used to great effect in Ember components. For example, let’s say you have a container or parent component that uses multiple child components:
 
-```handlebars
-<!-- templates/application.hbs -->
-
+```handlebars:title=templates/application.hbs
 {{edit-location location=location}}
 ```
 
-```handlebars
-<!-- components/edit-location.hbs -->
-
+```handlebars:title=components/edit-location.hbs
 {{google-map
     lat=location.lat
     lng=location.lng
@@ -86,9 +82,7 @@ I recently realized that the DI pattern can also be used to great effect in Embe
 
 The parent component `edit-location`’s primary responsibility is to provide UI to edit a location. It could have actions defined on it, like so:
 
-```js
-// components/edit-location.js
-
+```js:title=components/edit-location.js
 export default Component.extend({
   actions: {
     setLatLng(latLng) {
@@ -110,9 +104,7 @@ In this scenario, the `edit-location` component itself shouldn’t need to conce
 
 Using DI, we can decouple the `edit-location` component from its child components, and clean up our tests. This technique is currently only possible with [contextual components](http://emberjs.com/blog/2016/01/15/ember-2-3-released.html#toc_contextual-components) due to the use of the `component` and `hash` helpers, which were made available in [Ember 2.3.0](http://emberjs.com/blog/2016/01/15/ember-2-3-released.html).
 
-```handlebars
-<!-- application.hbs -->
-
+```handlebars:title=application.hbs
 {{edit-location
     location=location
     ui=(hash
@@ -124,9 +116,7 @@ Using DI, we can decouple the `edit-location` component from its child component
 
 We’ve passed in a hash of the child components using the `hash` and `component` helpers. This effectively inverts control to the template that calls the `edit-location` form:
 
-```handlebars
-<!-- components/edit-location.hbs -->
-
+```handlebars:title=components/edit-location.hbs
 {{ui.location-map
     lat=location.lat
     lng=location.lng
@@ -145,9 +135,7 @@ ember install ember-test-component
 
 Now, in our tests, we’ll need to write a little test helper (or use the addon above) to create a dummy component we can use to no-op (do nothing). Credit goes to [@runspired](https://twitter.com/runspired) for nudging me in the right direction:
 
-```js
-// tests/helpers/dummy-component.js
-
+```js:title=tests/helpers/dummy-component.js
 import Ember from 'ember';
 
 const {
@@ -176,9 +164,7 @@ export function unregisterDummyComponent(context, name = 'dummy-component') {
 
 This test helper registers a fake component in the container, making it available for us to use in our component integration test:
 
-```js
-// tests/integration/edit-location-test.js
-
+```js:title=tests/integration/edit-location-test.js
 test('it ...', function(assert) {
   registerDummyComponent(this);
   this.set('location', {});
@@ -198,9 +184,7 @@ test('it ...', function(assert) {
 
 Now we can test the `edit-location` component itself without worrying about setting up child components. That said, DI still allows us to test those child components integrating with `edit-location`, in a more controlled environment:
 
-```js
-// tests/integration/edit-location-test.js
-
+```js:title=tests/integration/edit-location-test.js
 test('it updates location via the form', function(assert) {
   registerDummyComponent(this);
   this.set('location', {});

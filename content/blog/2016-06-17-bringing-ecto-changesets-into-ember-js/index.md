@@ -229,8 +229,7 @@ export default {
 
 A validator like `validatePresence` is simply a function that returns a function:
 
-```js
-// validators/custom.js
+```js:title=validators/custom.js
 export default function validateCustom({ foo, bar } = {}) {
   return (key, newValue, oldValue, changes) => {
     // validation logic
@@ -241,8 +240,7 @@ export default function validateCustom({ foo, bar } = {}) {
 
 Which is simpler to reason about compared to an OOP implementation that relies on extending base classes and holding on to state. Because validation maps are simply POJOs, composing validators is intuitive:
 
-```js
-// validations/user.js
+```js:title=validations/user.js
 import {
   validatePresence,
   validateLength
@@ -256,8 +254,7 @@ export default {
 
 You can easily import other validations and combine them using `Ember.assign` or `Ember.merge`.
 
-```js
-// validations/adult.js
+```js:title=validations/adult.js
 import Ember from 'ember';
 import UserValidations from './user';
 import { validateNumber } from 'ember-changeset-validations/validators';

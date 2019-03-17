@@ -75,8 +75,7 @@ export default Ember.Controller.extend({ ... });
 
 That means we can also create our own controllers and other objects that can then be used as a new base class:
 
-```js
-// base.js
+```js:title=base.js
 export default Ember.Controller.extend({
   someComputed: Ember.computed('foo', 'bar', function() {
     return get(this, 'foo') + ' ' + get(this, 'bar');
@@ -86,8 +85,7 @@ export default Ember.Controller.extend({
 
 Then:
 
-```js
-// other.js
+```js:title=other.js
 import BaseController from 'base';
 
 export default BaseController.extend({
@@ -110,11 +108,3 @@ Over the next few weeks and months, I’ll be working on improving the [Ember Ge
 If you have any suggestions, ideas or feedback for the new GSG, please [tweet me](https://twitter.com/sugarpirate_)! Anything, no matter how small or insignificant, will be helpful. If you like my writing, I hope I’ll be able to inject a little bit of _sugarpirate_ goodness into the GSG, and if you don’t, please let me know ☺
 
 See you in the new year! — _Lauren_
-
-#### Follow my Ember Collections on Medium
-
-[`Delightful UI for Ember Apps`
-_A curation of insights into building delightful user interfaces for your Ember application_medium.com](https://medium.com/delightful-ui-for-ember-apps "https://medium.com/delightful-ui-for-ember-apps")[](https://medium.com/delightful-ui-for-ember-apps)
-
-[`The Ember Way`
-_Doing things the Ember Way_medium.com](https://medium.com/the-ember-way "https://medium.com/the-ember-way")[](https://medium.com/the-ember-way)

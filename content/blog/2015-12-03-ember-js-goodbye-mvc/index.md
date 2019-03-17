@@ -49,8 +49,7 @@ Our little application consists of a couple of checkboxes for selecting animals.
 
 In the route’s template, we can just render the injected service’s state using the `each` helper.
 
-```handlebars
-{{! animals/index.hbs }}
+```handlebars:title=animals/index.hbs
 <div class="row">
   <div class="col-md-3">
     <h2>Select Animals</h2>
@@ -89,8 +88,7 @@ In the route’s template, we can just render the injected service’s state usi
 
 In our controller or routable component, we inject the service and define the action for handling the checked animal. The service’s bag of state is then passed into the component, keeping it as pure as possible. Although you could have just injected the service into the component, doing it this way makes things more explicit and allows the component to be decoupled from the service.
 
-```js
-// animals/controller.js
+```js:title=animals/controller.js
 import Ember from 'ember';
 
 const { inject: { service }, Controller } = Ember;
@@ -114,8 +112,7 @@ export default Controller.extend({
 
 As mentioned, the service itself is simple. We can define more complex behavior later, but the underlying persistence for its state is just a JavaScript array.
 
-```js
-// checkbox-group/service.js
+```js:title=checkbox-group/service.js
 import Ember from 'ember';
 
 const { Service } = Ember;
@@ -134,8 +131,7 @@ In our component’s template, we make use of small, composable helpers. These h
 
 The `contains` helper doesn’t ship with Ember, but the function itself is [one line of code](https://github.com/poteto/component-best-practices/blob/master/app%2Fhelpers%2Fcontains.js?ts=2). There are a bunch of useful addons that add helpers such as these to your application — for example, [ember-truth-helpers](https://www.npmjs.com/package/ember-truth-helpers) is an addon I find myself using in almost all my apps.
 
-```handlebars
-{{! checkbox-group/template.hbs }}
+```handlebars:title=checkbox-group/template.hbs
 {{#each group as |item|}}
   <div class="checkbox">
     <label for={{concat "item-" item.id}}>

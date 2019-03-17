@@ -39,8 +39,7 @@ One of my favorite helpers in the addon is the `pipe` helper (and its closure ac
 }}
 ```
 
-```handlebars
-{{! perform-calculation/template.hbs }}
+```handlebars:title=perform-calculation/template.hbs
 <button {{action (pipe add square) 2 4}}>Should be 36</button>
 <button {{action (pipe subtract square) 4 2}}>Should be 4</button>
 <button {{action (pipe multiply square) 5 5}}>Should be 625</button>

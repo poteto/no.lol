@@ -21,9 +21,7 @@ Skeleton screen loading (also known as placeholder loading) is a technique that 
 
 The idea behind skeleton screens is instead to “[show content as soon as possible](https://developer.apple.com/ios/human-interface-guidelines/app-architecture/loading/)”, by using a “skeleton” or placeholder representation of the actual UI in its place while content is being loaded. From what I’ve seen in the wild, this is typically a wireframe version of the UI with subtle animations, but there are no hard and fast rules.
 
-![](https://cdn-images-1.medium.com/max/800/1*x3sau7_pLGRBTwK1bXGXhw.png)
-
-Facebook’s skeleton screen loading
+![Facebook’s skeleton screen loading](https://cdn-images-1.medium.com/max/800/1*x3sau7_pLGRBTwK1bXGXhw.png "Facebook’s skeleton screen loading")
 
 > Don’t make people wait for content to load before seeing the screen they’re expecting. Show the screen immediately, and use placeholder text, graphics, or animations to identify where content isn’t available yet. Replace these placeholder elements as the content loads. — Apple iOS Human Interface Guidelines
 

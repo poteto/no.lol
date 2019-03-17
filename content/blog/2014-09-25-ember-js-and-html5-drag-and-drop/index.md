@@ -26,9 +26,9 @@ Using [transclusion](http://en.wikipedia.org/wiki/Transclusion), we can then eas
 
 ### demo (with extra bells and whistles)
 
-[http://gfycat.com/HarmfulQuarterlyBobwhite](http://gfycat.com/HarmfulQuarterlyBobwhite)
+Code: [JSBin demo](http://jsbin.com/denep/9/edit?js,output)
 
-[JSBin demo](http://jsbin.com/denep/9/edit?js,output)
+<div style='position:relative; padding-bottom:calc(31.10% + 44px)'><iframe src='https://gfycat.com/ifr/HarmfulQuarterlyBobwhite' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div><p> <a href="https://gfycat.com/harmfulquarterlybobwhite">via Gfycat</a></p>
 
 ### draggable-dropzone
 

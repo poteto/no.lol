@@ -154,6 +154,7 @@ header {
 .blog-post img,
 .blog-post figcaption {
   margin: 0 auto;
+  display: block;
 }
 
 /* a tags */

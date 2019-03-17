@@ -71,8 +71,7 @@ Instead, let’s continue the discussion above on how best to refactor away obse
 
 Let’s say we have an observer in our application that needs to check a user’s birthday ([demo](http://emberjs.jsbin.com/citiwi/edit?js,output)):
 
-```js
-// birth-day/component.js
+```js:title=birth-day/component.js
 import Ember from 'ember';
 import moment from 'moment';
 
@@ -115,8 +114,7 @@ export default Component.extend({
 
 In the above example, we’re using an observer to set the `isBirthday` flag if it is the user’s birthday.
 
-```handlebars
-{{!birth-day/template.hbs}}
+```handlebars:title=birth-day/template.hbs
 {{input value=birthDate placeholder="Your birthday"}}
 
 <p>
@@ -133,8 +131,7 @@ When you find yourself setting some value (be in on the component, record or som
 
 In this scenario, you can simply replace the observer with a CP.
 
-```js
-// birth-day/component.js
+```js:title=birth-day/component.js
 import Ember from 'ember';
 import moment from 'moment';
 
@@ -162,8 +159,7 @@ export default Component.extend({
 
 We could also move the `input` logic out of this component, and use the [new component lifecycle hooks](https://github.com/emberjs/ember.js/pull/11127) to set the `isBirthday` flag on the component.
 
-```js
-// birth-day/component.js
+```js:title=birth-day/component.js
 import Ember from 'ember';
 import moment from 'moment';
 
@@ -194,8 +190,7 @@ export default Component.extend({
 });
 ```
 
-```handlebars
-{{!index/template.hbs}}
+```handlebars:title=index/template.hbs
 {{one-way-input
     value=user.birthDate
     update=(action (mut user.birthDate))
@@ -204,8 +199,7 @@ export default Component.extend({
 {{happy-birthday today=today birthDate=user.birthDate}}
 ```
 
-```handlebars
-{{!birth-day/template.hbs}}
+```handlebars:title=birth-day/template.hbs
 <p>
   You are currently {{age}} years old.
   {{#if isBirthday}}
@@ -222,8 +216,7 @@ In this situation, let’s say we want to update the user record’s `isBirthday
 
 By bringing in the [ember-one-way-input](https://github.com/dockyard/ember-one-way-input) addon, we can eliminate the coupling of the component to the user record:
 
-```js
-// birth-day/component.js
+```js:title=birth-day/component.js
 import Ember from 'ember';
 import moment from 'moment';
 
@@ -249,8 +242,7 @@ export default Component.extend({
 });
 ```
 
-```handlebars
-{{!birth-day/template.hbs}}
+```handlebars:title=birth-day/template.hbs
 {{one-way-input
     value=birthDate
     update=(action "checkBirthday")
@@ -267,8 +259,7 @@ export default Component.extend({
 
 And then in the Controller:
 
-```js
-// index/controller.js
+```js:title=index/controller.js
 import Ember from 'ember';
 
 const { Controller, set } = Ember;
@@ -288,8 +279,7 @@ export default Controller.extend({
 });
 ```
 
-```handlebars
-{{!index/template.hbs}}
+```handlebars:title=index/template.hbs
 {{happy-birthday
     setIsBirthday=(action "setIsBirthday")
     setBirthdate=(action "setBirthdate")
