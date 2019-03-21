@@ -37,6 +37,7 @@ module.exports = {
               backgroundColor: `transparent`,
               withWebp: true,
               showCaptions: true,
+              quality: 80,
             },
           },
           {
