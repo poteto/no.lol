@@ -11,6 +11,7 @@ keywords:
   - ancora imparo
   - i am still learning
   - imposter syndrome
+published: true
 cover: ./david-clarke-1400883-unsplash.jpg
 coverAuthor: David Clarke
 coverOriginalUrl: https://unsplash.com/photos/Jhc6SoGWRlI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

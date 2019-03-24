@@ -9,6 +9,7 @@ categories:
 keywords:
   - imposter syndrome
   - year in review
+published: true
 cover: ./jason-leem-1404540-unsplash.jpg
 coverAuthor: Jason Leem
 coverOriginalUrl: https://unsplash.com/photos/zi6-k5vNWZ8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

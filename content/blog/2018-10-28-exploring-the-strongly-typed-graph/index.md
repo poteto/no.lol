@@ -9,6 +9,7 @@ categories:
 keywords:
   - graphql
   - microservices
+published: true
 cover: ./benjamin-hung-340383-unsplash.jpg
 coverAuthor: Benjamin Hung
 coverOriginalUrl: https://unsplash.com/photos/m7q5iX4L7vQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

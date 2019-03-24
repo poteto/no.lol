@@ -16,6 +16,7 @@ keywords:
   - functional validations
   - virtual properties
   - method missing
+published: true
 cover: ./steven-su-1405584-unsplash.jpg
 coverAuthor: Steven Su
 coverOriginalUrl: https://unsplash.com/photos/7Oc33M8vs0s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
