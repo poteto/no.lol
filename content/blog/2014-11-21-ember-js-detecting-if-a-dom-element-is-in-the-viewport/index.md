@@ -9,6 +9,7 @@ categories:
 keywords:
   - emberjs
   - in viewport
+published: true
 cover: ./pawel-czerwinski-1404596-unsplash.jpg
 coverAuthor: Paweł Czerwiński
 coverOriginalUrl: https://unsplash.com/photos/R7n2WIyFr3E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

@@ -11,6 +11,7 @@ keywords:
   - commitment
   - communication
   - five dysfunctions of a team
+published: true
 cover: ./matthias-schroder-1399823-unsplash.jpg
 coverAuthor: Matthias Schröder
 coverOriginalUrl: https://unsplash.com/photos/v5ehDfMpUyA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

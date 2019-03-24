@@ -10,6 +10,7 @@ keywords:
   - emberjs
   - computed property macros
   - search
+published: true
 cover: ./philip-swinburn-60229-unsplash.jpg
 coverAuthor: Philip Swinburn
 coverOriginalUrl: https://unsplash.com/photos/vS7LVkPyXJU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

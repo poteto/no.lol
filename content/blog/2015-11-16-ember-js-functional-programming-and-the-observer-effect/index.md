@@ -12,6 +12,7 @@ keywords:
   - observers
   - data down actions up
   - one way data flow
+published: true
 cover: ./adam-sodek-1403521-unsplash.jpg
 coverAuthor: Adam Šodek
 coverOriginalUrl: https://unsplash.com/photos/WF3shbZCOi4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

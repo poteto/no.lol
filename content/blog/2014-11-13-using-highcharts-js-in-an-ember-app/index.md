@@ -9,6 +9,7 @@ categories:
 keywords:
   - emberjs
   - highcharts
+published: true
 cover: ./tracy-thomas-56810-unsplash.jpg
 coverAuthor: Tracy Thomas
 coverOriginalUrl: https://unsplash.com/photos/Y7SQO1p6B0A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
