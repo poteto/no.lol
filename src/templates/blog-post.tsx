@@ -33,7 +33,10 @@ const BlogPostTemplate: React.FunctionComponent<BlogPostTemplateProps> = ({
         keywords={post.frontmatter.keywords}
       />
       <div className="blog-post">
-        <h1 style={{ marginTop: 0 }}>{post.frontmatter.title}</h1>
+        <h1 style={{ marginTop: 0 }}>
+          {post.frontmatter.published ? '' : 'DRAFT: '}
+          {post.frontmatter.title}
+        </h1>
         <small
           style={{
             ...scale(-1 / 5),
@@ -157,6 +160,7 @@ export const pageQuery = graphql`
         coverAuthor
         coverOriginalUrl
         keywords
+        published
       }
     }
   }
