@@ -53,13 +53,13 @@ When you get a question in this area, take these approaches:
 
 For technical questions, this usually means starting with the simplest approach. The interviewer will then expand the scope of the question by asking you additional questions that make it more complex. For questions such as the "tricky project" one, start high level, then go into more details. For example: *"One of the most challenging projects I worked on was Project Donut. The requirements were confusing, and we had to implement a complex data-driven UI that had a lot of perf constraints. To be specific, I had to work closely with our PM to clarify what the requirements were. They were new to the company and didn't have a lot of context about the users we were trying to help. [...] We first tried doing X to render all the items on screen, but this turned out to cause a lot of jank when scrolling. We then tried doing Y which [...]"*
 
-#### Ask for more context
+#### Collaborate and share context
 
 What level of technical detail would they like you to go to? Will this list contain only integers? Would they prefer you spoke about a technically challenging project, or an organizationally challenging project? Asking for context will help you understand what the interviewer is looking for, and reduce the amount of guesswork you have to do.
 
-#### Explain the details
-
 Even if the interviewer is technical, explain what you're doing and why. Don't assume that they already know what it is. If you're unsure, you can always ask if they would like you to explain something.
+
+Throughout the interview, your interviewer may share feedback with you. If they're suggesting something, go with it! It's very rare that interviewers will try to mislead you or throw you off. If they suggest something, it's usually because they're trying to help.
 
 #### Compare the tradeoffs
 
