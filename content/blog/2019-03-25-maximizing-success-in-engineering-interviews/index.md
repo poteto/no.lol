@@ -41,7 +41,7 @@ Depending on the needs of the company, the specifics may vary. These areas shoul
 
 ### How do I demonstrate that I can do the job?
 
-These are questions that involve your core skills as an engineer: problem solving, logic, breaking down large requirements into smaller tasks, knowledge/usage of specific technical concepts, and most importantly, communication.
+These are questions that involve your core skills as an engineer: problem solving, logic, breaking down large requirements into smaller tasks, knowledge/usage of specific technical concepts, and most importantly communication.
 
 The kinds of questions you'll get in this area depends on the role and company you're applying for. Some places might place emphasis on CS fundamentals like data structures and algorithms. Others may focus on practical questions (ps: check out my [hiring-without-whiteboards](https://github.com/poteto/hiring-without-whiteboards) repo for a list of such companies). Regardless of what you get, the approach to answering them is mostly the same. The interviewer is trying to understand if you have the necessary skills to do the job, so help them out.
 
