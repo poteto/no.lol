@@ -27,9 +27,7 @@ _⚠️ Warning_: It may not solve the exact problem that you have. Read more an
 
 I currently work in a large, microservice heavy organization. Microservices have worked well for us given our loosely coupled org structure. We optimize for rapid learning and innovation in our respective business sub-domains. The larger domain being entertainment, for content creation at scale. Think creating thousands of high quality shows (movies and TV series) a year, across domains such as financing, production, business/legal obligations, casting/staffing of productions, and more.
 
-![](https://cdn-images-1.medium.com/max/800/1*II3IKcf1BWtrT6cmbdSfJg.png)
-
-“Organizations which design systems … are constrained to produce designs which are copies of the communication structures of these organizations.” — M. Conway
+![Conway's Law](./conways-law.png "\"Organizations which design systems … are constrained to produce designs which are copies of the communication structures of these organizations.\"— M. Conway")
 
 We moved fast, building a core set of applications in a few years. But, these applications were silos, and disconnected from each other. We would update something in one, and wonder why it wasn’t updated in the other.
 
@@ -43,9 +41,7 @@ In entertainment, it’s the same questions. How we will finance the show? Who w
 
 In moving fast, we were also able to learn fast. We learned that these sub-domains made up a larger graph. And that we needed to connect them together to truly push the business forward.
 
-![](https://cdn-images-1.medium.com/max/600/1*lsQ-lcLu2J080Ym1dpy-tw.png)
-
-Example graph from neo4j movie dataset
+![Example graph from neo4j movie dataset](./movie-graph.png "Example graph from neo4j movie dataset")
 
 ### Move fast and grow the network
 
@@ -55,9 +51,7 @@ We want teams to be able to accelerate their rate of innovation, but in a way th
 
 #### End-to-end type coverage
 
-The idea of end-to-end type coverage is simple and compelling. It is the combination of strongly typed technologies such as gRPC/Thrift, GraphQL, and TypeScript/Flow across the stack, from backend to frontend. If you’re interested in learning more about type systems, check out my talk below at [React Rally 2018](https://youtu.be/y3uXazpAdwo).
-
-My talk about type systems in JavaScript
+The idea of end-to-end type coverage is simple and compelling. It is the combination of strongly typed technologies such as gRPC/Thrift, GraphQL, and TypeScript/Flow across the stack, from backend to frontend. If you’re interested in learning more about type systems, check out my talk at [React Rally 2018](https://youtu.be/y3uXazpAdwo).
 
 Type systems are not new inventions. You may have used a strongly typed language like Java, C#, Go, Rust, and more. The static type systems you’re familiar with give you compile time guarantees. They guarantee that the code _you_ have written is type safe. They don’t guarantee that the services you _depend on_ are type safe.
 
@@ -71,9 +65,7 @@ Picture this. You’re at your editor, coding up a storm for a new client-side U
 
 The “Strongly Typed Graph” builds upon end-to-end type coverage and connects diverse domains into a single graph. It gives teams near real-time visibility of how changes in the larger graph affect your entire organization. As a reminder, this architecture is still only an exploration!
 
-![](https://cdn-images-1.medium.com/max/800/1*Y140aFlCjLSsU0iZQvYpLA.png)
-
-Architecture for the Strongly Typed Graph
+![Architecture for the Strongly Typed Graph](./strongly-typed-architecture.png "Architecture for the Strongly Typed Graph")
 
 What’s exciting about this are just some of the possibilities at various levels in the organization:
 
