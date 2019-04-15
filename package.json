@@ -58,7 +58,7 @@
     "eslint-plugin-react": "7.12.4",
     "lighthousebot": "https://github.com/GoogleChromeLabs/lighthousebot",
     "prettier": "1.17.0",
-    "typescript": "3.4.2",
+    "typescript": "3.4.3",
     "wait-for-netlify-preview": "1.2.0"
   },
   "homepage": "https://github.com/poteto/no.lol",
