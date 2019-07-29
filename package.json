@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@types/react": "16.8.23",
-    "@types/react-dom": "16.8.4",
+    "@types/react-dom": "16.8.5",
     "@types/react-helmet": "5.0.8",
     "@types/typography": "0.16.2",
     "@typescript-eslint/eslint-plugin": "1.12.0",
