@@ -1554,10 +1554,10 @@
     "@webassemblyjs/wast-parser" "1.7.11"
     "@xtuc/long" "4.2.1"
 
-"@weknow/gatsby-remark-twitter@0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@weknow/gatsby-remark-twitter/-/gatsby-remark-twitter-0.2.1.tgz#d3e7d72d4b25d4d5d115f4d569dfb5c8b7e31c7f"
-  integrity sha512-Z8VRSIfh86/phIbOTY0HfWBqddsCq7Yvok9+rgSBScuB1tqHs6wkzFULCC9Sg3E/PfsFb5qVwZQbGNIENtVUrA==
+"@weknow/gatsby-remark-twitter@0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@weknow/gatsby-remark-twitter/-/gatsby-remark-twitter-0.2.3.tgz#2b9292cc077196ebc6fbacf2af30bfe82f1f0f2e"
+  integrity sha512-24//k4QPUcZUv1f2ev4AzxBDMhvRdOyj/yiVDJ579WlsWZjKayPAi7TgeLRuejBTs4mfx3aBv4N/kD/oDvwsXw==
   dependencies:
     babel-runtime "^6.26.0"
     node-fetch "^2.3.0"

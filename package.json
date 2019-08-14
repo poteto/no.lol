@@ -8,7 +8,7 @@
     "@fortawesome/fontawesome-svg-core": "1.2.21",
     "@fortawesome/free-brands-svg-icons": "5.10.1",
     "@fortawesome/react-fontawesome": "0.1.4",
-    "@weknow/gatsby-remark-twitter": "0.2.1",
+    "@weknow/gatsby-remark-twitter": "0.2.3",
     "gatsby": "2.13.50",
     "gatsby-image": "2.2.8",
     "gatsby-plugin-eslint": "2.0.5",
