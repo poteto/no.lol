@@ -222,6 +222,10 @@ a.squiggly:hover {
   background-color: #a7fae6;
   color: #006d5d;
 }
+.pill--personal {
+  background-color: #ffd6e8;
+  color: #9f1853;
+}
 
 /* embedded tweets */
 .twitter-tweet {

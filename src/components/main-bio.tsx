@@ -8,7 +8,7 @@ import { rhythm } from '../utils/typography';
 
 const mainBioQuery = graphql`
   query MainBioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic2.jpg/" }) {
+    avatar: file(absolutePath: { regex: "/profile-pic3.jpg/" }) {
       childImageSharp {
         fixed(width: 250, height: 250, quality: 90) {
           ...GatsbyImageSharpFixed
@@ -73,9 +73,9 @@ const MainBio: React.FunctionComponent<{}> = () => {
                   🏄🏻‍♀️
                 </span>{' '}
                 webmaster of this little website. I started my career in tech as
-                a UI designer, but the allure of learning to bring my own
-                designs to life was too enticing. I write about leadership,
-                JavaScript, TypeScript, Elixir, and more. Welcome!
+                a UI designer, but the allure of learning to bring my designs to
+                life was too enticing. I write about leadership, JavaScript,
+                TypeScript, Elixir, and more. Welcome!
               </p>
             </div>
             <Image
