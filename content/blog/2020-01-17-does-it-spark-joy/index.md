@@ -35,7 +35,7 @@ It was true--I was *very* curious about management. I pestered other managers to
 
 To be honest, I don't remember what exactly my skip and their manager said that day. I was trying to process my emotions from the days' news, so I  wasn't listening to most of what they said. I couldn't. Even though they tried to tell me that I was ready, I didn't feel it. I didn't think I could do it.
 
-I ended up taking the job a couple of days later. I realized it was a [Type 2 decision](https://fs.blog/2018/04/reversible-irreversible-decisions/), so there was no point agonizing over making a perfect decision. One guiding principle that has shaped my career is: [do things that scare you](http://localhost:8000/2017-05-30-i-am-still-learning/). Fears tend to disguise opportunities for personal growth. Switching roles to be a manager was completely uncharted territory for me. I was terrified, but whatever happened, I knew I would be learning and growing. I also had a backup plan: I could go back to being an engineer if I didn't let my skills atrophy too much.
+I ended up taking the job a couple of days later. I realized it was a [Type 2 decision](https://fs.blog/2018/04/reversible-irreversible-decisions/), so there was no point agonizing over making a perfect decision. One guiding principle that has shaped my career is: [do things that scare you](https://no.lol/2017-05-30-i-am-still-learning/). Fears tend to disguise opportunities for personal growth. Switching roles to be a manager was completely uncharted territory for me. I was terrified, but whatever happened, I knew I would be learning and growing. I also had a backup plan: I could go back to being an engineer if I didn't let my skills atrophy too much.
 
 ## Does it spark joy?
 
