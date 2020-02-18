@@ -27,6 +27,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/talks`,
+        name: `talks`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -41,6 +48,13 @@ module.exports = {
             },
           },
           {
+            resolve: `@weknow/gatsby-remark-twitter`,
+            options: {
+              align: `center`,
+            },
+          },
+          `gatsby-remark-embed-video`,
+          {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
@@ -51,12 +65,6 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          {
-            resolve: `@weknow/gatsby-remark-twitter`,
-            options: {
-              align: `center`,
-            },
-          },
           `gatsby-remark-external-links`,
         ],
       },

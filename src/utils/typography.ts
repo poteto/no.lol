@@ -61,6 +61,7 @@ Wordpress2016.overrideThemeStyles = () => ({
   },
   small: {
     color: 'var(--gray)',
+    lineHeight: `1.1em`,
   },
   '.blog-post figcaption': {
     fontSize: '0.8rem',
