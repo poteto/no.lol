@@ -1,5 +1,6 @@
 ---
 title: The Importance of Being Experience First
+kind: post
 description: >-
   We’re in the middle of a digital renaissance that has software eating the
   world. Like the industrial revolution, the digital revolution…

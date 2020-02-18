@@ -1,5 +1,6 @@
 ---
 title: "Does It Spark Joy?"
+kind: post
 description: >-
   I'm heading for a new adventure!
 date: "2020-02-17T20:29:57.498Z"

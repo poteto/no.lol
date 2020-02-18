@@ -2,6 +2,7 @@
 title: >-
   Creating an Ember CLI addon — Detecting Ember.js Components Entering or
   Leaving the Viewport
+kind: post
 description: >-
   I wrote a post last year about how I made an Ember Mixin that would let Ember
   Components or Views know if their DOM element had entered or…

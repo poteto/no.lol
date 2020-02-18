@@ -1,5 +1,6 @@
 ---
 title: Using Highcharts.js in an Ember app
+kind: post
 description: >-
   Highcharts is one of the better supported and developed front end charting
   libraries out there, and it makes creating standard charts a…

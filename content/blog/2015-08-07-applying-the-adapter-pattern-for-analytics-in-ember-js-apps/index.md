@@ -1,5 +1,6 @@
 ---
 title: Applying the Adapter Pattern for Analytics in Ember.js Apps
+kind: post
 description: >-
   At DockYard, most (if not all) Ember apps we build for our clients require
   analytics in some form or other. For many of these apps…

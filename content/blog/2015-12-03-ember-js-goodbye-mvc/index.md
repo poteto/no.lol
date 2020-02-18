@@ -1,5 +1,6 @@
 ---
 title: Ember.js — Goodbye MVC
+kind: post
 description: >-
   At EmberConf 2015, Yehuda Katz and Tom Dale announced the arrival of certain
   changes to Ember 2. Most notably, the routable components RFC…

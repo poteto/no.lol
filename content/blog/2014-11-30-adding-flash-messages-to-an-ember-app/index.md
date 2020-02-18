@@ -1,5 +1,6 @@
 ---
 title: Adding Flash Messages to an Ember App
+kind: post
 description: >-
   One of Jakob Nielsen’s 10 heuristics for user interface design is Visibility
   of System Status, or in other words, keeping users informed…

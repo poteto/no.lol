@@ -1,5 +1,6 @@
 ---
 title: Rise From the Ashes — Incremental APIs With Phoenix
+kind: post
 description: >-
   Much has been said about the Elixir language and the Phoenix framework
   —Phoenix’s performance without compromise makes it a compelling…

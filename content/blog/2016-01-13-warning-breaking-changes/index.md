@@ -1,5 +1,6 @@
 ---
 title: Warning — Breaking Changes
+kind: post
 description: >-
   In the world of software releases, programmers call a significant change in
   existing behavior a breaking change. Typically, this means that…

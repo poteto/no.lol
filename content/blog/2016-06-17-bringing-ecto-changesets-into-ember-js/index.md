@@ -1,5 +1,6 @@
 ---
 title: Bringing Ecto Changesets into Ember.js
+kind: post
 description: >-
   The past month or so, I’ve been working on an Elixir and Phoenix API for a
   client. I am blown away by how nice it is working with Elixir…

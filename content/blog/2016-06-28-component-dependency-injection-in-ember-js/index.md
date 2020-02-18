@@ -1,5 +1,6 @@
 ---
 title: Component dependency injection in Ember.js
+kind: post
 description: >-
   The Dependency Injection (DI) pattern is a subset of Inversion of Control, and
   is a useful technique for decoupling the creation of a…

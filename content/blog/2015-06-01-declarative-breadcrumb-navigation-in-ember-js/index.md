@@ -1,5 +1,6 @@
 ---
 title: Declarative Breadcrumb Navigation in Ember.js
+kind: post
 description: >-
   Breadcrumb navigation isn’t a new concept, in fact, it’s usefulness has been
   endlessly debated about by UX designers all over. Today, I…

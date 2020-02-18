@@ -1,5 +1,6 @@
 ---
 title: Skeleton Screen Loading in Ember.js
+kind: post
 description: >-
   Skeleton screen loading (also known as placeholder loading) is a technique
   that enhances the perception of loading in your application…

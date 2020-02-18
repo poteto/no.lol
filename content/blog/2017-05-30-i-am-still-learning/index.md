@@ -1,5 +1,6 @@
 ---
 title: I Am Still Learning
+kind: post
 description: >-
   Learn to welcome fear. Learn from fear. No one learns and develops skills in a
   bubble.

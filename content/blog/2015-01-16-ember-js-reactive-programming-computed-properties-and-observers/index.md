@@ -1,5 +1,6 @@
 ---
 title: Ember.js & Reactive Programming — Computed Properties and Observers
+kind: post
 description: >-
   Reactive Programming (or RP for short) is a programming paradigm that gets
   thrown around a lot, but its clear that there is much confusion…

@@ -1,5 +1,6 @@
 ---
 title: Ember – Simple text search computed property macro
+kind: post
 description: >-
   Every now and then, you want to let your users quickly search for records that
   you’ve already loaded into your store. We can easily…

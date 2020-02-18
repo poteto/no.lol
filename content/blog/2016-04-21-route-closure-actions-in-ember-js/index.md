@@ -1,5 +1,6 @@
 ---
 title: Route Closure Actions in Ember.js
+kind: post
 description: >-
   In my previous post, I wrote about moving singleton state in Controllers into
   Services that back components. This means being able to…

@@ -1,5 +1,6 @@
 ---
 title: Exploring the Strongly Typed Graph
+kind: post
 description: >-
   The “Strongly Typed Graph” is something I’ve been thinking about lately. I
   believe it could significantly improve developer productivity in…

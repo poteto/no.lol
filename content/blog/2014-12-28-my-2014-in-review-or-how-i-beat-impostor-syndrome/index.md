@@ -1,5 +1,6 @@
 ---
 title: My 2014 in Review — Or How I Beat Impostor Syndrome
+kind: post
 description: >-
   I’ll remember this year as the year I was challenged and grew the most — both
   personally, and professionally as a UI designer and front end…
