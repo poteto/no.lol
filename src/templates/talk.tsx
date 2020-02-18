@@ -77,7 +77,7 @@ const TalkTemplate: React.FunctionComponent<TalkTemplateProps> = ({
             rel="nofollow noopener noreferrer"
             href={`https://github.com/poteto/no.lol/tree/master/content/talks${fileName}`}
           >
-            Edit this talk on GitHub
+            Edit this page on GitHub
           </a>
         </small>
         <hr
