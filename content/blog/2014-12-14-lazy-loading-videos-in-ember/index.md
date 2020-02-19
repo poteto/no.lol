@@ -1,5 +1,6 @@
 ---
 title: Lazy Loading Videos in Ember
+kind: post
 description: >-
   If you’re like me, every time you embed a video iframe into your app you feel
   a little bit dirty for having to load an entire html document…

@@ -1,5 +1,6 @@
 ---
 title: "#1 Should I Become a Tech Lead?"
+kind: post
 description: >-
   I recently tweeted that I was starting an experiment. 26 people applied to try this out! Over the next couple of weeks, I'll be speaking to as many of them as I can in one-on-one (1:1) meetings over Google Hangouts. With their permission, I hope to be able to share some of the advice I've given them with you. Here is today's topic - growing as an engineer in the context of becoming a tech lead.
 date: "2019-03-09T19:21:07.439Z"

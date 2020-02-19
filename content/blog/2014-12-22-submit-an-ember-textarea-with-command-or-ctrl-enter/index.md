@@ -1,5 +1,6 @@
 ---
 title: Submit an Ember TextArea with Command or Ctrl + Enter
+kind: post
 description: >-
   You might have an Ember TextArea in your app somewhere, perhaps as a comment
   form or some other input, for submitting multi-line strings…

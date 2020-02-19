@@ -1,5 +1,6 @@
 ---
 title: Commit to Commit
+kind: post
 description: >-
   Commitment can be terrifying. Broken promises are the surest way down the
   waterslide of low morale.

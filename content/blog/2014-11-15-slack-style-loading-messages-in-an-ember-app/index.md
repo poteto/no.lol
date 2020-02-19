@@ -1,5 +1,6 @@
 ---
 title: Slack-style loading messages in an Ember app
+kind: post
 description: >-
   If you haven’t used Slack already, it’s an awesome chat app for teams that’s
   similar to IRC. I’ve been using it for a while now, and I’ve…

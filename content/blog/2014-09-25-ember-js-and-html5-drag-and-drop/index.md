@@ -1,5 +1,6 @@
 ---
 title: Ember.js and HTML5 Drag and Drop
+kind: post
 description: >-
   It’s fairly trivial to add a ‘drag and drop’ interface to Ember.js with html5,
   without the need for external libraries, although…

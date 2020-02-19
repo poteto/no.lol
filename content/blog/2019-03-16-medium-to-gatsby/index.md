@@ -1,5 +1,6 @@
 ---
 title: "Migrating from Medium to Gatsby"
+kind: post
 description: >-
   I recently moved my blog from Medium to a self-managed blog built with Gatsby, then deployed on Netlify. After a few weeks of fiddling around, I feel like I've landed on something I'm mostly happy with. I've also automated a bunch of things like performance testing with lighthouse which have made the experience quite great.
 date: "2019-03-17T03:45:03.995Z"

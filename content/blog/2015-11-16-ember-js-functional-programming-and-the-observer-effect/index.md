@@ -1,5 +1,6 @@
 ---
 title: Ember.js — Functional Programming and the Observer Effect
+kind: post
 description: >-
   My awesome colleagues have written about patterns and best practices we use at
   DockYard, covering everything from the Ember Object model…

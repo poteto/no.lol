@@ -8,6 +8,7 @@ import SEO from '../components/seo';
 import Pills from '../components/pills';
 import { rhythm } from '../utils/typography';
 import pluralizeReadingTime from '../utils/pluralize-reading-time';
+import KEYWORDS from '../constants/seo-keywords';
 
 interface BlogIndexProps {
   data: any;
@@ -23,22 +24,7 @@ const BlogIndex: React.FunctionComponent<BlogIndexProps> = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
-        title="Writing"
-        keywords={[
-          `blog`,
-          `gatsby`,
-          `javascript`,
-          `typescript`,
-          `elixir`,
-          `react`,
-          `lauren tan`,
-          `sugarpirate`,
-          `no.lol`,
-          `engineering manager`,
-          `engineering leader`,
-        ]}
-      />
+      <SEO title="Writing" keywords={KEYWORDS} />
       <MainBio />
       {posts.map(({ node }: { node: any }) => {
         const title = node.frontmatter.title || node.fields.slug;
@@ -95,7 +81,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { published: { eq: true } } }
+      filter: { frontmatter: { published: { eq: true }, kind: { eq: "post" } } }
     ) {
       edges {
         node {

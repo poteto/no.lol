@@ -1,5 +1,6 @@
 ---
 title: An Engineer’s Guide to Communication
+kind: post
 description: >-
   It’s far too easy to be misunderstood. Trying to get your idea or point across
   to someone can often feel frustrating and difficult.

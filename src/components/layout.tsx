@@ -87,9 +87,9 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
             </Link>
           </li>
           <li>
-            <a className="squiggly" href="http://bit.ly/lauren-tan-speaking">
+            <Link className="squiggly" to={'/speaking'}>
               Speaking
-            </a>{' '}
+            </Link>
           </li>
         </ul>
       </header>

@@ -1,5 +1,6 @@
 ---
 title: Ember.js — Detecting if a DOM Element is in the Viewport
+kind: post
 description: >-
   Detecting whether or not an element is visible is very useful when it comes to
   triggering animations or events. Before you drop in another…

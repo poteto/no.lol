@@ -1,5 +1,6 @@
 ---
 title: Declarative Templating in Ember with Composable Helpers
+kind: post
 description: >-
   Previously, I mentioned that Ember’s new Helper implementation landed in 1.13.
   In my opinion, helpers are one of the most useful, yet least…

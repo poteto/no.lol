@@ -1,5 +1,6 @@
 ---
 title: "Type Narrowing in TypeScript"
+kind: post
 description: >-
   This blog post is to share a TypeScript tip I've picked up while creating a new programming language: type narrowing. Type narrowing gives TypeScript more information about the type being narrowed, and allows the TypeScript compiler to be more helpful to you. When used responsibly, narrowing types can make your code easier to understand.
 date: "2019-12-28T04:15:24.915Z"

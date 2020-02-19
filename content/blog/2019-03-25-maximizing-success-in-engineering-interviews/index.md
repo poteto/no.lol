@@ -1,5 +1,6 @@
 ---
 title: "#2 Maximizing Success in Engineering Interviews"
+kind: post
 description: >-
   Here is today's 1:1 topic -- finding success in software engineering interviews. The person I spoke to is new to tech and has been feeling frustrated understanding how to maximize their chances of success. This is largely because they haven't received much feedback on what to improve on post-interview. There is much that isn't right about the tech interview process, but I'll save that post for another time. This guide is for maximizing success in that interview that's coming up for you next week.
 date: "2019-03-25T19:33:52.706Z"
