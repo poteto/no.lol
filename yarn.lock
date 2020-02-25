@@ -6204,7 +6204,7 @@ gatsby-remark-copy-linked-files@2.1.37:
     probe-image-size "^4.1.1"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-embed-video@^2.0.1:
+gatsby-remark-embed-video@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-remark-embed-video/-/gatsby-remark-embed-video-2.0.1.tgz#d7b5a8ecbde9ec8fc33fb2e569b87b2af35cb278"
   integrity sha512-V+cW4Ev+iXb0jmqfqKpcdPRn9vsKahIdj9sAUj26Ox4rooknWCjhayBdxT51BM2u7P2u3ck3Ty96PnqW7e/Mog==
