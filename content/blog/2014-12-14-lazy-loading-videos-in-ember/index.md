@@ -11,7 +11,7 @@ keywords:
   - ember-lazy-video
   - lazy loading videos
 published: true
-cover: ./damian-markutt-1405941-unsplash.jpg
+cover: ./damian-markutt-1405941-unsplash-optimized.jpg
 coverAuthor: Damian Markutt
 coverOriginalUrl: https://unsplash.com/photos/eCkmZ7f8oWY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---

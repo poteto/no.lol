@@ -13,7 +13,7 @@ keywords:
   - analytics
   - ember-metrics
 published: true
-cover: ./petri-r-1403845-unsplash.jpg
+cover: ./petri-r-1403845-unsplash-optimized.jpg
 coverAuthor: Petri R
 coverOriginalUrl: https://unsplash.com/photos/6j_lmeycTrM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---

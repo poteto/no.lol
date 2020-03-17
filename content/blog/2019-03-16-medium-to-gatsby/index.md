@@ -14,7 +14,7 @@ keywords:
   - bors
   - delete-merged-branch
 published: true
-cover: ./marvin-meyer-794521-unsplash.jpg
+cover: ./marvin-meyer-794521-unsplash-optimized.jpg
 coverAuthor: Marvin Meyer
 coverOriginalUrl: https://unsplash.com/photos/VvKdB1FYNZs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---

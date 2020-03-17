@@ -12,7 +12,7 @@ keywords:
   - flash messages
   - ember-cli-flash
 published: true
-cover: ./david-ngo-1404606-unsplash.jpg
+cover: ./david-ngo-1404606-unsplash-optimized.jpg
 coverAuthor: David Ngo
 coverOriginalUrl: https://unsplash.com/photos/UdToY22XYJQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---

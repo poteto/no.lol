@@ -10,7 +10,7 @@ keywords:
   - type narrowing
   - typescript
 published: true
-cover: ./gil-q1-dAZuhs7I-unsplash.jpg
+cover: ./gil-q1-dAZuhs7I-unsplash-optimized.jpg
 coverAuthor: gil
 coverOriginalUrl: https://unsplash.com/photos/q1-dAZuhs7I
 ---

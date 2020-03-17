@@ -14,7 +14,7 @@ keywords:
   - data down actions up
   - one way data flow
 published: true
-cover: ./sepp-rutz-1402081-unsplash.jpg
+cover: ./sepp-rutz-1402081-unsplash-optimized.jpg
 coverAuthor: Sepp Rutz
 coverOriginalUrl: https://unsplash.com/photos/ToKAuHu_hbU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---

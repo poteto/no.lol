@@ -13,7 +13,7 @@ keywords:
   - engineer to manager
   - engineer/manager pendulum
 published: true
-cover: ./jr-korpa-gWlsT1ITojI-unsplash.jpg
+cover: ./jr-korpa-gWlsT1ITojI-unsplash-optimized.jpg
 coverAuthor: korpa
 coverOriginalUrl: https://unsplash.com/photos/gWlsT1ITojI
 ---

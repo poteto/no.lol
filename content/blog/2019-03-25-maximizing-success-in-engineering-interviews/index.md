@@ -11,7 +11,7 @@ keywords:
   - hiring-without-whiteboards
   - company culture
 published: true
-cover: ./zdenek-machacek-1456234-unsplash.jpg
+cover: ./zdenek-machacek-1456234-unsplash-optimized.jpg
 coverAuthor: Zdeněk Macháček
 coverOriginalUrl: https://unsplash.com/photos/FvTn9Dlv39A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---

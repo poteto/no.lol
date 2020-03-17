@@ -12,7 +12,7 @@ keywords:
   - breadcrumbs
   - ember-crumbly
 published: true
-cover: ./sam-moghadam-1403544-unsplash.jpg
+cover: ./sam-moghadam-1403544-unsplash-optimized.jpg
 coverAuthor: Sam Moghadam
 coverOriginalUrl: https://unsplash.com/photos/1nP3Q9ZXcos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---

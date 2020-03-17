@@ -11,7 +11,7 @@ keywords:
   - loneliness
   - relocation
 published: true
-cover: ./josh-applegate-1402894-unsplash.jpg
+cover: ./josh-applegate-1402894-unsplash-optimized.jpg
 coverAuthor: Josh Applegate
 coverOriginalUrl: https://unsplash.com/photos/mLqoV-TR9zM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
