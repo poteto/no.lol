@@ -46,6 +46,7 @@
     "typography-theme-wordpress-2016": "0.16.19"
   },
   "devDependencies": {
+    "@types/node": "^13.9.1",
     "@types/react": "16.9.23",
     "@types/react-dom": "16.9.5",
     "@types/react-helmet": "5.0.15",
@@ -57,8 +58,10 @@
     "eslint-loader": "3.0.3",
     "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-react": "7.19.0",
+    "execa": "^4.0.0",
     "lighthousebot": "https://github.com/GoogleChromeLabs/lighthousebot",
     "prettier": "1.19.1",
+    "signale": "^1.4.0",
     "typescript": "3.8.3",
     "wait-for-netlify-preview": "1.2.1"
   },
@@ -87,6 +90,7 @@
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
     "lint:fix": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx --fix",
     "test": "npm run lint",
-    "lh": "lighthousebot"
+    "lh": "lighthousebot",
+    "preoptimize:images": "node scripts/preoptimize-images.js"
   }
 }
