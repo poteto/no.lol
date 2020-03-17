@@ -12,7 +12,7 @@ keywords:
   - reactive programming
   - observer pattern
 published: true
-cover: ./jason-leem-1404539-unsplash.jpg
+cover: ./jason-leem-1404539-unsplash-optimized.jpg
 coverAuthor: Jason Leem
 coverOriginalUrl: https://unsplash.com/photos/LOvWqTe1_9E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---

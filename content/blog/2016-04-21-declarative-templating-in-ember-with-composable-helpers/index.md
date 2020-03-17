@@ -13,7 +13,7 @@ keywords:
   - ember-composable-helpers
   - principle of least power
 published: true
-cover: ./tim-patch-1404785-unsplash.jpg
+cover: ./tim-patch-1404785-unsplash-optimized.jpg
 coverAuthor: Tim Patch
 coverOriginalUrl: https://unsplash.com/photos/IS3PDiWTgrM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---

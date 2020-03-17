@@ -11,7 +11,7 @@ keywords:
   - ember
   - ember-route-action-helper
 published: true
-cover: ./devon-janse-van-rensburg-1405686-unsplash.jpg
+cover: ./devon-janse-van-rensburg-1405686-unsplash-optimized.jpg
 coverAuthor: Devon Janse van Rensburg
 coverOriginalUrl: https://unsplash.com/photos/DU8Z5djVJtg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---

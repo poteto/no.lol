@@ -11,7 +11,7 @@ keywords:
   - emberjs
   - dependency injection
 published: true
-cover: ./andrew-buchanan-1404154-unsplash.jpg
+cover: ./andrew-buchanan-1404154-unsplash-optimized.jpg
 coverAuthor: Andrew Buchanan
 coverOriginalUrl: https://unsplash.com/photos/UYJL-k9bkAY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---

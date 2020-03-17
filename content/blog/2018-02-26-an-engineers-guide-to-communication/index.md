@@ -13,7 +13,7 @@ keywords:
   - non-violent communication
   - highly aligned loosely coupled
 published: true
-cover: ./tom-sodoge-1169782-unsplash.jpg
+cover: ./tom-sodoge-1169782-unsplash-optimized.jpg
 coverAuthor: Tom Sodoge
 coverOriginalUrl: https://unsplash.com/photos/ul3ygBELnBw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---

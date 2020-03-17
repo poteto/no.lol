@@ -12,7 +12,7 @@ keywords:
   - drag and drop
   - html5
 published: true
-cover: ./rawpixel-191157-unsplash.jpg
+cover: ./rawpixel-191157-unsplash-optimized.jpg
 coverAuthor: rawpixel
 coverOriginalUrl: https://unsplash.com/photos/C05KN4h8WKw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---

@@ -11,7 +11,7 @@ keywords:
   - emberjs
   - keyboard
 published: true
-cover: ./pawel-czerwinski-1404603-unsplash.jpg
+cover: ./pawel-czerwinski-1404603-unsplash-optimized.jpg
 coverAuthor: Paweł Czerwiński
 coverOriginalUrl: https://unsplash.com/photos/1aMG_ShZCYg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
