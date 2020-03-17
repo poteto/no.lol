@@ -25,7 +25,7 @@ const SpeakingIndex: React.FunctionComponent<SpeakingIndexProps> = ({
       <SpeakerBio />
       {talks.map(({ node }: { node: any }) => {
         const title = node.frontmatter.title || node.fields.slug;
-        const relativeSlug = `speaking/${node.fields.slug}`;
+        const relativeSlug = `/speaking${node.fields.slug}`;
         return (
           <div
             className="talk-preview"
