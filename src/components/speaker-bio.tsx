@@ -72,11 +72,11 @@ const MainBio: React.FunctionComponent<{}> = () => {
                 </li>
               </ul>
               <p>
-                Lauren Tan is an engineering leader and software engineer at
-                Netflix. She&apos;s spoken at more than 15 talks at small to
-                large conferences. She speaks about TypeScript, JavaScript,
-                React, GraphQL, Elixir/Phoenix, Microservices, Engineering
-                leadership and/or management.
+                Lauren Tan is a Software Engineer at Facebook. Previously, she
+                was an Engineering Manager at Netflix. She&apos;s spoken at more
+                than 15 talks at small to large conferences. She speaks about
+                TypeScript, JavaScript, React, GraphQL, Elixir/Phoenix,
+                Microservices, engineering leadership and/or management.
               </p>
               <a className="squiggly" href="mailto:arr@sugarpirate.com">
                 Get in touch!
