@@ -66,16 +66,16 @@ const MainBio: React.FunctionComponent<{}> = () => {
                 ))}
               </ul>
               <p>
-                Hi there! I&apos;m a polyglot Engineering Manager at Netflix,
-                accomplished public speaker, thoughtful software engineer at
-                heart, and{' '}
+                Hi there! I&apos;m a polyglot Software Engineer at Facebook and
+                frequent public speaker. Previously, I was an Engineering
+                Manager at Netflix. I&apos;m the
                 <span role="img" aria-label="woman surfing">
                   🏄🏻‍♀️
                 </span>{' '}
                 webmaster of this little website. I started my career in tech as
                 a UI designer, but the allure of learning to bring my designs to
                 life was too enticing. I write about leadership, JavaScript,
-                TypeScript, Elixir, and more. Welcome!
+                TypeScript, Elixir, Rust, and more. Welcome!
               </p>
             </div>
             <Image
