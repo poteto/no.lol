@@ -26,7 +26,7 @@ const MainBio: React.FunctionComponent<{}> = () => {
   return (
     <StaticQuery
       query={mainBioQuery}
-      render={data => {
+      render={(data) => {
         const { author } = data.site.siteMetadata;
         return (
           <div

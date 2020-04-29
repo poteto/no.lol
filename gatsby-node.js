@@ -30,7 +30,7 @@ async function createSpeakingPages(graphql, createPage) {
 
   const talks = result.data.allMarkdownRemark.edges;
 
-  talks.forEach(talk => {
+  talks.forEach((talk) => {
     createPage({
       path: `speaking${talk.node.fields.slug}`,
       component: path.resolve(`./src/templates/talk.tsx`),

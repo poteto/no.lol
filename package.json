@@ -60,7 +60,7 @@
     "eslint-plugin-react": "7.19.0",
     "execa": "4.0.0",
     "lighthousebot": "https://github.com/GoogleChromeLabs/lighthousebot",
-    "prettier": "1.19.1",
+    "prettier": "2.0.5",
     "signale": "1.4.0",
     "typescript": "3.8.3",
     "wait-for-netlify-preview": "1.2.1"
