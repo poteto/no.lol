@@ -30,7 +30,7 @@ const MainBio: React.FunctionComponent<{}> = () => {
   return (
     <StaticQuery
       query={mainBioQuery}
-      render={data => {
+      render={(data) => {
         const { author } = data.site.siteMetadata;
         return (
           <div
@@ -53,7 +53,7 @@ const MainBio: React.FunctionComponent<{}> = () => {
                 className="horizontal-links"
                 style={{ marginBottom: rhythm(1) }}
               >
-                {SOCIAL.map(s => (
+                {SOCIAL.map((s) => (
                   <li key={s.kind}>
                     <a className="u-no-box-shadow" href={s.url}>
                       <FontAwesomeIcon
