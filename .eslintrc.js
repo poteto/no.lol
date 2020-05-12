@@ -32,7 +32,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.js', '*.jsx', '*.ts', "*.tsx"],
+      files: ['*.js', '*.jsx', '*.ts', '*.tsx'],
       rules: {
         '@typescript-eslint/no-var-requires': 'off',
         '@typescript-eslint/camelcase': 'off',
