@@ -28,7 +28,7 @@
     "gatsby-remark-autolink-headers": "2.3.1",
     "gatsby-remark-code-titles": "1.1.0",
     "gatsby-remark-copy-linked-files": "2.3.2",
-    "gatsby-remark-embed-video": "2.0.1",
+    "gatsby-remark-embed-video": "3.0.10",
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-remark-images": "3.3.2",
     "gatsby-remark-prismjs": "3.5.1",
