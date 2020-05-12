@@ -48,7 +48,7 @@ I've come to realize that perfection is not a destination. It's an incremental j
 
 Instead of seeing code as a rigid structure, like a building, think of your software as a living thing. Every project changes and grows over time, and they are rarely the same. And like things that constantly change, software is never finished. It just gets released.
 
-> "We are simply never going to realize a state of software nirvana where everything is supremely satisfying." - [Mark Slee](http://mcslee.com/)
+> "We are simply never going to realize a state of software nirvana where everything is supremely satisfying. That’s an important emotional realization. The fundamental reward of an improvement process is the experience of betterment, not some mythical destination." - [Mark Slee](http://mcslee.com/)
 
 ---
 
