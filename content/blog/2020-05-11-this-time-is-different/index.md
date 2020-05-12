@@ -22,7 +22,9 @@ This time is different. "Clean slate. Solid foundations. This time I will build 
 
 Early on in my career, I used to be obsessed with "best practices". I wanted to write code that would stand the test of time. Code that was objectively ideal. After all, my programming idols on Twitter said it was good. This is clearly the best way of building software. Who am I to question them?
 
-This is the same mindset that leads to the exhausting pursuit of the shiniest of tech stacks. If it works for BigCorp, surely it works for us. How can I convince my boss to let me use Rectangle, Crust, and GiraffeQL™ to build our new serverless CRUD app orchestrated by AWS step functions? We need to use microservices, the best state management patterns, and only the purest of functional programming paradigms, so we are future proof.
+This is the same mindset that leads to the exhausting pursuit of the shiniest of tech stacks. How can I convince my boss to let me use Rectangular.js, Crust, Kappa, and GiraffeQL to build our new serverless CRUD app orchestrated by Gooberyetis? We need to use microservices, the best state management patterns, and only the purest of functional programming paradigms, so we are future proof. If it works for BigCorp, surely it works for us. 
+
+Don't get me wrong though, these are all great tools (jk, none of them exist). Just keep in mind that tools like these are often extracted from specific use cases and engineering cultures that might differ from yours.
 
 ### Best practice today, anti-pattern tomorrow
 
@@ -36,7 +38,7 @@ I've picked up more languages and tools since then, but the humbling lessons don
 
 We often look to heuristics like Twitter follower count, stars on GitHub, and other proxies to tell us what we should do next. That's fair--sometimes, you just want to get your job done. Software is still a relatively young industry, and it seems to change rapidly. That often is overwhelming. But don't start from the default of thinking that this must be good because someone else said so. Consider the problem you're trying to solve, the opportunity cost of going with this solution instead of another, and the tradeoffs your team is comfortable making. Dealing with ambiguity and making tradeoffs is part of the job.
 
-More importantly, realize that whatever you decide to go with today will likely [change](https://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to) in the long term. And that's okay.
+More importantly, realize that whatever you decide to go with today will likely [change](https://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to) in the long term. If your project even lasts that long :) And that's okay.
 
 ### This time is no different
 
