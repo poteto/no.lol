@@ -24,7 +24,7 @@ Early on in my career, I used to be obsessed with "best practices". I wanted to 
 
 This is the same mindset that leads to the exhausting pursuit of the shiniest of tech stacks. How can I convince my boss to let me use Rectangular.js, Crust, Kappa, and GiraffeQL to build our new serverless CRUD app orchestrated by AWS step functions? We need to use microservices, the best state management patterns, and only the purest of functional programming paradigms, so we are future proof. If it works for BigCorp, surely it works for us. 
 
-Don't get me wrong though, these are all great tools (jk, none of them exist). Just keep in mind that they were extracted from specific use cases that you might not have.
+Don't get me wrong though, these are all great tools (jk, none of them exist). Just keep in mind that tools like these are often extracted from specific use cases and engineering cultures that might differ from yours.
 
 ### Best practice today, anti-pattern tomorrow
 
