@@ -1,13 +1,16 @@
 const execa = require('execa');
 const path = require('path');
 const signale = require('signale');
-const { existsSync, lstatSync, readdirSync } = require('fs');
+const { promisify } = require('util');
+const { existsSync, lstatSync, readdirSync, unlink } = require('fs');
 
 const CJPEG_BIN_PATH = '/usr/local/opt/mozjpeg/bin/cjpeg';
 const CONVERT_BIN_PATH = 'convert';
 const CONTENT_PATH = 'content';
 const OPTIMIZED_SUFFIX = 'optimized';
 const OUTPUT_EXT = 'jpg';
+
+const unlinkAsync = promisify(unlink);
 
 function* findFromDir(startPath, filter) {
   if (!existsSync(startPath)) {
@@ -38,12 +41,16 @@ function* findFromDir(startPath, filter) {
     const out = path.join(dir, `${name}-${OPTIMIZED_SUFFIX}.${OUTPUT_EXT}`);
     signale.start(`Optimizing ${filename}...`);
     try {
-      await execa(CONVERT_BIN_PATH, [filename, 'pnm:-']).stdout.pipe(
-        execa(CJPEG_BIN_PATH, ['-optimize', '-outfile', out]).stdin
-      );
+      const convert = execa(CONVERT_BIN_PATH, [filename, 'pnm:-']);
+      const cjpeg = execa(CJPEG_BIN_PATH, ['-optimize', '-outfile', out]);
+      convert.stdout.pipe(cjpeg.stdin);
+      await convert;
+      await cjpeg;
+      await unlinkAsync(filename);
       signale.success(`Wrote to ${out}\n`);
-    } catch (err) {
-      signale.fatal(err);
+    } catch (_err) {
+      signale.fatal('Something went wrong');
+      break;
     }
   }
   signale.complete('Done, killing child processes...');
