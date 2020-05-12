@@ -10,7 +10,7 @@ keywords:
   - rewrites
   - perfection
   - hard problems
-published: true
+published: false
 cover: ./jr-korpa-xOW_W2vsuk8-unsplash-optimized.jpg
 coverAuthor: korpa
 coverOriginalUrl: https://unsplash.com/photos/xOW_W2vsuk8
