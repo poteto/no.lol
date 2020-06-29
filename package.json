@@ -62,7 +62,7 @@
     "lighthousebot": "https://github.com/GoogleChromeLabs/lighthousebot",
     "prettier": "2.0.5",
     "signale": "1.4.0",
-    "typescript": "3.9.3",
+    "typescript": "3.9.5",
     "wait-for-netlify-preview": "1.2.1"
   },
   "homepage": "https://github.com/poteto/no.lol",
