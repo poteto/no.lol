@@ -22,7 +22,7 @@ const mainBioQuery = graphql`
   }
 `;
 
-const MainBio: React.FunctionComponent<{}> = () => {
+const MainBio: React.FunctionComponent<unknown> = () => {
   return (
     <StaticQuery
       query={mainBioQuery}
