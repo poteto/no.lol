@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "author": "Lauren Tan <arr@sugarpirate.com>",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "1.2.32",
-    "@fortawesome/free-brands-svg-icons": "5.15.1",
+    "@fortawesome/fontawesome-svg-core": "1.2.34",
+    "@fortawesome/free-brands-svg-icons": "5.15.2",
     "@fortawesome/react-fontawesome": "0.1.14",
     "@weknow/gatsby-remark-twitter": "0.2.3",
     "gatsby": "2.30.1",
