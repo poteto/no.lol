@@ -7842,14 +7842,14 @@ gatsby-remark-copy-linked-files@2.10.0:
     probe-image-size "^6.0.0"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-embed-video@3.0.10:
-  version "3.0.10"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-video/-/gatsby-remark-embed-video-3.0.10.tgz#2813199338d27e731783a6f8663477f877e72b73"
-  integrity sha512-3dQgw0g3nndspiXkz7pKOXZs67I1Cz/sefyjXQ2bq6gtdX3qBdBurMuAeIlk0TgueMJCbR8SyFjMyVdI0LAJDg==
+gatsby-remark-embed-video@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-video/-/gatsby-remark-embed-video-3.1.0.tgz#d1f536ddd5a15139328b6ba23ac03e2f5c0d09e3"
+  integrity sha512-yA5YE12K6vRyzDkux2iFtCi46qgCpyTHvv7oOJIF0MKmreweVQpIyjXJs+w3ybKpc4F8M3XF4w3+xOAcGwQvDg==
   dependencies:
-    get-video-id "^3.1.4"
+    get-video-id "^3.1.9"
     remark-burger "^1.0.1"
-    unist-util-visit "^2.0.2"
+    unist-util-visit "^2.0.3"
 
 gatsby-remark-external-links@0.0.4:
   version "0.0.4"
@@ -8235,10 +8235,10 @@ get-value@^2.0.3, get-value@^2.0.6:
   resolved "https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
 
-get-video-id@^3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/get-video-id/-/get-video-id-3.1.4.tgz#9bffb8b607aa0379f0f8a927eae7df13b5e414a3"
-  integrity sha512-XOZ60NZ60ozTtoWtPPpA3TC9JgDXgcd5nTfYwjBhZWAx3w48HRq6EqKp2bUJ/3F+BWgiMMHg4IkQ+acO6LxfMQ==
+get-video-id@^3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/get-video-id/-/get-video-id-3.1.9.tgz#e20634444cac0b25162a637e81b8746b4ae077bd"
+  integrity sha512-N6zOItV21/Z7DedqPCQ0lgi5IZJjXz6a4FjW0tDCDrTlLsfPnsIjfPDP+yyqlTwuHLefynCrZjBLDqETB+oafw==
   dependencies:
     get-src "^1.0.1"
 
@@ -16118,6 +16118,15 @@ unist-util-visit@^2.0.0, unist-util-visit@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-2.0.2.tgz#3843782a517de3d2357b4c193b24af2d9366afb7"
   integrity sha512-HoHNhGnKj6y+Sq+7ASo2zpVdfdRifhTgX2KTU3B/sO/TTlZchp7E3S4vjRzDJ7L60KmrCPsQkVK3lEF3cz36XQ==
+  dependencies:
+    "@types/unist" "^2.0.0"
+    unist-util-is "^4.0.0"
+    unist-util-visit-parents "^3.0.0"
+
+unist-util-visit@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-2.0.3.tgz#c3703893146df47203bb8a9795af47d7b971208c"
+  integrity sha512-iJ4/RczbJMkD0712mGktuGpm/U4By4FfDonL7N/9tATGIF4imikjOuagyMY53tnZq3NP6BcmlrHhEKAfGWjh7Q==
   dependencies:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
