@@ -9,7 +9,7 @@
     "@fortawesome/free-brands-svg-icons": "5.15.2",
     "@fortawesome/react-fontawesome": "0.1.14",
     "@weknow/gatsby-remark-twitter": "0.2.3",
-    "gatsby": "2.32.10",
+    "gatsby": "2.32.11",
     "gatsby-image": "2.11.0",
     "gatsby-plugin-eslint": "3.0.0",
     "gatsby-plugin-favicon": "3.1.6",
