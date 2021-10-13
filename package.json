@@ -46,7 +46,7 @@
     "typography-theme-wordpress-2016": "0.16.19"
   },
   "devDependencies": {
-    "@types/node": "14.17.18",
+    "@types/node": "14.17.22",
     "@types/react": "17.0.26",
     "@types/react-dom": "17.0.9",
     "@types/react-helmet": "6.1.2",
