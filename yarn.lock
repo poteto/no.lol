@@ -7686,10 +7686,10 @@ gatsby-page-utils@^0.9.1:
     lodash "^4.17.20"
     micromatch "^4.0.2"
 
-gatsby-plugin-eslint@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint/-/gatsby-plugin-eslint-4.0.0.tgz#c3f7b141fd1ae4eb87838829e5443a558881f238"
-  integrity sha512-f/SS2BqNtpt7BoLsaC6zug6UM0CwN1G+6uU2S/kb7/0HdBJgnf08OchNTE0HOyj7yxM0bj1CV5J1S3x/3Wk8ZQ==
+gatsby-plugin-eslint@4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint/-/gatsby-plugin-eslint-4.0.2.tgz#a963d03c851e299d407becec8c9b5e4386d2223e"
+  integrity sha512-fNLmtu8zgkrdifF9tnbtzmraJzSulhLo868FObCkArfjXB4PLxguxfBWKuJ6PMeZcSIIA4SgouCXHo2hoA12Pw==
   dependencies:
     webpack-merge "^5.8.0"
 
