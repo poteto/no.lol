@@ -58,7 +58,7 @@
     "eslint-loader": "4.0.2",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.27.1",
-    "execa": "5.1.1",
+    "execa": "6.0.0",
     "lighthousebot": "https://github.com/GoogleChromeLabs/lighthousebot",
     "prettier": "2.5.1",
     "signale": "1.4.0",
