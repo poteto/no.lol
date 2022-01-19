@@ -1,6 +1,6 @@
 {
   "extends": [
     "config:base",
-    "schedule:every month"
+    "schedule:monthly"
   ]
 }
