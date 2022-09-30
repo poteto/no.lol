@@ -415,7 +415,7 @@ Congrats! You’ve written your first addon☺Now you can obsess over your addon
 
 ### Thanks for reading!
 
-This has been a pretty long post, I hope you’ve learned something. If you’d like to ask any questions, please feel free to send me a [tweet](http://www.twitter.com/sugarpirate_).
+This has been a pretty long post, I hope you’ve learned something. If you’d like to ask any questions, please feel free to send me a [tweet](http://www.twitter.com/potetotes).
 
 Some of you might probably know that I’ve recently joined [DockYard](http://www.dockyard.com). If you’re looking for Ember experts to augment your staff, work on a greenfield project or an existing one, please get in touch!
 

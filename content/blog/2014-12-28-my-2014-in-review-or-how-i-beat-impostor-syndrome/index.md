@@ -106,7 +106,7 @@ I’ve come a long way since I first started learning HTML/CSS in high school, a
 
 As you can probably imagine, I don’t feel prepared (or qualified) at all to speak at EmberConf, so I’ll be shutting myself in, spending the next few months preparing intensely for my talk — which by the way, is about ‘Ambitious UX for Ambitious Apps’ — and I know that I’ll be over-prepared by the time the conference begins. I wouldn’t have it any other way.
 
-If you’ve ever faced impostor syndrome in your life, I’d love to [hear](http://www.twitter.com/sugarpirate_) about it, especially if you’re a woman and/or minority working in technology. I don’t know if my methods will work for everyone (if anyone at all), but I hope my writing spurs you on to discover a method of your own.
+If you’ve ever faced impostor syndrome in your life, I’d love to [hear](http://www.twitter.com/potetotes) about it, especially if you’re a woman and/or minority working in technology. I don’t know if my methods will work for everyone (if anyone at all), but I hope my writing spurs you on to discover a method of your own.
 
 Happy new year!
 

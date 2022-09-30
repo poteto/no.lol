@@ -16,9 +16,9 @@ coverAuthor: Zdeněk Macháček
 coverOriginalUrl: https://unsplash.com/photos/FvTn9Dlv39A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
-Here is today's [1:1](https://twitter.com/sugarpirate_/status/1101943502592602113) topic -- finding success in software engineering interviews. The person I spoke to is new to tech and has been feeling frustrated understanding how to maximize their chances of success. This is largely because they haven't received much feedback on what to improve on post-interview.
+Here is today's [1:1](https://twitter.com/potetotes/status/1101943502592602113) topic -- finding success in software engineering interviews. The person I spoke to is new to tech and has been feeling frustrated understanding how to maximize their chances of success. This is largely because they haven't received much feedback on what to improve on post-interview.
 
-https://twitter.com/sugarpirate_/status/1101943502592602113
+https://twitter.com/potetotes/status/1101943502592602113
 
 I honestly struggled putting together this post. There is much that [isn't right](https://theoutline.com/post/1166/programmers-are-confessing-their-coding-sins-to-protest-a-broken-job-interview-process?zd=1&zi=c7gde5xr) about the tech interview process, but I'll save that for another time. This guide is for maximizing success in *that* interview that's coming up for you next week.
 
@@ -91,7 +91,7 @@ These answers will help you evaluate their claims about the company's culture.
 
 ### Ugh
 
-Interviews aren't the most pleasant experience, but they can be prepared for. If you're still struggling, ping me on [Twitter](https://twitter.com/sugarpirate_) and I'll try my best to help.
+Interviews aren't the most pleasant experience, but they can be prepared for. If you're still struggling, ping me on [Twitter](https://twitter.com/potetotes) and I'll try my best to help.
 
 > Interviews generally suck and there's no reason to feel bad about not being good at it. Learning to separate your value as engineer/self-worth from your interviewing skills will greatly help with your mental health. Please take the time for self-care!
 

@@ -14,9 +14,9 @@ coverAuthor: Ian Cylkowski
 coverOriginalUrl: https://unsplash.com/photos/ut2Gmr3nOII?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 
-I recently [tweeted](https://twitter.com/sugarpirate_/status/1101943502592602113) that I was starting an experiment. 26 people applied to try this out! Over the next couple of weeks, I'll be speaking to as many of them as I can in one-on-one (1:1) meetings over Google Hangouts. With their permission, I hope to be able to share some of the advice I've given them with you.
+I recently [tweeted](https://twitter.com/potetotes/status/1101943502592602113) that I was starting an experiment. 26 people applied to try this out! Over the next couple of weeks, I'll be speaking to as many of them as I can in one-on-one (1:1) meetings over Google Hangouts. With their permission, I hope to be able to share some of the advice I've given them with you.
 
-https://twitter.com/sugarpirate_/status/1101943502592602113
+https://twitter.com/potetotes/status/1101943502592602113
 
 Here is today's topic -- growing as an engineer in the context of becoming a tech lead. The person I spoke to has been doing frontend development for most of their career, but was wondering if they needed to become fullstack in order to do a good job as a lead.
 

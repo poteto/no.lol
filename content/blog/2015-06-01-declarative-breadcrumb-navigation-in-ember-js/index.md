@@ -333,4 +333,4 @@ This has been yet another long post, I hope I’ve managed to explain my ideas w
 
 Until next time,
 
-[Lauren](https://twitter.com/sugarpirate_) / [_DockYard_](http://www.dockyard.com)
+[Lauren](https://twitter.com/potetotes) / [_DockYard_](http://www.dockyard.com)

@@ -286,7 +286,7 @@ As front end developers, we strive to build delightful and reactive experiences 
 *   [The introduction to Reactive Programming you’ve been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754) — @andrestaltz
 *   [Principles of Reactive Programming](https://www.coursera.org/course/reactive)—Coursera
 
-As always, I hope you’ve enjoyed reading! [Tweet me](https://twitter.com/sugarpirate_) if you have any questions.
+As always, I hope you’ve enjoyed reading! [Tweet me](https://twitter.com/potetotes) if you have any questions.
 
 This post started its life as a draft from a few months ago, but finished from inside the [@DockYard](https://twitter.com/DockYard) offices. Thanks for letting me hang out with you for the week!
 

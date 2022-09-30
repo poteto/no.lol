@@ -155,4 +155,4 @@ Some other bots I also found useful:
 - [renovate](https://renovatebot.com): keeps your dependencies up to date, similar to [greenkeeper](https://greenkeeper.io/). I like that you can specify a schedule so the PRs don't get too noisy
 - [bors](https://bors.tech/): if you have multiple people contributing to your blog, bors is incredibly helpful! I use this in a bunch of my open source libraries. It helps you prevent ["semantic conflicts"](https://bors.tech/essay/2017/02/02/pitch/) as you merge multiple PRs. It's also pretty cool being able to merge PRs simply by leaving a comment ("bors r+")
 
-If you have any questions or want more details, [tweet at me](https://twitter.com/sugarpirate_). I hope you found this post useful, happy blogging!
+If you have any questions or want more details, [tweet at me](https://twitter.com/potetotes). I hope you found this post useful, happy blogging!

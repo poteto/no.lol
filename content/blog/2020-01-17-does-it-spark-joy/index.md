@@ -67,7 +67,7 @@ This week, I'm resigning from Netflix to return to being a software engineer. I'
 
 After 2 challenging and rewarding years as an engineering manager, one of the most valuable lessons I've learned is that you can be both an [individual contributor and a leader](https://charity.wtf/2017/05/11/the-engineer-manager-pendulum/). Some of the most effective ICs I've worked with do this incredibly well and know that you don't need to be a manager to be a leader. I've distilled a few of these things down into personal engineering leadership principles that I plan to evolve and bring along with me into my next adventure. I'll write about this topic more in a future blog post.
 
-I'm excited that I've found an opportunity that aligns with my personal growth goals, and humbled that I'll get to explore this with an incredible group of kind, smart, and thoughtful human beings. I'll share more details next month on [Twitter](https://twitter.com/sugarpirate_).
+I'm excited that I've found an opportunity that aligns with my personal growth goals, and humbled that I'll get to explore this with an incredible group of kind, smart, and thoughtful human beings. I'll share more details next month on [Twitter](https://twitter.com/potetotes).
 
 I leave you with these questions from [@millie](https://twitter.com/millie)'s wonderful [slide deck on what to do with your life](https://docs.google.com/presentation/d/1dM-XIIarWt3PsHxFi_B92-pYc1Xjh80AJZR93Ogt02g/edit?usp=sharing):
 

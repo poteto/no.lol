@@ -233,4 +233,4 @@ As you can probably tell, we could refactor the code we’ve written into someth
 
 As always, it’s been a pleasure writing and I hope you’ve enjoyed reading. I’ll be working on making this into a [reusable Ember addon](https://github.com/poteto/ember-lazy-video) over the next week or so in my spare time, I invite you to contribute if you’d like to.
 
-In the next week or two, I’ll be writing about the process for turning a little idea in a JS Bin into a proper well tested Ember addon. Follow me on [twitter](https://twitter.com/sugarpirate_) if you’d like to read more of my ramblings!
+In the next week or two, I’ll be writing about the process for turning a little idea in a JS Bin into a proper well tested Ember addon. Follow me on [twitter](https://twitter.com/potetotes) if you’d like to read more of my ramblings!

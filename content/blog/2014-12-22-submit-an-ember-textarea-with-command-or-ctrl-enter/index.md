@@ -107,6 +107,6 @@ I hope you’ve enjoyed reading this little blog post!
 
 Over the next few weeks and months, I’ll be working on improving the [Ember Getting Started Guide](http://emberjs.com/guides/getting-started/) (GSG) alongside the Ember documentation strike team. We’re aware that Ember’s documentation isn’t as strong as we’d like, so we’ll be taking this opportunity to redesign and rewrite it from the ground up to ensure Ember’s on-boarding story for new developers is best in class in the run up to 2.0.
 
-If you have any suggestions, ideas or feedback for the new GSG, please [tweet me](https://twitter.com/sugarpirate_)! Anything, no matter how small or insignificant, will be helpful. If you like my writing, I hope I’ll be able to inject a little bit of _sugarpirate_ goodness into the GSG, and if you don’t, please let me know ☺
+If you have any suggestions, ideas or feedback for the new GSG, please [tweet me](https://twitter.com/potetotes)! Anything, no matter how small or insignificant, will be helpful. If you like my writing, I hope I’ll be able to inject a little bit of _potetotes goodness into the GSG, and if you don’t, please let me know ☺
 
 See you in the new year! — _Lauren_

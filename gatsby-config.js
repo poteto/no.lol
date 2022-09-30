@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: `https://www.no.lol/`,
     social: {
       github: `poteto`,
-      twitter: `sugarpirate_`,
+      twitter: `potetotes`,
       linkedin: `laurenelizabethtan`,
       medium: `sugarpirate`,
     },

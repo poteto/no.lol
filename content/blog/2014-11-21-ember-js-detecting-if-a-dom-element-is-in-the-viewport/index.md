@@ -189,4 +189,4 @@ With the mixin added, you can use `enteredViewport` and `exitedViewport` like an
 
 The component I made in my JS Bin renders a card with a dog breed and some filler description, and its style updates when the cards enter the viewport. It’s a [simple example](http://gfycat.com/FatalAdvancedKite), but it should give you an idea of what you can do with this. You could have animations fire, or you could perform certain logic when something enters the viewport.
 
-I hope you’ve enjoyed reading! If you have any questions, you can [tweet](https://twitter.com/sugarpirate_) me or leave a note on this post.
+I hope you’ve enjoyed reading! If you have any questions, you can [tweet](https://twitter.com/potetotes) me or leave a note on this post.

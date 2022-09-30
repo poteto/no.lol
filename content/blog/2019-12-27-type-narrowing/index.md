@@ -17,7 +17,7 @@ coverOriginalUrl: https://unsplash.com/photos/q1-dAZuhs7I
 
 One of my 2020 resolutions is to learn how to create my [own programming language](https://github.com/poteto/boba-js), along with an interpreter and compiler for it. I'm writing the interpreter and compiler in TypeScript. My eventual goal is to compile it into `wasm`, and introduce some fun language features like pattern matching, the pipe `|>` operator from F#/Elixir, and other fun stuff I haven't yet thought about.
 
-As of time of writing, I have mostly completed the lexer and parser for my interpreter and am about to jump into evaluation. I stream on [Twitch](https://www.twitch.tv/sugarpirate_) when I work on it (usually weekends PST), so check in if you're interested in watching!
+As of time of writing, I have mostly completed the lexer and parser for my interpreter and am about to jump into evaluation. I stream on [Twitch](https://www.twitch.tv/potetotes) when I work on it (usually weekends PST), so check in if you're interested in watching!
 
 This blog post is to share a TypeScript tip I've picked up while creating this language: type narrowing.
 

@@ -32,7 +32,7 @@ As I worked on more projects, I started to question the dogma I believed so stro
 
 Learning a new language that was unlike anything I had used before was humbling. I struggled for hours trying to understand pattern matching. Variable declarations are one of the first things you learn as a total beginner in any programming language. Yet here I was struggling to understand it, despite having done this for a few years.
 
-https://twitter.com/sugarpirate_/status/1256254398121955328
+https://twitter.com/potetotes/status/1256254398121955328
 
 I've picked up more languages and tools since then, but the humbling lessons don't stop. Paradoxically, the more I know, the less I understand.
 

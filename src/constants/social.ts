@@ -14,7 +14,7 @@ export default [
   {
     kind: 'Twitter',
     icon: faTwitter,
-    url: 'https://twitter.com/sugarpirate_',
+    url: 'https://twitter.com/potetotes',
   },
   {
     kind: 'LinkedIn',

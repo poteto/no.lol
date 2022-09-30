@@ -441,7 +441,7 @@ At some point in the future, it would make sense for each adapter to have its ow
 
 ### Thanks for reading!
 
-I hope you’ve learned something about addon creation and the adapter pattern. As always, please direct any comments or criticism to [@sugarpirate_](https://twitter.com/sugarpirate_).
+I hope you’ve learned something about addon creation and the adapter pattern. As always, please direct any comments or criticism to [@potetotes](https://twitter.com/potetotes).
 
 Until next time,
 
