@@ -20,7 +20,7 @@ This time is different. "Clean slate. Solid foundations. This time I will build 
 
 [![The Life of a Software Engineer, by Manu Cornet](./2011.11.15_building_software.png)](https://bonkersworld.net/building-software)
 
-Early in my career, I was obsessed with "best practices". I wanted to write code that would stand the test of time. Code that was objectively ideal. Everything had to be functional, pure, and composable. After all, my programming idols on Twitter said it was good. This is clearly the best way of building software. Who am I to question them? There was a sense I had that if I wrote it well enough and adopted the right patterns and libraries, that my project would be set for life.
+Early in my career, I was obsessed with "best practices". I wanted to write code that would stand the test of time. Code that was objectively ideal. Everything had to be functional, pure, and composable. The fact that my programming idols on Twitter said it was good was convincing enough. Who was I to question them? There was a sense I had that if I wrote it well enough and adopted the right patterns and libraries, that my project would be set for life.
 
 ### Best practice today, anti-pattern tomorrow
 
@@ -32,7 +32,7 @@ https://twitter.com/potetotes/status/1256254398121955328
 
 I've picked up more languages and tools since then, but the humbling lessons don't stop. Paradoxically, the more I know, the less I understand.
 
-We often look to proxies like Twitter follower counts, stars on GitHub, and loudness of voice to tell us what we should do next. That's fair--sometimes, you just want to get your job done. Software is still a relatively young industry, and it seems to change rapidly. That often is overwhelming. But don't start from the default of thinking that this must be good because someone else said so. Consider the problem you're trying to solve, the opportunity cost of going with this solution instead of another, and the tradeoffs your team is comfortable making. Dealing with ambiguity and making tradeoffs is part of the job.
+We often look to proxies like Twitter follower counts, stars on GitHub, and loudness of voice to tell us what we should do next. That's fair--sometimes, you just want to get your job done. Software is still a relatively young industry, and it seems to change rapidly. That often is overwhelming. But I've learned that starting from the default of thinking that this must be good because someone else said so is a flawed foundation. Consider the problem you're trying to solve, the opportunity cost of going with this solution instead of another, and the tradeoffs your team is comfortable making. Dealing with ambiguity and making tradeoffs is part of the job.
 
 More importantly, realize that whatever you decide to go with today will likely [change](https://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to) in the long term. If your project even lasts that long :) And that's okay.
 
