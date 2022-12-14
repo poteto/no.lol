@@ -20,15 +20,11 @@ This time is different. "Clean slate. Solid foundations. This time I will build 
 
 [![The Life of a Software Engineer, by Manu Cornet](./2011.11.15_building_software.png)](https://bonkersworld.net/building-software)
 
-Early in my career, I was obsessed with "best practices". I wanted to write code that would stand the test of time. Code that was objectively ideal. After all, my programming idols on Twitter said it was good. This is clearly the best way of building software. Who am I to question them?
-
-This is the same mindset that leads to the exhausting pursuit of the shiniest of tech stacks. How can I convince my boss to let me use Rectangular.js, Crust, Kappa, and GiraffeQL to build our new serverless CRUD app orchestrated by Gooberyetis? We need to use microservices, the best state management patterns, and only the purest of functional programming paradigms, so we are future proof. If it works for BigCorp, surely it works for us.
-
-Don't get me wrong though, these are all great tools (jk, none of them exist). Just keep in mind that tools like these are often extracted from specific use cases and engineering cultures that might differ from yours.
+Early in my career, I was obsessed with "best practices". I wanted to write code that would stand the test of time. Code that was objectively ideal. Everything had to be functional, pure, and composable. After all, my programming idols on Twitter said it was good. This is clearly the best way of building software. Who am I to question them? There was a sense I had that if I wrote it well enough and adopted the right patterns and libraries, that my project would be set for life.
 
 ### Best practice today, anti-pattern tomorrow
 
-As I worked on more projects, I started to question the dogma I believed so strongly in. If I had to identify the turning point, it was when I first started learning a new programming language, Elixir. Up to that point, Ruby and JavaScript were the tools I knew best. It turns out that there's truth behind Maslow's Hammer--"I suppose it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail."
+As I gained experience working on more projects, I started to question the dogma I so strongly believed in. If I had to identify the turning point, it was when I first started learning a new programming language, Elixir. Up to that point, Ruby and JavaScript were the tools I knew best. It turns out that there's truth behind Maslow's Hammer--"I suppose it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail."
 
 Learning a new language that was unlike anything I had used before was humbling. I struggled for hours trying to understand pattern matching. Variable declarations are one of the first things you learn as a total beginner in any programming language. Yet here I was struggling to understand it, despite having done this for a few years.
 
