@@ -30,7 +30,7 @@ As I gained experience working on more projects, I started to question the dogma
 
 Learning a new language that was unlike anything I had used before was humbling. I struggled for hours trying to understand pattern matching. Variable declarations are one of the first things you learn as a total beginner in any programming language. Yet here I was struggling to understand it, despite having done this for a few years.
 
-It forced me to expand my perspective on different techniques and an appreciation for why they were used. Almost everything has a use, and that finding a satisfying solution that is always better in 100% of use cases is rare. As much as I enjoyed the functional nature of Elixir and  recursing everywhere, I realized that some things are more efficiently solved with a good old `for` loop. Both techniques have their place.
+It forced me to expand my perspective on different techniques and an appreciation for why they were used. Almost everything has a use. Finding a satisfying solution that is always better in 100% of use cases is exceedingly rare. As much as I enjoyed the functional nature of Elixir and  recursing everywhere, I realized that some things are more efficiently solved with a good old `for` loop. Both techniques have their place.
 
 https://twitter.com/potetotes/status/1256254398121955328
 
@@ -48,9 +48,11 @@ When I first watched [Jiro Dreams of Sushi](https://www.netflix.com/title/701817
 
 I've come to realize that perfection is not a destination. It's an incremental journey, process, or whatever you want to call it. Whether it's today's project, or a project I'll work on next year, every piece of software is the [same, only different](http://st.japantimes.co.jp/english_news/essay/2012/ey20120203/ey20120203main.htm?print=noframe). Put another way, something that works well on one project might not yield the same results in another.
 
-Instead of seeing code as an unchanging structure, like a building, think of your software as a living thing. Every project changes and grows over time. The people who work on it come and go. The people who use your software also change. Like things that constantly change, software is never finished. It just gets released (hopefully continuously). I suppose there's a certain zen of software engineering that comes with experience that you can't learn without the scars to prove it.
+Instead of seeing code as an unchanging structure, like a building, think of your software as a living thing. Every project changes and grows over time. The people who work on it come and go. The people who use your software also change. Like things that constantly change, software is never finished. It just gets released (hopefully continuously).
 
 > "We are simply never going to realize a state of software nirvana where everything is supremely satisfying. That’s an important emotional realization. The fundamental reward of an improvement process is the experience of betterment, not some mythical destination." - [Mark Slee](http://mcslee.com/)
+
+I suppose there's a certain zen of software engineering that comes with experience that is hard to learn without the scars to prove it. So go forth, make those mistakes, and find peace with yourself. And the next time, it'll be different :)
 
 ---
 
