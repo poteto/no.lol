@@ -1,9 +1,6 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
-
-// Matches the reading speed gatsby-transformer-remark used before it dropped
-// the built-in `timeToRead` field in Gatsby 5.
-const AVERAGE_WORDS_PER_MINUTE = 265;
+const { timeToRead } = require(`./lib/time-to-read`);
 
 async function createSpeakingPages(graphql, createPage) {
   const result = await graphql(`
@@ -109,10 +106,15 @@ exports.createResolvers = ({ createResolvers }) => {
     MarkdownRemark: {
       timeToRead: {
         type: `Int!`,
-        resolve(source) {
-          const words = (source.rawMarkdownBody ?? ``).match(/[\p{L}\p{N}]+/gu);
-          const wordCount = words ? words.length : 0;
-          return Math.max(1, Math.round(wordCount / AVERAGE_WORDS_PER_MINUTE));
+        async resolve(source, args, context, info) {
+          const { resolve } = info.schema
+            .getType(`MarkdownRemark`)
+            .getFields().html;
+          const html = await resolve(source, {}, context, {
+            ...info,
+            fieldName: `html`,
+          });
+          return timeToRead(html);
         },
       },
     },
