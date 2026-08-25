@@ -1,29 +1,28 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
+const { timeToRead } = require(`./lib/time-to-read`);
 
 async function createSpeakingPages(graphql, createPage) {
-  const result = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          filter: { frontmatter: { kind: { eq: "talk" } } }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
+  const result = await graphql(`
+    {
+      allMarkdownRemark(
+        sort: { frontmatter: { date: DESC } }
+        filter: { frontmatter: { kind: { eq: "talk" } } }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
             }
           }
         }
       }
-    `
-  );
+    }
+  `);
   if (result.errors) {
     throw result.errors;
   }
@@ -42,28 +41,26 @@ async function createSpeakingPages(graphql, createPage) {
 }
 
 async function createBlogPostPages(graphql, createPage) {
-  const result = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          filter: { frontmatter: { kind: { eq: "post" } } }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
+  const result = await graphql(`
+    {
+      allMarkdownRemark(
+        sort: { frontmatter: { date: DESC } }
+        filter: { frontmatter: { kind: { eq: "post" } } }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
             }
           }
         }
       }
-    `
-  );
+    }
+  `);
   if (result.errors) {
     throw result.errors;
   }
@@ -102,4 +99,24 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     });
   }
+};
+
+exports.createResolvers = ({ createResolvers }) => {
+  createResolvers({
+    MarkdownRemark: {
+      timeToRead: {
+        type: `Int!`,
+        async resolve(source, args, context, info) {
+          const { resolve } = info.schema
+            .getType(`MarkdownRemark`)
+            .getFields().html;
+          const html = await resolve(source, {}, context, {
+            ...info,
+            fieldName: `html`,
+          });
+          return timeToRead(html);
+        },
+      },
+    },
+  });
 };

@@ -1,4 +1,22 @@
+const netlifyAdapter = require(`gatsby-adapter-netlify`).default;
+
 module.exports = {
+  // Installed explicitly so Gatsby does not npm-install the adapter mid-build
+  // on Netlify (zero-configuration deployments).
+  adapter: netlifyAdapter(),
+  // Gatsby's adapter already sends the security headers gatsby-plugin-netlify
+  // used to add (x-frame-options, x-xss-protection, x-content-type-options,
+  // referrer-policy). Only referrer-policy is changed: `same-origin` sends no
+  // referrer to YouTube, which has rejected such embeds with "error 153"
+  // since 2025. strict-origin-when-cross-origin sends just the origin.
+  headers: [
+    {
+      source: `/*`,
+      headers: [
+        { key: `referrer-policy`, value: `strict-origin-when-cross-origin` },
+      ],
+    },
+  ],
   siteMetadata: {
     title: `no.lol`,
     author: `Lauren Tan`,
@@ -11,6 +29,7 @@ module.exports = {
       medium: `sugarpirate`,
     },
   },
+  jsxRuntime: `automatic`,
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -47,13 +66,8 @@ module.exports = {
               quality: 80,
             },
           },
-          {
-            resolve: `@weknow/gatsby-remark-twitter`,
-            options: {
-              align: `center`,
-            },
-          },
-          `gatsby-remark-embed-video`,
+          `gatsby-remark-embedder`,
+          require.resolve(`./plugins/gatsby-remark-centered-tweets`),
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
@@ -61,6 +75,7 @@ module.exports = {
             },
           },
           `gatsby-remark-autolink-headers`,
+          require.resolve(`./plugins/gatsby-remark-legacy-heading-ids`),
           `gatsby-remark-code-titles`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
@@ -69,6 +84,10 @@ module.exports = {
         ],
       },
     },
+    // gatsby-remark-embedder only emits the tweet blockquote; this loads X's
+    // widgets.js on pages that have one, so tweets render as embedded cards.
+    `gatsby-plugin-twitter`,
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -77,7 +96,66 @@ module.exports = {
         trackingId: `UA-135472857-1`,
       },
     },
-    `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            title: `no.lol`,
+            output: `/rss.xml`,
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { frontmatter: { date: DESC } }
+                  filter: {
+                    frontmatter: { published: { eq: true }, kind: { eq: "post" } }
+                  }
+                  limit: 1000
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            `,
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
+              allMarkdownRemark.nodes.map((node) => {
+                const url = new URL(
+                  node.fields.slug,
+                  site.siteMetadata.siteUrl
+                ).toString();
+                return {
+                  ...node.frontmatter,
+                  description: node.excerpt,
+                  url,
+                  guid: url,
+                  custom_elements: [{ 'content:encoded': node.html }],
+                };
+              }),
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -91,7 +169,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -100,24 +177,10 @@ module.exports = {
     },
     `gatsby-plugin-typescript`,
     {
-      resolve: `gatsby-plugin-favicon`,
-      options: { logo: './static/favicon.png' },
-    },
-    {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         typekit: { id: `ldl2nlv` },
       },
     },
-    {
-      resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {
-          include: /assets/,
-        },
-      },
-    },
-    `gatsby-plugin-netlify-cache`,
-    `gatsby-plugin-netlify`, // must be last
   ],
 };

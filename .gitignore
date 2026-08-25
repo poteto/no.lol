@@ -58,6 +58,9 @@ typings/
 .cache/
 public
 
+# netlify cli / adapter
+.netlify/
+
 # Mac files
 .DS_Store
 

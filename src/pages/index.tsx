@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
-import Image from 'gatsby-image';
+import { Link, graphql, HeadFC } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import MainBio from '../components/main-bio';
 import Layout from '../components/layout';
@@ -24,12 +24,11 @@ const BlogIndex: React.FunctionComponent<BlogIndexProps> = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Writing" keywords={KEYWORDS} />
       <MainBio />
       {posts.map(({ node }: { node: any }) => {
         const title = node.frontmatter.title || node.fields.slug;
         const imageAuthor = node.frontmatter.coverAuthor;
-        const { fluid } = node.frontmatter.cover.childImageSharp;
+        const { gatsbyImageData } = node.frontmatter.cover.childImageSharp;
         return (
           <div
             className="blog-post-preview"
@@ -50,9 +49,9 @@ const BlogIndex: React.FunctionComponent<BlogIndexProps> = ({
               {pluralizeReadingTime(node.timeToRead)}
             </small>
             <Pills items={node.frontmatter.categories} />
-            <Image
+            <GatsbyImage
               style={{ marginTop: rhythm(0.5), marginBottom: rhythm(0.5) }}
-              fluid={fluid}
+              image={gatsbyImageData}
               alt={imageAuthor}
             />
             <p
@@ -72,6 +71,8 @@ const BlogIndex: React.FunctionComponent<BlogIndexProps> = ({
 
 export default BlogIndex;
 
+export const Head: HeadFC = () => <SEO title="Writing" keywords={KEYWORDS} />;
+
 export const pageQuery = graphql`
   query {
     site {
@@ -80,7 +81,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { published: { eq: true }, kind: { eq: "post" } } }
     ) {
       edges {
@@ -96,11 +97,14 @@ export const pageQuery = graphql`
             title
             description
             categories
+            coverAuthor
             cover {
               childImageSharp {
-                fluid(maxWidth: 1200) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(
+                  width: 1200
+                  layout: CONSTRAINED
+                  placeholder: BLURRED
+                )
               }
             }
           }
