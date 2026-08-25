@@ -1,6 +1,7 @@
 # Node.js version comes from .nvmrc.
 [build]
-  command = "yarn build"
+  # TEMPORARY: diagnostics wrapper around `yarn build`, see scripts/netlify-diagnose.sh
+  command = "bash scripts/netlify-diagnose.sh"
   publish = "public"
 
 [build.environment]
