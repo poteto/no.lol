@@ -2,3 +2,12 @@
 [build]
   command = "yarn build"
   publish = "public"
+
+[build.environment]
+  # Netlify passes --ignore-optional to yarn by default. Gatsby 5 needs the
+  # optional, platform-specific native packages (@parcel/watcher-linux-x64-glibc,
+  # @lmdb/lmdb-linux-x64, msgpackr-extract) or `gatsby build` fails at startup.
+  YARN_FLAGS = "--no-ignore-optional"
+  # The build image ships a system libvips. Make sharp use its prebuilt binary
+  # instead of compiling itself from source against the system library.
+  SHARP_IGNORE_GLOBAL_LIBVIPS = "true"
