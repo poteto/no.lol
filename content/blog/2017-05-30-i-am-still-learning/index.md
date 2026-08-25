@@ -72,7 +72,7 @@ Public speaking was my greatest fear. It might be yours too. Now, my greatest fe
 
 Whatever it is you’re afraid of doing next, know that you’re not alone. To be afraid is to be human. When you’re afraid, it’s a great signal that you’re on to a learning opportunity.
 
-Learn to welcome fear. Learn _from_ fear_._ [No one learns and develops skills in a bubble.](https://twitter.com/_shreve/status/866819372924493826)
+Learn to welcome fear. Learn _from_ fear. [No one learns and develops skills in a bubble.](https://twitter.com/_shreve/status/866819372924493826)
 
 Now repeat after me:
 

@@ -29,7 +29,7 @@ In this post I'll describe how I did the transition, and what tools I found alon
 
 The first step is to [download all your information from Medium](https://medium.com/me/export). It'll be sent to you as .zip file containing all your data, including published & draft posts you've written. Once you've uncompressed your files, you'll see a bunch of folders:
 
-![Medium posts are exported as html files](./Screenshot 2019-03-16 18.10.24.png "Medium posts are exported as html files")
+![Medium posts are exported as html files](<./Screenshot 2019-03-16 18.10.24.png> "Medium posts are exported as html files")
 
 Medium posts are exported as html files in the `posts` folder, so we'll want something to convert them to markdown. Alternatively, you could use something like [gatsby-source-medium](https://www.gatsbyjs.org/packages/gatsby-source-medium/?=medium) or [gatsby-source-rss](https://github.com/jondubin/gatsby-source-rss) to add this data to [Gatsby's GraphQL endpoint](https://www.gatsbyjs.org/docs/querying-with-graphql/). I preferred having actual  files in my repo so I could make edits as necessary.
 
@@ -62,7 +62,7 @@ npx medium-2-md convertLocal path/to/medium-export/posts -f
 
 If you want to convert your drafts as well, add the `-d` flag to the command. When the script completes, it'll place a folder within `posts` called `md_<series of numbers>`, which contains all your published posts in markdown format.
 
-![Converted posts in markdown format](./Screenshot 2019-03-16 18.24.38.png)
+![Converted posts in markdown format](<./Screenshot 2019-03-16 18.24.38.png>)
 
 ### Getting started with Gatsby
 
@@ -74,7 +74,7 @@ Now that we have our posts, we can get our blog going! I started by throwing som
 
 Next, let's get our repo created using the [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) starter. There are lots of different [starters](https://www.gatsbyjs.org/starters/?v=2) when you're creating something with Gatsby, but I found this one good enough to be a base. Follow the instructions in the gatsby-starter-blog repo after you've also installed [gatsby-cli](https://www.gatsbyjs.org/docs/gatsby-cli/). If you did it right, you should have a new folder with the following (or similar) structure:
 
-![What your folder structure should look like](./Screenshot 2019-03-16 18.43.56.png "What your folder structure should look like")
+![What your folder structure should look like](<./Screenshot 2019-03-16 18.43.56.png> "What your folder structure should look like")
 
 At this point, I moved my markdown posts into the `content/blog` folder, and had to do a bunch of cleanup to prettify the markdown. One thing that made the conversion process difficult was that in my Medium posts, I added code snippets by embedding GitHub gists. This meant that the code snippets in my posts didn't get converted, so I had to do some manual work here with copypasta.
 
@@ -102,7 +102,7 @@ Getting your blog deployed with [Netlify](https://netlify.com) is a breeze. Once
 
 After some headscratching, I finally figured out how to get the [lighthousebot](https://github.com/GoogleChromeLabs/lighthousebot) to automatically run in CI for every pull request. If you're not familiar with [Lighthouse](https://developers.google.com/web/tools/lighthouse/), it's a developer tool released by the Chrome team that helps you audit your site for performance, accessibility, progressive web apps, and more. You can run a lighthouse audit in your Chrome DevTools without installing anything:
 
-![Run a lighthouse audit on your site in the Chrome DevTools](./Screenshot 2019-03-16 22.30.11.png "Run a lighthouse audit on your site in the Chrome DevTools")
+![Run a lighthouse audit on your site in the Chrome DevTools](<./Screenshot 2019-03-16 22.30.11.png> "Run a lighthouse audit on your site in the Chrome DevTools")
 
 To get started with lighthousebot, follow the instructions in the [lighthousebot](https://github.com/GoogleChromeLabs/lighthousebot) repo. You'll need to:
 
@@ -111,13 +111,13 @@ To get started with lighthousebot, follow the instructions in the [lighthousebot
 3. Add the API key as an environment variable to TravisCI
 4. Then run it against your Netlify deploy preview so you can look at score changes before merging your PR
 
-![lighthousebot will leave a comment in your PR](./Screenshot 2019-03-16 19.54.07.png "lighthousebot will leave a comment in your PR")
+![lighthousebot will leave a comment in your PR](<./Screenshot 2019-03-16 19.54.07.png> "lighthousebot will leave a comment in your PR")
 
 Because you need to wait for the Netlify deploy preview to finish before you can run lighthousebot, you'll need a little npm package called [wait-for-netlify-preview](https://github.com/Developmint/wait-for-netlify-preview) by [Alexander Lichter](https://github.com/manniL) to let TravisCI wait before running the lighthouse audit. To get this to work, install `wait-for-netlify-preview` as a dev dependency, add an [access token](https://github.com/settings/tokens) with the `repo` permission, and add that as a environment variable in TravisCI: `GITHUB_API_TOKEN = <your access token>`
 
 If you did it right, you should have two environment variables set in TravisCI:
 
-![What your TravisCI environment variables should look like](./Screenshot 2019-03-16 20.09.28.png "What your TravisCI environment variables should look like")
+![What your TravisCI environment variables should look like](<./Screenshot 2019-03-16 20.09.28.png> "What your TravisCI environment variables should look like")
 
 Here's what I added to my TravisCI config and package.json:
 
@@ -143,7 +143,7 @@ jobs:
 
 Now, when you open a PR, you'll see the following stages in TravisCI:
 
-![Your TravisCI stages should look like this](./Screenshot 2019-03-16 20.16.08.png "Your TravisCI stages should look like this")
+![Your TravisCI stages should look like this](<./Screenshot 2019-03-16 20.16.08.png> "Your TravisCI stages should look like this")
 
 This is a pretty nice setup! Gatsby gives you incredible performance out of the box, so this addition to your CI process ensures that the code you add won't slow your site down too much ;)
 
