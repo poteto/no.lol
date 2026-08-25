@@ -6,10 +6,6 @@
   # TEMPORARY: pre-install environment probe; always exits 1 so the build continues
   ignore = "bash ./scripts/netlify-probe.sh"
 
-# TEMPORARY: reports build stages and the build error, see netlify/diagnose-plugin
-[[plugins]]
-  package = "./netlify/diagnose-plugin"
-
 [build.environment]
   # Netlify pinned this site to the Ruby version of its original (2019) build
   # image. That Ruby is not preinstalled on the current Ubuntu 24.04 image, so
