@@ -19,6 +19,7 @@
     "gatsby-plugin-manifest": "5.16.0",
     "gatsby-plugin-offline": "6.16.0",
     "gatsby-plugin-sharp": "5.16.0",
+    "gatsby-plugin-twitter": "5.16.0",
     "gatsby-plugin-typescript": "5.16.0",
     "gatsby-plugin-typography": "5.16.0",
     "gatsby-plugin-web-font-loader": "1.0.4",

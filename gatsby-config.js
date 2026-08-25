@@ -84,6 +84,9 @@ module.exports = {
         ],
       },
     },
+    // gatsby-remark-embedder only emits the tweet blockquote; this loads X's
+    // widgets.js on pages that have one, so tweets render as embedded cards.
+    `gatsby-plugin-twitter`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
