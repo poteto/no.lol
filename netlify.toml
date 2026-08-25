@@ -1,0 +1,4 @@
+# Node.js version comes from .nvmrc.
+[build]
+  command = "yarn build"
+  publish = "public"

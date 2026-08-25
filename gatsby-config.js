@@ -1,4 +1,22 @@
+const netlifyAdapter = require(`gatsby-adapter-netlify`).default;
+
 module.exports = {
+  // Installed explicitly so Gatsby does not npm-install the adapter mid-build
+  // on Netlify (zero-configuration deployments).
+  adapter: netlifyAdapter(),
+  // Security headers previously added by gatsby-plugin-netlify, which the
+  // adapter replaces.
+  headers: [
+    {
+      source: `/*`,
+      headers: [
+        { key: `X-Frame-Options`, value: `DENY` },
+        { key: `X-XSS-Protection`, value: `1; mode=block` },
+        { key: `X-Content-Type-Options`, value: `nosniff` },
+        { key: `Referrer-Policy`, value: `same-origin` },
+      ],
+    },
+  ],
   siteMetadata: {
     title: `no.lol`,
     author: `Lauren Tan`,
@@ -167,6 +185,5 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-netlify`, // must be last
   ],
 };
