@@ -156,11 +156,7 @@ export const pageQuery = graphql`
         categories
         cover {
           childImageSharp {
-            gatsbyImageData(
-              width: 1440
-              layout: CONSTRAINED
-              placeholder: BLURRED
-            )
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
         coverAuthor
