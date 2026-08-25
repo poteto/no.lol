@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import { rhythm, scale } from '../utils/typography';
-import Logo from '../../content/assets/donut.svg';
+import Logo from './logo';
 import SOCIAL from '../constants/social';
 
 interface LayoutProps {
