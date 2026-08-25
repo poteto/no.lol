@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link, graphql, HeadFC } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -21,7 +21,6 @@ const SpeakingIndex: React.FunctionComponent<SpeakingIndexProps> = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Speaking" keywords={KEYWORDS} />
       <SpeakerBio />
       {talks.map(({ node }: { node: any }) => {
         const title = node.frontmatter.title || node.fields.slug;
@@ -80,6 +79,8 @@ const SpeakingIndex: React.FunctionComponent<SpeakingIndexProps> = ({
 
 export default SpeakingIndex;
 
+export const Head: HeadFC = () => <SEO title="Speaking" keywords={KEYWORDS} />;
+
 export const pageQuery = graphql`
   query {
     site {
@@ -88,7 +89,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { published: { eq: true }, kind: { eq: "talk" } } }
     ) {
       edges {

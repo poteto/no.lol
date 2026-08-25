@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
-import Image from 'gatsby-image';
+import { Link, graphql, HeadFC } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import Bio from '../components/bio';
 import Layout from '../components/layout';
@@ -27,11 +27,6 @@ const BlogPostTemplate: React.FunctionComponent<BlogPostTemplateProps> = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
-        title={`${post.frontmatter.title}`}
-        description={post.frontmatter.description || post.excerpt}
-        keywords={post.frontmatter.keywords}
-      />
       <div className="blog-post">
         <h1 style={{ marginTop: 0 }}>
           {post.frontmatter.published ? '' : 'DRAFT: '}
@@ -49,8 +44,8 @@ const BlogPostTemplate: React.FunctionComponent<BlogPostTemplateProps> = ({
           {pluralizeReadingTime(post.timeToRead)}
         </small>
         <Pills items={post.frontmatter.categories} />
-        <Image
-          fluid={post.frontmatter.cover.childImageSharp.fluid}
+        <GatsbyImage
+          image={post.frontmatter.cover.childImageSharp.gatsbyImageData}
           alt={post.frontmatter.coverAuthor}
           className="u-full-width"
           style={{
@@ -126,6 +121,17 @@ const BlogPostTemplate: React.FunctionComponent<BlogPostTemplateProps> = ({
 
 export default BlogPostTemplate;
 
+export const Head: HeadFC<any> = ({ data }) => {
+  const post = data.markdownRemark;
+  return (
+    <SEO
+      title={`${post.frontmatter.title}`}
+      description={post.frontmatter.description || post.excerpt}
+      keywords={post.frontmatter.keywords}
+    />
+  );
+};
+
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
@@ -150,9 +156,11 @@ export const pageQuery = graphql`
         categories
         cover {
           childImageSharp {
-            fluid(maxWidth: 1440) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(
+              width: 1440
+              layout: CONSTRAINED
+              placeholder: BLURRED
+            )
           }
         }
         coverAuthor

@@ -16,7 +16,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
   title,
   children,
 }) => {
-  const rootPath = `${__PATH_PREFIX__}/`; // eslint-disable-line no-undef
+  const rootPath = `${__PATH_PREFIX__}/`;
   let header;
 
   if (location.pathname === rootPath) {

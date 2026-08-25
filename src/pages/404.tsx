@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, HeadFC } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -27,7 +27,6 @@ const NotFoundPage: React.FunctionComponent<NotFoundProps> = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="404: Not Found" />
       <h1>Not Found</h1>
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
     </Layout>
@@ -35,3 +34,5 @@ const NotFoundPage: React.FunctionComponent<NotFoundProps> = ({
 };
 
 export default NotFoundPage;
+
+export const Head: HeadFC = () => <SEO title="404: Not Found" />;

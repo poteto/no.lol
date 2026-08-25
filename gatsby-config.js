@@ -11,6 +11,7 @@ module.exports = {
       medium: `sugarpirate`,
     },
   },
+  jsxRuntime: `automatic`,
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -47,13 +48,7 @@ module.exports = {
               quality: 80,
             },
           },
-          {
-            resolve: `@weknow/gatsby-remark-twitter`,
-            options: {
-              align: `center`,
-            },
-          },
-          `gatsby-remark-embed-video`,
+          `gatsby-remark-embedder`,
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
@@ -69,6 +64,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -77,7 +73,66 @@ module.exports = {
         trackingId: `UA-135472857-1`,
       },
     },
-    `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            title: `no.lol`,
+            output: `/rss.xml`,
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { frontmatter: { date: DESC } }
+                  filter: {
+                    frontmatter: { published: { eq: true }, kind: { eq: "post" } }
+                  }
+                  limit: 1000
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            `,
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
+              allMarkdownRemark.nodes.map((node) => {
+                const url = new URL(
+                  node.fields.slug,
+                  site.siteMetadata.siteUrl
+                ).toString();
+                return {
+                  ...node.frontmatter,
+                  description: node.excerpt,
+                  url,
+                  guid: url,
+                  custom_elements: [{ 'content:encoded': node.html }],
+                };
+              }),
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -91,7 +146,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -99,10 +153,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-typescript`,
-    {
-      resolve: `gatsby-plugin-favicon`,
-      options: { logo: './static/favicon.png' },
-    },
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
@@ -117,7 +167,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-netlify-cache`,
     `gatsby-plugin-netlify`, // must be last
   ],
 };

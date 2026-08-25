@@ -1,29 +1,31 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+// Matches the reading speed gatsby-transformer-remark used before it dropped
+// the built-in `timeToRead` field in Gatsby 5.
+const AVERAGE_WORDS_PER_MINUTE = 265;
+
 async function createSpeakingPages(graphql, createPage) {
-  const result = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          filter: { frontmatter: { kind: { eq: "talk" } } }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
+  const result = await graphql(`
+    {
+      allMarkdownRemark(
+        sort: { frontmatter: { date: DESC } }
+        filter: { frontmatter: { kind: { eq: "talk" } } }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
             }
           }
         }
       }
-    `
-  );
+    }
+  `);
   if (result.errors) {
     throw result.errors;
   }
@@ -42,28 +44,26 @@ async function createSpeakingPages(graphql, createPage) {
 }
 
 async function createBlogPostPages(graphql, createPage) {
-  const result = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          filter: { frontmatter: { kind: { eq: "post" } } }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
+  const result = await graphql(`
+    {
+      allMarkdownRemark(
+        sort: { frontmatter: { date: DESC } }
+        filter: { frontmatter: { kind: { eq: "post" } } }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
             }
           }
         }
       }
-    `
-  );
+    }
+  `);
   if (result.errors) {
     throw result.errors;
   }
@@ -102,4 +102,19 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     });
   }
+};
+
+exports.createResolvers = ({ createResolvers }) => {
+  createResolvers({
+    MarkdownRemark: {
+      timeToRead: {
+        type: `Int!`,
+        resolve(source) {
+          const words = (source.rawMarkdownBody ?? ``).match(/[\p{L}\p{N}]+/gu);
+          const wordCount = words ? words.length : 0;
+          return Math.max(1, Math.round(wordCount / AVERAGE_WORDS_PER_MINUTE));
+        },
+      },
+    },
+  });
 };
