@@ -3,6 +3,12 @@
   # TEMPORARY: diagnostics wrapper around `yarn build`, see scripts/netlify-diagnose.sh
   command = "bash scripts/netlify-diagnose.sh"
   publish = "public"
+  # TEMPORARY: pre-install environment probe; always exits 1 so the build continues
+  ignore = "bash ./scripts/netlify-probe.sh"
+
+# TEMPORARY: reports build stages and the build error, see netlify/diagnose-plugin
+[[plugins]]
+  package = "./netlify/diagnose-plugin"
 
 [build.environment]
   # Netlify passes --ignore-optional to yarn by default. Gatsby 5 needs the
