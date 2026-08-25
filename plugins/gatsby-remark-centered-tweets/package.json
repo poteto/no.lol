@@ -1,0 +1,8 @@
+{
+  "name": "gatsby-remark-centered-tweets",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Centers embedded tweets like the previous Twitter plugin did",
+  "main": "index.js",
+  "license": "MIT"
+}

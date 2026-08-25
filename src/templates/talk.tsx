@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, HeadFC } from 'gatsby';
 
 import Bio from '../components/bio';
 import Layout from '../components/layout';
@@ -22,11 +22,6 @@ const TalkTemplate: React.FunctionComponent<TalkTemplateProps> = ({
   const fileName = `${slug.substring(0, slug.length - 1)}.md`;
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
-        title={`${talk.frontmatter.title}`}
-        description={talk.frontmatter.description || talk.excerpt}
-        keywords={talk.frontmatter.keywords}
-      />
       <div className="talk">
         <h1 style={{ marginTop: 0 }}>
           {talk.frontmatter.published ? '' : 'DRAFT: '}
@@ -92,6 +87,17 @@ const TalkTemplate: React.FunctionComponent<TalkTemplateProps> = ({
 };
 
 export default TalkTemplate;
+
+export const Head: HeadFC<any> = ({ data }) => {
+  const talk = data.markdownRemark;
+  return (
+    <SEO
+      title={`${talk.frontmatter.title}`}
+      description={talk.frontmatter.description || talk.excerpt}
+      keywords={talk.frontmatter.keywords}
+    />
+  );
+};
 
 export const pageQuery = graphql`
   query TalkBySlug($slug: String!) {

@@ -1,8 +1,21 @@
 # [no.lol](https://www.no.lol)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/767c7e3a-f8ef-4f0f-9463-076318164ece/deploy-status)](https://app.netlify.com/sites/no-lol/deploys) [![Build Status](https://travis-ci.com/poteto/no.lol.svg?branch=master)](https://travis-ci.com/poteto/no.lol)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/767c7e3a-f8ef-4f0f-9463-076318164ece/deploy-status)](https://app.netlify.com/sites/no-lol/deploys)
 
 Lauren's personal blog. `master` is automatically deployed to Netlify.
+
+## Development
+
+Requires Node.js 22 (see `.nvmrc`) and Yarn 1.
+
+```sh
+nvm use
+yarn install
+yarn develop   # dev server at http://localhost:8000
+yarn build     # production build into ./public
+yarn serve     # serve the production build
+yarn test      # lint + typecheck
+```
 
 ## Image Pre-optimization
 

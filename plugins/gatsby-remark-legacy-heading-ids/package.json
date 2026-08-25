@@ -1,0 +1,8 @@
+{
+  "name": "gatsby-remark-legacy-heading-ids",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Keeps heading anchors stable for headings that contain non-breaking spaces",
+  "main": "index.js",
+  "license": "MIT"
+}

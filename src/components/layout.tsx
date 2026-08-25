@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import { rhythm, scale } from '../utils/typography';
-import Logo from '../../content/assets/donut.svg';
+import Logo from './logo';
 import SOCIAL from '../constants/social';
 
 interface LayoutProps {
@@ -16,7 +16,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
   title,
   children,
 }) => {
-  const rootPath = `${__PATH_PREFIX__}/`; // eslint-disable-line no-undef
+  const rootPath = `${__PATH_PREFIX__}/`;
   let header;
 
   if (location.pathname === rootPath) {
