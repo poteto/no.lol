@@ -4,16 +4,16 @@ module.exports = {
   // Installed explicitly so Gatsby does not npm-install the adapter mid-build
   // on Netlify (zero-configuration deployments).
   adapter: netlifyAdapter(),
-  // Security headers previously added by gatsby-plugin-netlify, which the
-  // adapter replaces.
+  // Gatsby's adapter already sends the security headers gatsby-plugin-netlify
+  // used to add (x-frame-options, x-xss-protection, x-content-type-options,
+  // referrer-policy). Only referrer-policy is changed: `same-origin` sends no
+  // referrer to YouTube, which has rejected such embeds with "error 153"
+  // since 2025. strict-origin-when-cross-origin sends just the origin.
   headers: [
     {
       source: `/*`,
       headers: [
-        { key: `X-Frame-Options`, value: `DENY` },
-        { key: `X-XSS-Protection`, value: `1; mode=block` },
-        { key: `X-Content-Type-Options`, value: `nosniff` },
-        { key: `Referrer-Policy`, value: `same-origin` },
+        { key: `referrer-policy`, value: `strict-origin-when-cross-origin` },
       ],
     },
   ],
@@ -67,6 +67,7 @@ module.exports = {
             },
           },
           `gatsby-remark-embedder`,
+          require.resolve(`./plugins/gatsby-remark-centered-tweets`),
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
@@ -74,6 +75,7 @@ module.exports = {
             },
           },
           `gatsby-remark-autolink-headers`,
+          require.resolve(`./plugins/gatsby-remark-legacy-heading-ids`),
           `gatsby-remark-code-titles`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
