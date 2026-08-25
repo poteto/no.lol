@@ -13,10 +13,20 @@
   # "Failed to install ruby version". Nothing here needs Ruby; use the version
   # the image ships so rvm activates it instantly.
   RUBY_VERSION = "3.4.8"
-  # Netlify passes --ignore-optional to yarn by default. Gatsby 5 needs the
-  # optional, platform-specific native packages (@parcel/watcher-linux-x64-glibc,
-  # @lmdb/lmdb-linux-x64, msgpackr-extract) or `gatsby build` fails at startup.
-  YARN_FLAGS = "--no-ignore-optional"
+  # --pure-lockfile is Netlify's default. Never let --ignore-optional in: Gatsby 5
+  # ships its native binaries as optional, platform-specific packages
+  # (@parcel/watcher-linux-x64-glibc, @lmdb/lmdb-linux-x64, msgpackr-extract)
+  # and `gatsby build` fails at startup without them.
+  YARN_FLAGS = "--pure-lockfile --no-ignore-optional"
   # The build image ships a system libvips. Make sharp use its prebuilt binary
   # instead of compiling itself from source against the system library.
   SHARP_IGNORE_GLOBAL_LIBVIPS = "true"
+
+# The Lighthouse plugin was installed from the Netlify UI years ago, and Netlify
+# pinned it to major version 4 there. v4 requires Node < 20 and its install dies
+# on the current build image, which failed every build before the build command
+# ran. A netlify.toml entry overrides the UI pin. Uninstall the plugin in the
+# Netlify UI and delete this block if you do not want Lighthouse runs.
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+  pinned_version = "6"
